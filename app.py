@@ -151,7 +151,7 @@ if authentication_status:
         o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12=st.tabs(["NatSq", "Spiral", "TrTr", "TrNa", "addPrice", "Fib", "FutDates", "Mult", "Natal", "PriceTime", "Retro", "Sq9"])
         
         with o1:
-            col1, col2 = st.columns([1,3.33])
+            col1, col2 = st.columns([1,2])
 
             with col1:
                 st.dataframe(m1.style.background_gradient(cmap='Blues'))
