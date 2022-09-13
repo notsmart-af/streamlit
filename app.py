@@ -167,7 +167,7 @@ if authentication_status:
                 st.dataframe(m2.style.background_gradient(cmap='Blues'))
             with col2:
                 fig2 = px.bar(m2, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Spiral | Hits Chart")
+                        title="Spiral | Hits Chart", height=520)
                 st.plotly_chart(fig2, use_container_width=True)
 
         with o3:
@@ -177,7 +177,7 @@ if authentication_status:
                 st.dataframe(m3.style.background_gradient(cmap='Blues'))
             with col2:
                 fig3 = px.bar(m3, x='Date', y='Points',
-                        title="TrTr | Hits Chart")
+                        title="TrTr | Hits Chart", height=520)
                 st.plotly_chart(fig3, use_container_width=True)
 
         with o4:
@@ -187,7 +187,7 @@ if authentication_status:
                 st.dataframe(m4.style.background_gradient(cmap='Blues'))
             with col2:
                 fig4 = px.bar(m4, x='Date', y='Points',
-                        title="TrNa | Hits Chart")
+                        title="TrNa | Hits Chart", height=520)
                 st.plotly_chart(fig4, use_container_width=True)
 
         with o5:
@@ -196,7 +196,7 @@ if authentication_status:
             with col1:
                 st.dataframe(m5.style.background_gradient(cmap='Blues'))
             with col2:
-                fig5 = px.bar(m5, x='Date', y='Hit', title="addPrice | Hits Chart")
+                fig5 = px.bar(m5, x='Date', y='Hit', title="addPrice | Hits Chart", height=520)
                 st.plotly_chart(fig5, use_container_width=True)
 
         with o6:
@@ -206,7 +206,7 @@ if authentication_status:
                 st.dataframe(m6.style.background_gradient(cmap='Blues'))
             with col2:
                 fig6 = px.bar(m6, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Fib | Hits Chart")
+                        title="Fib | Hits Chart", height=520)
                 st.plotly_chart(fig6, use_container_width=True)
 
         with o7:
@@ -216,7 +216,7 @@ if authentication_status:
                 st.dataframe(m7.style.background_gradient(cmap='Blues'))
             with col2:
                 fig7 = px.bar(m7, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="FutDates | Hits Chart")
+                        title="FutDates | Hits Chart", height=520)
                 st.plotly_chart(fig7, use_container_width=True)
 
         with o8:
@@ -226,7 +226,7 @@ if authentication_status:
                 st.dataframe(m8.style.background_gradient(cmap='Blues'))
             with col2:
                 fig8 = px.bar(m8, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Mult | Hits Chart")
+                        title="Mult | Hits Chart", height=520)
                 st.plotly_chart(fig8, use_container_width=True)
 
         with o9:
@@ -236,7 +236,7 @@ if authentication_status:
                 st.dataframe(m9.style.background_gradient(cmap='Blues'))
             with col2:
                 fig9 = px.bar(m9, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Natal | Hits Chart")
+                        title="Natal | Hits Chart", height=520)
                 st.plotly_chart(fig9, use_container_width=True)
 
         with o10:
@@ -246,7 +246,7 @@ if authentication_status:
                 st.dataframe(m10.style.background_gradient(cmap='Blues'))
             with col2:
                 fig10 = px.bar(m10, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="PriceTime | Hits Chart")
+                        title="PriceTime | Hits Chart", height=520)
                 st.plotly_chart(fig10, use_container_width=True)
 
         with o11:
@@ -256,7 +256,7 @@ if authentication_status:
                 st.dataframe(m11.style.background_gradient(cmap='Blues'))
             with col2:
                 fig11 = px.bar(m11, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Retro | Hits Chart")
+                        title="Retro | Hits Chart", height=520)
                 st.plotly_chart(fig11, use_container_width=True)
 
         with o12:
@@ -266,7 +266,7 @@ if authentication_status:
                 st.dataframe(m12.style.background_gradient(cmap='Blues'))
             with col2:
                 fig12 = px.bar(m12, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Sq9 | Hits Chart")
+                        title="Sq9 | Hits Chart", height=520)
                 st.plotly_chart(fig12, use_container_width=True)
 
     col1, col2, col3 = st.columns([8, 7, 2])
