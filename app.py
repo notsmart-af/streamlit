@@ -151,13 +151,13 @@ if authentication_status:
         o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12=st.tabs(["NatSq", "Spiral", "TrTr", "TrNa", "addPrice", "Fib", "FutDates", "Mult", "Natal", "PriceTime", "Retro", "Sq9"])
         
         with o1:
-            col1, col2 = st.columns([1,2])
+            col1, col2 = st.columns([1,3.33])
 
             with col1:
                 st.dataframe(m1.style.background_gradient(cmap='Blues'))
             with col2:
                 fig1 = px.bar(m1, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="NatSq | Hits Chart", height=618)
+                        title="NatSq | Hits Chart", height=520)
                 st.plotly_chart(fig1, use_container_width=True)
 
         with o2:
