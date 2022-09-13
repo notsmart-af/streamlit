@@ -157,7 +157,7 @@ if authentication_status:
                 st.dataframe(m1.style.background_gradient(cmap='Blues'))
             with col2:
                 fig1 = px.bar(m1, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="NatSq | Hits Chart")
+                        title="NatSq | Hits Chart", height=618)
                 st.plotly_chart(fig1, use_container_width=True)
 
         with o2:
