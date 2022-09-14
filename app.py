@@ -112,8 +112,9 @@ if authentication_status:
             with col0:
                 st.dataframe(hm.style.background_gradient(cmap='Blues'))
             with col00:
-                st.markdown("**Aspects TrTr & TrNa**")
+                st.markdown("**Transit Aspects**")
                 st.dataframe(mn1.style.background_gradient(cmap='Blues'))
+                st.markdown("**Natal Aspects**")
                 st.dataframe(mn2.style.background_gradient(cmap='Blues'))
 
         with h2:
@@ -122,8 +123,9 @@ if authentication_status:
             with col0:
                 st.dataframe(gm.style.background_gradient(cmap='Blues'))
             with col00:
-                st.markdown("**Aspects TrTr & TrNa**")
+                st.markdown("**Transit Aspects**")
                 st.dataframe(mn3.style.background_gradient(cmap='Blues'))
+                st.markdown("**Natal Aspects**")
                 st.dataframe(mn4.style.background_gradient(cmap='Blues'))
         
         with h3:
