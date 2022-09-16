@@ -155,9 +155,9 @@ if authentication_status:
                 st.markdown("Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence...")
 
     with chart:
-        fig0 = px.bar(m, x='Date', y='EP', color='EP', color_continuous_scale=px.colors.sequential.Cividis,
-                height=500, width=3200)
-        st.plotly_chart(fig0, use_container_width=True)
+        figui = px.bar(m, x="Date", y="EP", hover_data=['Date', 'EP'], color='EP', color_continuous_scale=px.colors.sequential.Cividis,
+             height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
+        st.plotly_chart(figui, use_container_width=True)
 
     with Method:
         
