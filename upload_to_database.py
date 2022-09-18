@@ -1,5 +1,4 @@
 import streamlit_authenticator as stauth
-
 import database as db
 
 usernames = ["AL", "SG", "JF", "siix", "Donovan", "jb", "Dje", "DVortex", "pap", "starseedmatrix", "Blake_R", "JwJ"]

@@ -24,11 +24,8 @@ for file in os.listdir(csv_path):
     fd = pd.read_csv(os.path.join(csv_path, file))
     globals()[file.rpartition(".")[0]] = fd
 
-twoday = datetime.strftime(datetime.now(), "%Y/%m/%d")
-t = pd.to_datetime(twoday)
-t = pd.to_datetime(t)
-
 today = datetime.strftime(datetime.now(), "%d/%m/%Y")
+t = today
 
 # LOGO
 st.set_page_config(page_title="ASTROTOOL", layout="wide")
