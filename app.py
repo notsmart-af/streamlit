@@ -182,7 +182,7 @@ if authentication_status:
                 ]
 
                 for i, (df, date) in enumerate(data):
-                filtered_dfs.append(cum_hel(df, date))
+                    filtered_dfs.append(cum_hel(df, date))
 
                 cumm_hel = pd.concat(filtered_dfs)
                 hel = pd.concat([result, cumm_hel])
