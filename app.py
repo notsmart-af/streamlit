@@ -204,7 +204,7 @@ if authentication_status:
                             cell_colours[i].append("none")
 
                 fig, ax = plt.subplots()
-                fig.set_size_inches(12, 12, forward=True)
+                fig.set_size_inches(7, 7, forward=True)
 
                 ax.get_xaxis().set_visible(False)
                 ax.get_yaxis().set_visible(False)
