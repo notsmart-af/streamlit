@@ -74,7 +74,6 @@ if authentication_status:
     helio = helio.iloc[::, helio.columns !='Date'].apply(np.floor)
     helio_cum = helio_cum.copy()
 
-
     geo = geo.copy()
     geo = geo.iloc[::, geo.columns !='Date'].apply(np.floor)
 
