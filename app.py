@@ -70,6 +70,8 @@ if authentication_status:
     st.markdown(f"Welcome aboard {names}, enjoy our Alpha Version!")
 
     m = fluchart.copy()
+    helio = helio.copy()
+    geo = geo.copy()
 
     hm = helio_main.copy()
     gm = geo_main.copy()
@@ -204,7 +206,7 @@ if authentication_status:
                             cell_colours[i].append("none")
 
                 fig, ax = plt.subplots()
-                fig.set_size_inches(4, 4, forward=True)
+                fig.set_size_inches(5, 5, forward=True)
 
                 ax.get_xaxis().set_visible(False)
                 ax.get_yaxis().set_visible(False)
@@ -217,6 +219,10 @@ if authentication_status:
                 table = plt.table(cellText=cell_text, cellColours=cell_colours, cellLoc="center", bbox=[0, 0, 1, 1])
 
                 st.pyplot(fig)
+                st.markdown("**Helio**")
+                st.dataframe(helio)
+                st.markdown("**Geo**")
+                st.dataframe(geo)                
 
             with col00:
                 st.image(sq2)
