@@ -562,7 +562,7 @@ if authentication_status:
                 helio_concat.Date = helio_concat.Date.dt.strftime("%d/%m/%Y")
 
                 hcc = pd.concat([result, mod0, helio_concat])
-                st.table(hcc)
+                st.dataframe(hcc)
             with col00:
                 st.markdown("**Transit Aspects**")
                 st.dataframe(mn1.style.background_gradient(cmap='Blues'))
