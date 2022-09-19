@@ -149,8 +149,8 @@ if authentication_status:
         with h4:
 
             col0,col00 = st.columns([1,1])
-            sq1 = Image.open(r'SQ1.png')
             sq2 = Image.open(r'SQ2.png')
+            st.title('Square of 9')
             with col0:
 
                 NORTH, S, W, E = (0, 1), (0, -1), (-1, 0), (1, 0) # directions
@@ -235,7 +235,7 @@ if authentication_status:
                 st.dataframe(helio)
                 st.markdown("**Geo** in Blue")
                 st.dataframe(geo) 
-                
+
     with chart:
         figui = px.bar(m, x="Date", y="EP", hover_data=['Date', 'EP'], color='EP', color_continuous_scale=px.colors.sequential.Cividis,
              height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
