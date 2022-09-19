@@ -135,9 +135,6 @@ if authentication_status:
                 helio = helio.copy()
                 test = helio_cum.copy()
 
-                today = datetime.strftime(datetime.now(), "%d/%m/%Y")
-                result = helio[helio.Date == today]
-
                 def cum_hel(df, date):
                     today = datetime.strftime(datetime.now(), "%d/%m/%Y")
                     return pd.DataFrame(
