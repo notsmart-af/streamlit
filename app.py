@@ -146,7 +146,76 @@ if authentication_status:
             sq1 = Image.open(r'SQ1.png')
             sq2 = Image.open(r'SQ2.png')
             with col0:
-                st.image(sq1)
+
+                NORTH, S, W, E = (0, 1), (0, -1), (-1, 0), (1, 0) # directions
+                turn_left = {S: E, W: S, NORTH: W, E: NORTH} # old -> new direction
+                MASTER_WIDTH    = 19
+                MASTER_HEIGHT   = 19
+
+                def spiral(width, height):
+                    if width < 1 or height < 1:
+                        raise ValueError
+                    x, y = width // 2, height // 2 # start near the center
+                    dx, dy = NORTH # initial direction
+                    matrix = [[None] * width for _ in range(height)]
+                    count = 0
+                    while True:
+                        count += 1
+                        matrix[y][x] = count # visit
+                        # try to turn right
+                        new_dx, new_dy = turn_left[dx,dy]
+                        new_x, new_y = x + new_dx, y + new_dy
+                        if (0 <= new_x < width and 0 <= new_y < height and
+                            matrix[new_y][new_x] is None): # can turn right
+                            x, y = new_x, new_y
+                            dx, dy = new_dx, new_dy
+                        else: # try to move straight
+                            x, y = x + dx, y + dy
+                            if not (0 <= x < width and 0 <= y < height):
+                                return matrix # nowhere to go
+
+                def print_matrix(matrix):
+                    width = len(str(max(el for row in matrix for el in row if el is not None)))
+                    fmt = "{:0%dd}" % width
+                    for row in matrix:
+                        print(" ".join("_"*width if el is None else fmt.format(el) for el in row))
+
+                my_matrix = spiral(MASTER_WIDTH, MASTER_HEIGHT)
+
+                # PLOT GANN SQUARE OF 9
+
+                out_mat = my_matrix
+
+                cell_text = []
+                cell_colours = []
+                for i in range(MASTER_HEIGHT):
+                    cell_text.append([])
+                    cell_colours.append([])
+                    for j in range(MASTER_WIDTH):
+                        cell_text[i].append(str(out_mat[i][j]))
+                        if  i == j \
+                            or i == (18-j) \
+                            or j == (MASTER_WIDTH // 2) \
+                            or i == (MASTER_HEIGHT // 2):
+                            cell_colours[i].append("yellow")
+                        else:
+                            cell_colours[i].append("none")
+
+                fig, ax = plt.subplots()
+                fig.set_size_inches(12, 12, forward=True)
+
+                ax.get_xaxis().set_visible(False)
+                ax.get_yaxis().set_visible(False)
+                ax.axes.spines["left"].set_color(None)
+                ax.axes.spines["right"].set_color(None)
+                ax.axes.spines["top"].set_color(None)
+                ax.axes.spines["bottom"].set_color(None)
+                ax.set_aspect("equal")
+
+                table = plt.table(cellText=cell_text, cellColours=cell_colours, cellLoc="center", bbox=[0, 0, 1, 1])
+
+                st.pyplot(fig)
+
             with col00:
                 st.image(sq2)
                 st.markdown("Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence...")
