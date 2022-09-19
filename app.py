@@ -218,6 +218,12 @@ if authentication_status:
 
                 table = plt.table(cellText=cell_text, cellColours=cell_colours, cellLoc="center", bbox=[0, 0, 1, 1])
 
+                for k, v in table._cells.items():
+                v.set_edgecolor((0.7, 0.7, 0.7))
+
+                for i in range(10):
+                ax.add_patch(Rect((2-0.1*i, 2-0.1*i), 0.2*i, 0.2*i, facecolor="none", edgecolor="black", lw=1.5))
+
                 st.pyplot(fig)
                 st.markdown("**Helio**")
                 st.dataframe(helio)
