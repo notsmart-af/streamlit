@@ -226,16 +226,16 @@ if authentication_status:
                 for i in range(10):
                     ax.add_patch(Rect((2-0.1*i, 2-0.1*i), 0.2*i, 0.2*i, facecolor="none", edgecolor="black", lw=1.5))
 
-                st.pyplot(fig)
-                st.markdown("**Helio** in Purple")
-                st.dataframe(helio)
-                st.markdown("**Geo** in Blue")
-                st.dataframe(geo)                
+                st.pyplot(fig)               
 
             with col00:
                 st.image(sq2)
                 st.markdown("Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence...")
-
+                st.markdown("**Helio** in Purple")
+                st.dataframe(helio)
+                st.markdown("**Geo** in Blue")
+                st.dataframe(geo) 
+                
     with chart:
         figui = px.bar(m, x="Date", y="EP", hover_data=['Date', 'EP'], color='EP', color_continuous_scale=px.colors.sequential.Cividis,
              height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
