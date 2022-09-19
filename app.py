@@ -272,7 +272,7 @@ if authentication_status:
             with col1:
                 st.dataframe(m3.style.background_gradient(cmap='Blues'))
             with col2:
-                fig3 = px.bar(m3, x='Date', y='Points',
+                fig3 = px.bar(m3, x='Date', y='Hit',
                         title="TrTr | Hits Chart")
                 st.plotly_chart(fig3, use_container_width=True)
 
@@ -282,7 +282,7 @@ if authentication_status:
             with col1:
                 st.dataframe(m4.style.background_gradient(cmap='Blues'))
             with col2:
-                fig4 = px.bar(m4, x='Date', y='Points',
+                fig4 = px.bar(m4, x='Date', y='Hit',
                         title="TrNa | Hits Chart")
                 st.plotly_chart(fig4, use_container_width=True)
 
