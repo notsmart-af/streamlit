@@ -227,9 +227,9 @@ if authentication_status:
                     ax.add_patch(Rect((2-0.1*i, 2-0.1*i), 0.2*i, 0.2*i, facecolor="none", edgecolor="black", lw=1.5))
 
                 st.pyplot(fig)
-                st.markdown("**Helio**")
+                st.markdown("**Helio** in *Purple*")
                 st.dataframe(helio)
-                st.markdown("**Geo**")
+                st.markdown("**Geo** in *Blue*")
                 st.dataframe(geo)                
 
             with col00:
