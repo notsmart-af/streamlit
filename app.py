@@ -7,6 +7,8 @@ import numpy as np
 from datetime import date
 from datetime import datetime
 from datetime import timedelta
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle as Rect
 import streamlit_authenticator as stauth
 import database as db
 from PIL import Image
