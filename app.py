@@ -150,9 +150,8 @@ if authentication_status:
 
             col0,col00 = st.columns([1,1])
             sq2 = Image.open(r'SQ2.png')
-            st.title('Square of 9')
             with col0:
-
+                st.title('Square of 9')
                 NORTH, S, W, E = (0, 1), (0, -1), (-1, 0), (1, 0) # directions
                 turn_left = {S: E, W: S, NORTH: W, E: NORTH} # old -> new direction
                 MASTER_WIDTH    = 19
