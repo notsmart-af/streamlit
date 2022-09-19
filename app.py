@@ -71,7 +71,7 @@ if authentication_status:
 
     m = fluchart.copy()
     helio = helio.copy()
-    helio = helio.iloc[::, helio.columns !='Date'].apply(np.floor)
+    #helio = helio.iloc[::, helio.columns !='Date'].apply(np.floor)
     helio_cum = helio_cum.copy()
 
     geo = geo.copy()
