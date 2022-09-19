@@ -181,7 +181,8 @@ if authentication_status:
 
                 for i, (df, date) in enumerate(data):
                     filtered_dfs.append(cum_hel(df, date))
-
+                    
+                result = helio[helio.Date == today]
                 cumm_hel = pd.concat(filtered_dfs)
                 hel = pd.concat([result, cumm_hel])
                 hel = hel.round()
