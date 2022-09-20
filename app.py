@@ -168,9 +168,13 @@ if authentication_status:
             with col00:
                 st.image(sq2)
                 st.markdown("Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence...")
-                original_title = '**<p style="font-family:sans-serif; color:Purple; font-size: 16px;">**Heliocentric**</p>**'
+                original_title = '**<p style="font-family:sans-serif; color:Purple; font-size: 20px;">**Heliocentric**</p>**'
                 st.markdown(original_title, unsafe_allow_html=True)
+                for col in helio.columns[1:]:
+                    helio = helio.astype({col: int})
                 st.dataframe(helio)
+                original_titles = '**<p style="font-family:sans-serif; color:Blue; font-size: 20px;">**Geocentric**</p>**'
+                st.markdown(original_titles, unsafe_allow_html=True)
                 st.markdown("**Geo** in Blue")
                 st.dataframe(geo) 
 
