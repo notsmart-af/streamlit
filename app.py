@@ -113,7 +113,7 @@ if authentication_status:
 
         with h1:
                 st.dataframe(hm)
-            with col00:
+        with col00:
                 st.markdown("**Transit Aspects**")
                 st.dataframe(mn1.style.background_gradient(cmap='Blues'))
                 st.markdown("**Natal Aspects**")
