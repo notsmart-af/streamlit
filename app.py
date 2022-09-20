@@ -125,8 +125,8 @@ if authentication_status:
                     st.dataframe(hm)
             with col00:
                     st.markdown("**Transit Aspects**")
-                    for col in mn1.columns[3:]:
-                        mn1 = mn1.round(1)
+                    number = mn1['Angle']
+                    mn1['Angle'] = round(number,1)
                     st.dataframe(mn1.style.background_gradient(cmap='Blues'))
                     st.markdown("**Natal Aspects**")
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
