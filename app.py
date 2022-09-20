@@ -156,8 +156,50 @@ if authentication_status:
 
             with col0:
                 # PLOT GANN SQUARE OF 9
+                #############################################################################
 
-                degrees = helio.values.tolist()[0]
+                # SPIRAL MATRIX ALGORITHM FOR SQUARE OF 9
+
+                NORTH, S, W, E = (0, 1), (0, -1), (-1, 0), (1, 0) # directions
+                turn_left = {S: E, W: S, NORTH: W, E: NORTH} # old -> new direction
+                MASTER_WIDTH    = 19
+                MASTER_HEIGHT   = 19
+
+                #############################################################################
+
+                def spiral(width, height):
+                    if width < 1 or height < 1:
+                        raise ValueError
+                    x, y = width // 2, height // 2 # start near the center
+                    dx, dy = NORTH # initial direction
+                    matrix = [[None] * width for _ in range(height)]
+                    count = 0
+                    while True:
+                        count += 1
+                        matrix[y][x] = count # visit
+                        # try to turn right
+                        new_dx, new_dy = turn_left[dx,dy]
+                        new_x, new_y = x + new_dx, y + new_dy
+                        if (0 <= new_x < width and 0 <= new_y < height and
+                            matrix[new_y][new_x] is None): # can turn right
+                            x, y = new_x, new_y
+                            dx, dy = new_dx, new_dy
+                        else: # try to move straight
+                            x, y = x + dx, y + dy
+                            if not (0 <= x < width and 0 <= y < height):
+                                return matrix # nowhere to go
+
+                def print_matrix(matrix):
+                    width = len(str(max(el for row in matrix for el in row if el is not None)))
+                    fmt = "{:0%dd}" % width
+                    for row in matrix:
+                        print(" ".join("_"*width if el is None else fmt.format(el) for el in row))
+
+                my_matrix = spiral(MASTER_WIDTH, MASTER_HEIGHT)
+
+                # PLOT GANN SQUARE OF 9
+
+                degrees = helio[helio.Date == today].values.tolist()[0]
                 degrees.pop(0)
                 planets = ["Ear", "Mer", "Ven", "Mar", "Jup", "Sat", "Ura", "Nep", "Plu"]
                 planet_hash = dict(zip(degrees, planets))
@@ -214,7 +256,6 @@ if authentication_status:
                 for i in range(10):
                     ax.add_patch(Rect((2-0.1*i, 2-0.1*i), 0.2*i, 0.2*i, facecolor="none", edgecolor="black", lw=1.5))
 
-                plt.show()
                 st.pyplot(fig)               
 
             with col00:
