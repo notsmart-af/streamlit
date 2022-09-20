@@ -173,7 +173,7 @@ if authentication_status:
                 helio['Nep'] = helio['Nep'].astype(int)
                 helio['Plu'] = helio['Plu'].astype(int)
 
-                degrees = helio[helio.Date == today].values.tolist()[0]
+                degrees = helio.values.tolist()[0]
                 degrees.pop(0)
                 planets = ["Ear", "Mer", "Ven", "Mar", "Jup", "Sat", "Ura", "Nep", "Plu"]
                 planet_hash = dict(zip(degrees, planets))
@@ -213,7 +213,7 @@ if authentication_status:
                             cell_colours[i].append("none")
 
                 fig, ax = plt.subplots()
-                fig.set_size_inches(15, 15, forward=True)
+                fig.set_size_inches(12, 12, forward=True)
 
                 ax.get_xaxis().set_visible(False)
                 ax.get_yaxis().set_visible(False)
@@ -230,7 +230,7 @@ if authentication_status:
 
                 for i in range(10):
                     ax.add_patch(Rect((2-0.1*i, 2-0.1*i), 0.2*i, 0.2*i, facecolor="none", edgecolor="black", lw=1.5))
-                    
+
                 st.pyplot(fig)               
 
             with col00:
