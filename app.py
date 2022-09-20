@@ -222,7 +222,7 @@ if authentication_status:
                     for i, degree in enumerate(row):
                         if i < len(row):
                             x.append(planet_hash[degree]) if degree in planet_hash.keys() else x.append(degree)
-                    new_matrix.append(x)
+                    return new_matrix.append(x)
 
                 out_mat = new_matrix
 
