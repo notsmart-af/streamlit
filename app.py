@@ -12,7 +12,6 @@ from matplotlib.patches import Rectangle as Rect
 import streamlit_authenticator as stauth
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
-import mpld3
 import streamlit as st
 import matplotlib.pylab as pylab
 import database as db
