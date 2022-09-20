@@ -16,6 +16,7 @@ import streamlit as st
 import matplotlib.pylab as pylab
 import database as db
 from PIL import Image
+
 import os
 
 # RECUP LA DATA
