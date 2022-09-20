@@ -112,12 +112,15 @@ if authentication_status:
         h1,h2,h3,h4=st.tabs(["Helio", "Geo", "Tools", "Sq9"])
 
         with h1:
-                st.dataframe(hm)
-        with col00:
-                st.markdown("**Transit Aspects**")
-                st.dataframe(mn1.style.background_gradient(cmap='Blues'))
-                st.markdown("**Natal Aspects**")
-                st.dataframe(mn2.style.background_gradient(cmap='Blues'))
+
+            col0,col00 = st.columns([6.618,3])
+            with col0:
+                    st.dataframe(hm)
+            with col0:
+                    st.markdown("**Transit Aspects**")
+                    st.dataframe(mn1.style.background_gradient(cmap='Blues'))
+                    st.markdown("**Natal Aspects**")
+                    st.dataframe(mn2.style.background_gradient(cmap='Blues'))
 
         with h2:
 
