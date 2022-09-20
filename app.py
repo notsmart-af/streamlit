@@ -242,7 +242,7 @@ if authentication_status:
         figui = px.bar(m, x="Date", y="EP", hover_data=['Date', 'EP'], color='EP', color_continuous_scale=px.colors.sequential.Cividis,
              height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
         st.plotly_chart(figui, use_container_width=True)
-        st.markdown("**Energy Points Hits on BTC chart last 2 years**")        
+        st.markdown("**Energy Points (EP) Hits on BTC chart last 2 years**")        
         st.image(epp)
 
     with Method:
