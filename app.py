@@ -171,7 +171,7 @@ if authentication_status:
                 for col in geox.columns[1:]:
                     geox = geox.astype({col: int})
 
-                degrees = helio[helio.Date == today].values.tolist()[0]
+                degrees = heliox[heliox.Date == today].values.tolist()[0]
                 degrees = degrees.pop(0)
                 planets = ["Ear", "Mer", "Ven", "Mar", "Jup", "Sat", "Ura", "Nep", "Plu"]
                 planet_hash = dict(zip(degrees, planets))
