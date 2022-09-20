@@ -125,7 +125,8 @@ if authentication_status:
                     st.dataframe(hm)
             with col00:
                     st.markdown("**Transit Aspects**")
-                    mn1 = mn1.round(2)
+                    for col in mn1.columns[1:]:
+                        mn1 = mn1.astype({col: int})
                     st.dataframe(mn1.style.background_gradient(cmap='Blues'))
                     st.markdown("**Natal Aspects**")
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
