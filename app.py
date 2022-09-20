@@ -113,7 +113,7 @@ if authentication_status:
 
         with h1:
 
-            col0,col00 = st.columns([6.618,3])
+            col0,col00 = st.columns([5,3])
             with col0:
                     st.dataframe(hm)
             with col00:
