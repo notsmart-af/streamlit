@@ -173,9 +173,10 @@ if authentication_status:
                 for col in helio.columns[1:]:
                     helio = helio.astype({col: int})
                 st.dataframe(helio)
-                original_titles = '**<p style="font-family:sans-serif; color:Blue; font-size: 20px;">**Geocentric**</p>**'
+                original_titles = '**<p style="font-family:sans-serif; color:DarkTurquoise; font-size: 20px;">**Geocentric**</p>**'
                 st.markdown(original_titles, unsafe_allow_html=True)
-                st.markdown("**Geo** in Blue")
+                for col in geo.columns[1:]:
+                    geo = geo.astype({col: int})
                 st.dataframe(geo) 
 
     with chart:
