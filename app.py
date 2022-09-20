@@ -173,6 +173,17 @@ if authentication_status:
                 helio['Nep'] = helio['Nep'].astype(int)
                 helio['Plu'] = helio['Plu'].astype(int)
 
+                geo['Moon'] = geo['Moon'].astype(int)
+                geo['Sun'] = geo['Sun'].astype(int)
+                geo['Mer'] = geo['Mer'].astype(int)
+                geo['Ven'] = geo['Ven'].astype(int)
+                geo['Mar'] = geo['Mar'].astype(int)
+                geo['Jup'] = geo['Jup'].astype(int)
+                geo['Sat'] = geo['Sat'].astype(int)
+                geo['Ura'] = geo['Ura'].astype(int)
+                geo['Nep'] = geo['Nep'].astype(int)
+                geo['Plu'] = geo['Plu'].astype(int)
+
                 degrees = helio.values.tolist()[0]
                 degrees.pop(0)
                 planets = ["Ear", "Mer", "Ven", "Mar", "Jup", "Sat", "Ura", "Nep", "Plu"]
