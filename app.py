@@ -10,6 +10,11 @@ from datetime import timedelta
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle as Rect
 import streamlit_authenticator as stauth
+import streamlit.components.v1 as components
+import matplotlib.pyplot as plt
+import mpld3
+import streamlit as st
+import matplotlib.pylab as pylab
 import database as db
 from PIL import Image
 import os
@@ -254,8 +259,6 @@ if authentication_status:
 
                 for i in range(10):
                     ax.add_patch(Rect((2-0.1*i, 2-0.1*i), 0.2*i, 0.2*i, facecolor="none", edgecolor="black", lw=1.5))
-
-                plt.show()
                 st.pyplot(fig)               
 
             with col00:
