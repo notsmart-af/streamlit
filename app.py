@@ -155,13 +155,19 @@ if authentication_status:
             col5, col9 = st.columns([6,4])
             with col5:
                 st.markdown("**Retro**")
+                for col in mn6.columns[1:]:
+                    mn6 = mn6.astype({col: int})
                 st.dataframe(mn6.style.background_gradient(cmap='Blues'))
             with col9:
+                for col in mn5.columns[1:]:
+                    mn5 = mn5.astype({col: int})
                 st.markdown("**Declination/Latitude**")
                 st.dataframe(mn5.style.background_gradient(cmap='Blues'))
 
             st.markdown("**Moon/Node/Dec/Lat**")
             col7, col8 = st.columns([12,0.2])
+                for col in mn7.columns[1:]:
+                    mn7 = mn7.astype({col: int})
             with col7:
                 st.dataframe(mn7.style.background_gradient(cmap='Blues'))
 
