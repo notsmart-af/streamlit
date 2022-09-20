@@ -159,7 +159,7 @@ if authentication_status:
             col0,col00 = st.columns([1,1])
             sq2 = Image.open(r'SQ2.png')
 
-                            with col0:
+            with col0:
                 #############################################################################
 
                 # SPIRAL MATRIX ALGORITHM FOR SQUARE OF 9
