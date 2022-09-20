@@ -159,7 +159,7 @@ if authentication_status:
             col0,col00 = st.columns([1,1])
             sq2 = Image.open(r'SQ2.png')
 
-            with col0:
+                            with col0:
                 #############################################################################
 
                 # SPIRAL MATRIX ALGORITHM FOR SQUARE OF 9
@@ -193,12 +193,18 @@ if authentication_status:
                             if not (0 <= x < width and 0 <= y < height):
                                 return matrix # nowhere to go
 
+                def print_matrix(matrix):
+                    width = len(str(max(el for row in matrix for el in row if el is not None)))
+                    fmt = "{:0%dd}" % width
+                    for row in matrix:
+                        print(" ".join("_"*width if el is None else fmt.format(el) for el in row))
+
                 my_matrix = spiral(MASTER_WIDTH, MASTER_HEIGHT)
 
                 # PLOT GANN SQUARE OF 9
 
                 degrees = helio[helio.Date == today].values.tolist()[0]
-                degrees = degrees.pop(0)
+                degrees.pop(0)
                 planets = ["Ear", "Mer", "Ven", "Mar", "Jup", "Sat", "Ura", "Nep", "Plu"]
                 planet_hash = dict(zip(degrees, planets))
 
@@ -253,6 +259,7 @@ if authentication_status:
 
                 for i in range(10):
                     ax.add_patch(Rect((2-0.1*i, 2-0.1*i), 0.2*i, 0.2*i, facecolor="none", edgecolor="black", lw=1.5))
+
                 st.pyplot(fig)               
 
             with col00:
