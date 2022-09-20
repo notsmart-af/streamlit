@@ -32,6 +32,7 @@ t = today
 # LOGO
 st.set_page_config(page_title="ASTROTOOL", layout="wide")
 logo = Image.open(r'logo.png')
+epp = Image.open(r'ep.png')
 
 col1, col2, col3 = st.columns([8, 7, 2])
 
@@ -241,6 +242,7 @@ if authentication_status:
         figui = px.bar(m, x="Date", y="EP", hover_data=['Date', 'EP'], color='EP', color_continuous_scale=px.colors.sequential.Cividis,
              height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
         st.plotly_chart(figui, use_container_width=True)
+        st.image(epp)
 
     with Method:
         
