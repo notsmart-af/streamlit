@@ -83,7 +83,6 @@ if authentication_status:
     geox = geox.copy()
 
     geo = geo.copy()
-    geo = geo.iloc[::, geo.columns !='Date'].apply(np.floor)
 
     hm = helio_main.copy()
     gm = geo_main.copy()
