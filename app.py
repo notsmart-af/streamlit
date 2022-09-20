@@ -132,7 +132,7 @@ if authentication_status:
                     for col in mn2.columns[3:]:
                         mn2 = mn2.astype({col: int})
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
-                    st.markdown("Legend: *7 = 7.5* & *22 = 22.5*")
+                    st.markdown("Legend: 7 = 7.5 & 22 = 22.5")
 
         with h2:
 
@@ -148,7 +148,7 @@ if authentication_status:
                 for col in mn4.columns[3:]:
                     mn4 = mn4.astype({col: int})
                 st.dataframe(mn4.style.background_gradient(cmap='Blues'))
-                st.markdown("Legend: *7 = 7.5* & *22 = 22.5*")
+                st.markdown("Legend: 7 = 7.5 & 22 = 22.5")
         
         with h3:
 
