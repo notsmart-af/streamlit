@@ -81,9 +81,7 @@ if authentication_status:
     helio_cum = helio_cum.copy()
     heliox = heliox.copy()
     geox = geox.copy()
-
     geo = geo.copy()
-
     hm = helio_main.copy()
     gm = geo_main.copy()
 
@@ -112,7 +110,62 @@ if authentication_status:
 
     # ONGLETS
 
-    main,chart,Method = st.tabs(["Main", "Chart","Method"])
+    help, main,chart,Method = st.tabs(["Help", "Main", "Chart","Method"])
+
+    with help:
+
+        col0,col00 = st.columns([4,3])
+
+        with col0:
+            st.title('AstroTool Help Page')
+            
+            gt = Image.open(r'gtlogo.png')
+
+            st.markdown('''
+            **This WebApp of Astrotool** is a gift from **[Geometric Thinking](https://geometricthinking.com "Geometric Thinking")** and the developpers **Amir & Sachith** to the world.  We have learned that there is a **very unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to discern, **far in advance, of the dates when turns are likely to occur**. We call those dates **ENERGY POINTS (EPs)**.  This file will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a heads up when to pay close attention to a chart for a trading opportunity**.
+            * Most of the workings of the file is not available inside this **Web-App** and/or **locked** to prevent the user from breaking it.
+            * The **CHART** page is self-explanatory.  The dates with the highest bars are the dates to watch the most.  Note that the ep dates should be viewed as +/- 1 day.  In other words, an ep may show up a day early or a day late.
+            * The **MAIN** page is chock full of astrological data related to the passage of time since key dates in BTC history.  Those dates are visible on the left side of the page.  As of the date of publication, the last date entered was 06/18/22.  
+            * If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at.  For a more thorough and complete understanding, you should attend a class, if and when Geometric Thinking holds another class.  
+            The founder of Geometric Thinking is no longer a young man and will not be involved with the markets for more than a few more years.  This workbook is given to help struggling traders by giving away some of the insights we PRAYED for, when we were starting out.  
+            **We wish you the very best success in your trading career**.
+            ''')
+            st.header('Who are we?')
+
+            st.image(gt)
+            
+            st.markdown('''
+            We opened Geometric Thinking in July 2017 and have now taught literally many hundreds of traders worldwide the art of Geometric Thinking.  
+            * Geometric Thinking focuses on a unique understanding of how geometry and natural law focuses the minds of traders (en masse) such that **there are points in time and price where we can forecast trend changes are most likely to occur.**
+
+            * Knowing in advance, for example, that a coin like BTC will likely reach an Energy Point (ep) in time 2 weeks in advance gives the trader an almost “unfair advantage” over other traders.  It becomes even more unfair if the Geometric Thinker realizes not only that a date 2 weeks away is a prime time to wait and watch for, but also realizes that there are forecast-able prices associated with that date.
+            * If you’ve been trading for awhile, you already know that this business is cut-throat. It is vicious and even very smart people typically lose everything over time.  If you are honest with yourself you know that **the classic trading techniques, divergences, moving averages, etc simply do not work consistently.**
+
+            * So what does work consistently?  What will give you an unfair advantage over other traders?  **Geometry and natural law**.  
+
+            * Knowing these things will not guarantee that you will win.  It simply gives you an advantage.  Look at the picture above of the man holding two aces in the hole.  Does this guarantee that he will win the hand?  **No.  There are still 100 ways to lose, even with a pair of aces in the hole.**  If he were playing against professional poker players he would still need to master the game right?  He would still need to hide his tells, learn to bluff, learn game mathematics, etc, in order to be a consistent winner.  So too with Geometric Thinking and trading.
+
+            * But still, imagine if EVERY hand, or nearly every hand, that man was dealt two aces in the hole (without cheating).  **UNFAIR ADVANTAGE, right?**    We can arrange for you to be dealt two aces in the hole more often than not.  If you will combine that with the dedication to master this business, you can become a consistent winner.  **We believe this 100%**.
+            ''')
+            
+            st.header('Why should you care?')
+            st.markdown('''
+            Whether you care to believe this or not, dates such as the 12/17/2017 high were seen weeks in advance as a date for a possible top.  The 3/12/2020 low was also forecasted as a possible low well more than a month in advance.  **WE LITERALLY TWEETED TO THE WORLD, AND BLOGGED, THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!**  To the best of our knowledge we are the only ones who did that. 
+
+            Whether you choose to believe this or not, I assure you it is true that at the very least, several hundred geometric thinking traders know which dates to watch, and which prices, LONG before other traders do.  Does that seem fair to you?  Does that matter?  Should you care?  **We think so.**
+            
+            You can join us in our [Telegram Channel](https://t.me/joinchat/FKSNuqrZpjhlZTJi)
+            ''')
+
+        with col00:
+                spa = Image.open(r'space.png')
+                st.image(spa)
+                astrotoologo = Image.open(r'astro.png')
+                sva = Image.open(r'sva.png')
+                st.image(sva)
+                st.markdown('*Amir & Sachith logo*')
+                st.markdown(''' This fully implemented Web-App, python ready has been created as part of a **Memory Paper** for **[DU Data Analytics @ University Panthéon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about trading & programming, they linked their passion to their interest to create this Web-App thanks to our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking* - that allowed us to translate Astrotool from excel to python and make a web-app off it... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of DU Data Analytics* - for allowing us AstroTool as a memory paper subject!''')
+
 
     with main:
 
@@ -132,7 +185,7 @@ if authentication_status:
                     for col in mn2.columns[3:]:
                         mn2 = mn2.astype({col: int})
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
-                    st.markdown("Legend: 7 = 7.5 & 22 = 22.5")
+                    st.markdown("Legend: 7 = 7.5° & 22 = 22.5°")
 
         with h2:
 
@@ -148,15 +201,13 @@ if authentication_status:
                 for col in mn4.columns[3:]:
                     mn4 = mn4.astype({col: int})
                 st.dataframe(mn4.style.background_gradient(cmap='Blues'))
-                st.markdown("Legend: 7 = 7.5 & 22 = 22.5")
+                st.markdown("Legend: 7 = 7.5° & 22 = 22.5°")
         
         with h3:
 
             col5, col9 = st.columns([6,4])
             with col5:
                 st.markdown("**Retro**")
-                for col in mn6.columns[1:]:
-                    mn6 = mn6.astype({col: int})
                 st.dataframe(mn6.style.background_gradient(cmap='Blues'))
             with col9:
                 for col in mn5.columns[1:]:
@@ -167,8 +218,6 @@ if authentication_status:
             st.markdown("**Moon/Node/Dec/Lat**")
             col7, col8 = st.columns([12,0.2])
             with col7:
-                for col in mn7.columns[1:]:
-                    mn7 = mn7.astype({col: int})
                 st.dataframe(mn7.style.background_gradient(cmap='Blues'))
 
         with h4:
