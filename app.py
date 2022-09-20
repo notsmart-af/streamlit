@@ -124,14 +124,15 @@ if authentication_status:
             with col0:
                     st.dataframe(hm)
             with col00:
-                    st.markdown("**Transit Aspects**  (*7 = 7.5 & 22 = 22.5*)")
+                    st.markdown("**Transit Aspects**")
                     for col in mn1.columns[3:]:
                         mn1 = mn1.astype({col: int})
                     st.dataframe(mn1.style.background_gradient(cmap='Blues'))
-                    st.markdown("**Natal Aspects** (*7 = 7.5 & 22 = 22.5*)")
+                    st.markdown("**Natal Aspects**")
                     for col in mn2.columns[3:]:
                         mn2 = mn2.astype({col: int})
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
+                    st.markdown("*7 = 7.5* & *22 = 22.5*")
 
         with h2:
 
@@ -139,14 +140,15 @@ if authentication_status:
             with col0:
                 st.dataframe(gm.style.background_gradient(cmap='Blues'))
             with col00:
-                st.markdown("**Transit Aspects** (*7 = 7.5 & 22 = 22.5*)")
+                st.markdown("**Transit Aspects**")
                 for col in mn3.columns[3:]:
                     mn3 = mn3.astype({col: int})
                 st.dataframe(mn3.style.background_gradient(cmap='Blues'))
-                st.markdown("**Natal Aspects** (*7 = 7.5 & 22 = 22.5*)")
+                st.markdown("**Natal Aspects**")
                 for col in mn4.columns[3:]:
                     mn4 = mn4.astype({col: int})
                 st.dataframe(mn4.style.background_gradient(cmap='Blues'))
+                st.markdown("*7 = 7.5* & *22 = 22.5*")
         
         with h3:
 
