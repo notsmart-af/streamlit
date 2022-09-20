@@ -193,12 +193,6 @@ if authentication_status:
                             if not (0 <= x < width and 0 <= y < height):
                                 return matrix # nowhere to go
 
-                def print_matrix(matrix):
-                    width = len(str(max(el for row in matrix for el in row if el is not None)))
-                    fmt = "{:0%dd}" % width
-                    for row in matrix:
-                        print(" ".join("_"*width if el is None else fmt.format(el) for el in row))
-
                 my_matrix = spiral(MASTER_WIDTH, MASTER_HEIGHT)
 
                 # PLOT GANN SQUARE OF 9
