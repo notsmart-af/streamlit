@@ -79,6 +79,8 @@ if authentication_status:
     helio = helio.copy()
     #helio = helio.iloc[::, helio.columns !='Date'].apply(np.floor)
     helio_cum = helio_cum.copy()
+    heliox = heliox.copy()
+    geox = geox.copy()
 
     geo = geo.copy()
     geo = geo.iloc[::, geo.columns !='Date'].apply(np.floor)
@@ -163,32 +165,16 @@ if authentication_status:
                 MASTER_WIDTH    = 19
                 MASTER_HEIGHT   = 19
 
-                helio['Earth'] = helio['Earth'].astype(int)
-                helio['Mer'] = helio['Mer'].astype(int)
-                helio['Ven'] = helio['Ven'].astype(int)
-                helio['Mar'] = helio['Mar'].astype(int)
-                helio['Jup'] = helio['Jup'].astype(int)
-                helio['Sat'] = helio['Sat'].astype(int)
-                helio['Ura'] = helio['Ura'].astype(int)
-                helio['Nep'] = helio['Nep'].astype(int)
-                helio['Plu'] = helio['Plu'].astype(int)
+                for col in heliox.columns[1:]:
+                    heliox = heliox.astype({col: int})
 
-                geo['Moon'] = geo['Moon'].astype(int)
-                geo['Sun'] = geo['Sun'].astype(int)
-                geo['Mer'] = geo['Mer'].astype(int)
-                geo['Ven'] = geo['Ven'].astype(int)
-                geo['Mar'] = geo['Mar'].astype(int)
-                geo['Jup'] = geo['Jup'].astype(int)
-                geo['Sat'] = geo['Sat'].astype(int)
-                geo['Ura'] = geo['Ura'].astype(int)
-                geo['Nep'] = geo['Nep'].astype(int)
-                geo['Plu'] = geo['Plu'].astype(int)
+                for col in geox.columns[1:]:
+                    geox = geox.astype({col: int})
 
-                degrees = helio.values.tolist()[0]
-                degrees.pop(0)
+                degrees = helio[helio.Date == today].values.tolist()[0]
+                degrees = degrees.pop(0)
                 planets = ["Ear", "Mer", "Ven", "Mar", "Jup", "Sat", "Ura", "Nep", "Plu"]
                 planet_hash = dict(zip(degrees, planets))
-                planet_hash
 
                 matrix = [[307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325],[306,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,326],
                 [305,240,183,184,185,186,187,188,189,190,191,192,193,194,195,196, 197,258,327],[304,239,182,133,134,135,136,137,138,139,140,141,142,143,144,145,198,259,328],[303,238,181,132,91,92,93,94,95,96,97,98,99,100,101,146,199,260,329],
@@ -197,6 +183,7 @@ if authentication_status:
                 [296,231,174,125,84,51,26,25,24,23,22,21,42,71,108,153,206,267,336],[295,230,173,124,83,50,49,48,47,46,45,44,43,72,109,154,207,268,337],[294,229,172,123,82,81,80,79,78,77,76,75,74,73,110,155,208,269,338],
                 [293,228,171,122,121,120,119,118,117,116,115,114,113,112,111,156,209,270,339],[292,227,170,169,168,167,166,165,164,163,162,161,160,159,158,157,210,271,340],[291,226,225,224,223,222,221,220,219,218,217,216,215,214,213,212,211,272,341],
                 [290,289,288,287,286,285,284,283,282,281,280,279,278,277,276,275,274,273,342],[361,360,359,358,357,356,355,354,353,352,351,350,349,348,347,346,345,344,343]]
+
                 new_matrix = []
 
                 for row in matrix:
@@ -224,7 +211,7 @@ if authentication_status:
                             cell_colours[i].append("none")
 
                 fig, ax = plt.subplots()
-                fig.set_size_inches(12, 12, forward=True)
+                fig.set_size_inches(15, 15, forward=True)
 
                 ax.get_xaxis().set_visible(False)
                 ax.get_yaxis().set_visible(False)
