@@ -166,8 +166,8 @@ if authentication_status:
 
             st.markdown("**Moon/Node/Dec/Lat**")
             col7, col8 = st.columns([12,0.2])
-                for col in mn7.columns[1:]:
-                    mn7 = mn7.astype({col: int})
+            for col in mn7.columns[1:]:
+                mn7 = mn7.astype({col: int})
             with col7:
                 st.dataframe(mn7.style.background_gradient(cmap='Blues'))
 
