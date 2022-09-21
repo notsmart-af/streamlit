@@ -197,7 +197,10 @@ if authentication_status:
 
             col0,col00 = st.columns([6.618,3])
             with col0:
-                st.dataframe(gm.style.background_gradient(cmap='Blues'))
+                    def highlight_everyother(s):
+                        return ['background-color: orange; color:black' if x%2==1 else ''
+                            for x in range(len(s))]
+                    st.dataframe(gm.style.apply(highlight_everyother))
             with col00:
                 st.markdown("**Transit Aspects**")
                 for col in mn3.columns[3:]:
