@@ -229,7 +229,7 @@ if authentication_status:
             sq2 = Image.open(r'SQ2.png')
 
             with col0:
-                st.image(sq1, width=1050)
+                st.image(sq1)
 
             with col00:
                 st.image(sq2)
