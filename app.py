@@ -182,7 +182,7 @@ if authentication_status:
                             return ['background-color: yellow']*3
                         else:
                             return ['background-color: white']*3
-                st.dataframe(hm.style.apply(highlight_everyother))
+                st.dataframe(hm.style.apply(highlight_everyother, axis=1))
 
             with col00:
                     st.markdown("**Transit Aspects**")
