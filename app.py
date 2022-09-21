@@ -300,7 +300,7 @@ if authentication_status:
         fig.add_vline(x=1, x0="2022-04-19", x1="2022-04-19", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2022-05-16", x1="2022-05-16", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2022-06-06", x1="2022-06-06", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-06-19", x1="2022-06-19", line_width=2, line_color="black")
+        fig.add_vline(x=1, x0="2022-06-19", x1="2022-06-19", line_width=2, line_color="blue")
         fig.add_vline(x=1, x0="2022-06-26", x1="2022-06-26", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2022-07-02", x1="2022-07-02", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2022-07-11", x1="2022-07-11", line_width=1, line_color="blue")
