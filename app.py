@@ -249,7 +249,7 @@ if authentication_status:
         figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
              height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
         st.plotly_chart(figui, use_container_width=True)
-        st.title('**Energy Points Hits on BTC @ last 2 years**')
+        st.markdown('**Energy Points Hits on BTC @ last 2 years**')
         df = btcusd_d.copy()
 
         fig = go.Figure(data=[go.Candlestick(x=df['Date'],
