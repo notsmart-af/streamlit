@@ -177,12 +177,12 @@ if authentication_status:
             col0,col00 = st.columns([4,3])
 
             with col0:
-                    def highlight_everyother(s):
+                def highlight_everyother(s):
                         if s.name%2==1:
                             return ['background-color: yellow']*3
                         else:
                             return ['background-color: white']*3
-                    st.dataframe(hm.style.apply(highlight_everyother))
+                st.dataframe(hm.style.apply(highlight_everyother))
 
             with col00:
                     st.markdown("**Transit Aspects**")
