@@ -324,8 +324,8 @@ if authentication_status:
 
         fig.update_layout(
         autosize=False,
-        width=1280,
-        height=1080)
+        width=1680,
+        height=1050)
 
         fig.update_layout(plot_bgcolor="white")
 
