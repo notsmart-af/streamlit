@@ -177,7 +177,7 @@ if authentication_status:
             col0,col00 = st.columns([4,3])
             with col0:
                     def highlight_everyother(s):
-                        return ['background-color: yellow; color:blue' if x%2==1 else ''
+                        return ['background-color: orange; color:black' if x%2==1 else ''
                             for x in range(len(s))]
 
                     hm.style.apply(highlight_everyother)
