@@ -16,7 +16,9 @@ import streamlit as st
 import matplotlib.pylab as pylab
 import database as db
 from PIL import Image
-
+import plotly.graph_objects as go
+import pandas as pd
+from datetime import datetime
 import os
 
 # RECUP LA DATA
@@ -247,7 +249,26 @@ if authentication_status:
         figui = px.bar(m, x="Date", y="EP", hover_data=['Date', 'EP'], color='EP', color_continuous_scale=px.colors.sequential.Cividis,
              height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
         st.plotly_chart(figui, use_container_width=True)
-        st.markdown("**Energy Points (EP) Hits on BTC chart last 2 years**")        
+        st.markdown("**Energy Points (EP) Hits on BTC chart last 2 years**")  
+        df = btcusd_d.copy()
+
+        fig = go.Figure(data=[go.Candlestick(x=df['Date'],
+                        open=df['Open'],
+                        high=df['High'],
+                        low=df['Low'],
+                        close=df['Close'])])
+        fig.add_vline(x=1, x0="2021-11-10", x1="2021-11-11", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2020-12-05", x1="2020-12-05", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2020-12-18", x1="2020-12-18", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2021-01-08", x1="2021-01-08", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2021-01-22", x1="2021-01-22", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2021-01-22", x1="2021-01-22", line_width=1, line_color="blue")
+        fig.update_layout(
+        autosize=False,
+        width=950,
+        height=950,)
+
+        st.plotly_chart(fig, use_container_width=True)
         st.image(epp)
 
     with Method:
