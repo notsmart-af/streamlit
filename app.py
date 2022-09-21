@@ -322,19 +322,16 @@ if authentication_status:
         fig.update_layout(plot_bgcolor="white")
 
         st.plotly_chart(fig, use_container_width=True)
-
         dataframe_c = dataframe_c.copy()
         st.markdown("Total Major EP since last 2 years")
-        st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
-        fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Blues,
-                        title="EP | Hits Chart")
-        st.plotly_chart(fig1, use_container_width=True)
-
+        with col1:
+            st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
+        with col2:
+            fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Blues,
+                            title="EP | Hits Chart")
+            st.plotly_chart(fig1, use_container_width=True)
 
         # Dataframe EP
-
-
-
 
     with Method:
         
