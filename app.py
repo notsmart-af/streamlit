@@ -284,7 +284,6 @@ if authentication_status:
         fig.update_layout(plot_bgcolor="white")
 
         st.plotly_chart(fig, use_container_width=True)
-        st.image(epp)
 
     with Method:
         
