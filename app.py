@@ -327,7 +327,7 @@ if authentication_status:
         with col1:
             st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
         with col2:
-            fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Blues,
+            fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
                             title="EP | Hits Chart")
             st.plotly_chart(fig1, use_container_width=True)
 
