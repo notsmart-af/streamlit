@@ -246,6 +246,7 @@ if authentication_status:
                 st.dataframe(geo) 
 
     with chart:
+        st.title('**Energy Points Chart (next 3 months)**')
         figui = px.bar(m, x="Date", y="EP", hover_data=['Date', 'EP'], color='EP', color_continuous_scale=px.colors.sequential.Cividis,
              height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
         st.plotly_chart(figui, use_container_width=True)
