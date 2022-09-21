@@ -214,6 +214,9 @@ if authentication_status:
                     mn4 = mn4.astype({col: int})
                 st.dataframe(mn4.style.background_gradient(cmap='Blues'))
                 st.markdown("7 = 7.5° & 22 = 22.5°")
+
+            help2 = Image.open(r'mainhelp.png')
+            st.image(help2)
         
         with h3:
 
