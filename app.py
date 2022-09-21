@@ -161,6 +161,7 @@ if authentication_status:
 
         with col00:
                 spa = Image.open(r'space.png')
+                st.markdown('*The Solar System - Spirals everywhere* | taken from "A Little Book of Coincidence" by John Southcliffe Martineau')
                 st.image(spa)
                 astrotoologo = Image.open(r'astro.png')
                 sva = Image.open(r'sva.png')
