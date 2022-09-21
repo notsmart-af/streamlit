@@ -283,6 +283,8 @@ if authentication_status:
         'plot_bgcolor': 'rgba(0,0,0,0)',
         'paper_bgcolor': 'rgba(0,0,0,0)')
 
+        fig.update_layout(paper_bgcolor="white")
+
         st.plotly_chart(fig, use_container_width=True)
         st.image(epp)
 
