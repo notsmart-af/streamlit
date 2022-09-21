@@ -198,7 +198,7 @@ if authentication_status:
             col0,col00 = st.columns([6.618,3])
             with col0:
                     def highlight_everyother(s):
-                        return ['background-color: orange; color:black' if x%2==1 else ''
+                        return ['background-color: yellow; color:black' if x%2==1 else ''
                             for x in range(len(s))]
                     st.dataframe(gm.style.apply(highlight_everyother))
             with col00:
