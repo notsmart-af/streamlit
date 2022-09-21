@@ -281,7 +281,7 @@ if authentication_status:
         width=950,
         height=950)
 
-        fig.update_layout(paper_bgcolor="white")
+        fig.update_layout(plot_bgcolor="white")
 
         st.plotly_chart(fig, use_container_width=True)
         st.image(epp)
