@@ -168,7 +168,6 @@ if authentication_status:
                 st.markdown('*Amir & Sachith logo*')
                 st.markdown(''' This fully implemented Web-App, python ready has been created as part of a **Memory Paper** for **[DU Data Analytics @ University Panthéon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about trading & programming, they linked their passion to their interest to create this Web-App thanks to our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking* - that allowed us to translate Astrotool from excel to python and make a web-app off it... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of DU Data Analytics* - for allowing us AstroTool as a memory paper subject!''')
 
-
     with main:
 
         h1,h2,h3,h4=st.tabs(["Helio", "Geo", "Tools", "Sq9"])
@@ -261,20 +260,21 @@ if authentication_status:
         fig.add_vline(x=1, x0="2020-12-05", x1="2020-12-05", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2020-12-18", x1="2020-12-18", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-01-08", x1="2021-01-08", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-01-22", x1="2021-01-22", line_width=1, line_color="blue")        
+        fig.add_vline(x=1, x0="2021-01-22", x1="2021-01-22", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2021-02-08", x1="2021-02-08", line_width=1, line_color="blue")      
         fig.add_vline(x=1, x0="2021-02-17", x1="2021-02-17", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-02-26", x1="2021-02-26", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-03-14", x1="2021-03-14", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-03-24", x1="2021-03-24", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-04-15", x1="2021-04-15", line_width=2, line_color="blue")
-        fig.add_vline(x=1, x0="2021-04-24", x1="2021-04-24", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2021-04-28", x1="2021-04-28", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-05-05", x1="2021-05-05", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-05-18", x1="2021-05-18", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-05-26", x1="2021-05-26", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-06-10", x1="2021-06-10", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-06-23", x1="2021-06-23", line_width=2, line_color="blue")
+        fig.add_vline(x=1, x0="2021-06-19", x1="2021-06-19", line_width=2, line_color="blue")
         fig.add_vline(x=1, x0="2021-07-06", x1="2021-07-06", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-07-21", x1="2021-07-21", line_width=1, line_color="blue")
+        fig.add_vline(x=1, x0="2021-07-18", x1="2021-07-18", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-07-31", x1="2021-07-31", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-08-04", x1="2021-08-04", line_width=1, line_color="blue")
         fig.add_vline(x=1, x0="2021-09-07", x1="2021-09-07", line_width=1, line_color="blue")
@@ -320,6 +320,11 @@ if authentication_status:
         fig.update_layout(plot_bgcolor="white")
 
         st.plotly_chart(fig, use_container_width=True)
+
+        # Dataframe EP
+
+
+
 
     with Method:
         
