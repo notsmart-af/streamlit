@@ -225,7 +225,7 @@ if authentication_status:
         with h4:
 
             col0,col00 = st.columns([2,1])
-            sq1 = Image.open(r'sq9.png')
+            sq1 = Image.open(r'sq9.jpg')
             sq2 = Image.open(r'SQ2.png')
 
             with col0:
