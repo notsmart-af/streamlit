@@ -325,7 +325,7 @@ if authentication_status:
         dataframe_c = dataframe_c.copy()
         st.markdown("Total Major EP since last 2 years")
 
-        oo = st 
+        oo = st.tabs(['Info'])
         with oo:
             col1, col2 = st.columns(1,3.33)
 
