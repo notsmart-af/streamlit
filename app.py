@@ -110,14 +110,14 @@ if authentication_status:
 
     # ONGLETS
 
-    help, main,chart,Method = st.tabs(["Help", "Main", "Chart","Method"])
+    help, main,chart,Method = st.tabs(["Info", "Main", "Chart","Method"])
 
     with help:
 
         col0,col00 = st.columns([4,3])
 
         with col0:
-            st.title('AstroTool Help Page')
+            st.title('AstroTool Info Page')
             
             gt = Image.open(r'gtlogo.png')
 
