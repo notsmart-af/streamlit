@@ -116,7 +116,7 @@ if authentication_status:
 
     with help:
 
-        col0,col00 = st.columns([4,3])
+        col0,col00 = st.columns([3,4])
 
         with col0:
             st.title('AstroTool Info Page')
