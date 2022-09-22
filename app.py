@@ -37,7 +37,7 @@ today = datetime.strftime(datetime.now(), "%d/%m/%Y")
 t = today
 
 # LOGO
-st.set_page_config(page_title="ASTROTOOL", layout="wide")
+st.set_page_config(page_title="ASTROTOOL©", layout="wide")
 logo = Image.open(r'logo.png')
 epp = Image.open(r'ep.png')
 
@@ -75,7 +75,7 @@ if authentication_status == None:
 
 if authentication_status:
 
-    st.markdown(f"Welcome aboard {names}, enjoy our Alpha Version!")
+    st.markdown(f"Welcome aboard {names}, enjoy the Alpha version of AstroTool© !")
 
     m = fluchart.copy()
     helio = helio.copy()
@@ -119,12 +119,12 @@ if authentication_status:
         col0,col00 = st.columns([5,3.5])
 
         with col0:
-            st.title('AstroTool Info Page')
+            st.title('AstroTool© Info Page')
             
             gt = Image.open(r'gtlogo.png')
 
             st.markdown('''
-            **This WebApp of Astrotool** is a gift from **[Geometric Thinking](https://geometricthinking.com "Geometric Thinking")** and the developpers **Amir & Sachith** to the world.  We have learned that there is a **very unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to discern, **far in advance, of the dates when turns are likely to occur**. We call those dates **ENERGY POINTS (EPs)**.  This WebApp will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a heads up when to pay close attention to a chart for a trading opportunity**.
+            **This WebApp of Astrotool©** is a gift from **[Geometric Thinking](https://geometricthinking.com "Geometric Thinking")** and the developpers **Amir & Sachith** to the world.  We have learned that there is a **very unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to discern, **far in advance, of the dates when turns are likely to occur**. We call those dates **ENERGY POINTS (EPs)**.  This WebApp will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a heads up when to pay close attention to a chart for a trading opportunity**.
             * Most of the workings of the file is not available inside this **Web-App** and/or **locked** to prevent the user from breaking it.
             * The **CHART** page is self-explanatory.  The dates with the highest bars are the dates to watch the most.  Note that the ep dates should be viewed as +/- 1 day.  In other words, an ep may show up a day early or a day late.
             * The **MAIN** page is chock full of astrological data related to the passage of time since key dates in BTC history.  Those dates are visible on the left side of the page.  As of the date of publication, the last date entered was 06/18/22.  
@@ -167,9 +167,9 @@ if authentication_status:
                 sva = Image.open(r'sva.png')
                 st.image(sva)
                 st.markdown('*About the developers...*')
-                st.markdown('''This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Panthéon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since 2015', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking* - who allowed us to translate "Astrotool" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool as a memory paper subject!
+                st.markdown('''This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Panthéon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since 2015', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking* - who allowed us to translate "Astrotool©" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool© as a memory paper subject!
 
-                The developers take no credit for the basic calculations and methods of the "Astrotool" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire "Astrotool" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha...''')
+                The developers take no credit for the basic calculations and methods of the "Astrotool©" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire "Astrotool" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha...''')
 
     with main:
 
@@ -328,7 +328,7 @@ if authentication_status:
         st.markdown("Total Major EP since last 2 years")
         st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
         fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                    title="EP | Hits Chart")
+                    title="EP hits since last 2 years")
         st.plotly_chart(fig1, use_container_width=True)
 
         # Dataframe EP
