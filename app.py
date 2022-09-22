@@ -152,7 +152,7 @@ if authentication_status:
             
             st.header('Why should you care?')
             st.markdown('''
-            Whether you care to believe this or not, dates such as the 12/17/2017 (20k) or the 11/10/2021 (69k) BTC high were seen weeks in advance as a date for a possible top.  The 3/12/2020 low was also forecasted as a possible low well more than a month in advance.  **WE LITERALLY [TWEETED TO THE WORLD](https://twitter.com/jimfred1276/status/1462641460948267013), THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!**  To the best of our knowledge we are the only ones who did that. 
+            Whether you care to believe this or not, dates such as the 12/17/2017 (20k) or the 15/04/2021 (65k) BTC high were seen weeks in advance as a date for a possible top.  The 3/12/2020 low was also forecasted as a possible low well more than a month in advance.  **WE LITERALLY [TWEETED TO THE WORLD](https://twitter.com/jimfred1276/status/1462641460948267013), THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!**  To the best of our knowledge we are the only ones who did that. 
 
             Whether you choose to believe this or not, I assure you it is true that at the very least, several hundred geometric thinking traders know which dates to watch, and which prices, LONG before other traders do.  Does that seem fair to you?  Does that matter?  Should you care?  **We think so.**
 
