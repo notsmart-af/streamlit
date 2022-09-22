@@ -129,7 +129,7 @@ if authentication_status:
             * The **CHART** page is self-explanatory.  The dates with the highest bars are the dates to watch the most.  Note that the ep dates should be viewed as +/- 1 day.  In other words, an ep may show up a day early or a day late.
             * The **MAIN** page is chock full of astrological data related to the passage of time since key dates in BTC history.  Those dates are visible on the left side of the page.  As of the date of publication, the last date entered was 06/18/22.  
             * If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at.  For a more thorough and complete understanding, you should attend a class, if and when Geometric Thinking holds another class.  
-            The founder of Geometric Thinking is no longer a young man and will not be involved with the markets for more than a few more years.  This workbook is given to help struggling traders by giving away some of the insights we PRAYED for, when we were starting out.  
+            The founder of Geometric Thinking is no longer a young man and will not be involved with the markets for more than a few more years.  This WebApp is given to help geometricthinking students by giving away some of the insights we PRAYED for, when we were starting out.  
             **We wish you the very best success in your trading career**.
             ''')
             st.header('Who are we?')
