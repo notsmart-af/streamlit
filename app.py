@@ -194,7 +194,7 @@ if authentication_status:
             st.write(' ')
 
         figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-            height=418).update_layout(xaxis={"rangeslider":{"visible":True}})
+            height=550).update_layout(xaxis={"rangeslider":{"visible":True}})
         st.plotly_chart(figui, use_container_width=True)
 
     with main:
