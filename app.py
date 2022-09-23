@@ -113,7 +113,7 @@ if authentication_status:
 
     # ONGLETS
 
-    info, help, main, chart, Method = st.tabs(["Info", "Help", "Main", "Chart", "Method"])
+    info, help, main, chart, Method = st.tabs(["About us", "Help", "Main", "Chart", "Method"])
 
     with info:
 
@@ -173,100 +173,106 @@ if authentication_status:
                 The developers take no credit for the basic calculations and methods of the "Astrotool©" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire "Astrotool" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha...''')
 
     with help:
-
-        col1, col2, col3 = st.columns([2, 3, 2])
-
-        with col1:
-            st.write(' ')
-
-        with col2:
-            st.title("AstroTool Help Page")
-            st.markdown('''GeometricThinking is of the opinion that it is FAR better to be **focus on time** as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally **hundreds of hidden variables** that we were never even taught to consider.''')
-            
-            st.markdown('''AstroTool was developed to solve a significant problem for forecasters who are employing natural law (astrology, arithmetic, geometry and universal principles of growth). There are so many factors to consider that it quickly becomes impossible for a serious forecaster to keep a handle on the hundreds of variables that are at work. We found ourselves missing turns that we had ourselves forecasted in the past, because we got lost in the minutiae of forecasting, along with simply losing track of where we were in real-time. AstroTool has solved this problem.''')
-            
-            st.markdown('''Following up on the success of AstroTool v5.3 (*which was made available on this website to the public for free*), v6.0 has been completed. It offers several improvements over v5.3 and is now the tool of choice for those who have access to it.''')
-            
-            st.markdown('''Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. **AstroTool’s output will be put behind a paywall at some point in the future**. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of **80% accurate in forecasting market turns**. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. **We are confident in what you will find.**''')
-            
-            st.markdown('''The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:''')
-        with col3:
-            st.write(' ')
- 
-        col1, col2, col3 = st.columns([1,3,1])
-        with col1:
-            st.write('')
-        with col2:
-            sp = Image.open(r'piv.png')
-            st.image(sp)
-        with col3:
-            st.write('')
-
-
-        col1, col2, col3 = st.columns([2, 3, 2])
-
-        with col1:
-            st.write(' ')
-
-        with col2:
-            st.title("Chart")
-            st.markdown('As mentioned above, the key component of Astrotool is the chart of forecasted EP dates in the months ahead. We use it with the understanding that it is accurate **+/- 1 day**. In other words, if a date like 4/10/2021 is forecasted, then we know to be alert from 4/9-4/11/2021. Here is an example of the chart:')
-
-        with col3:
-            st.write(' ')
         
-        col1, col2, col3 = st.columns([0.5,5,0.5])
+        ee1,ee2=st.tabs(["Intro", "User Guide"])
 
-        with col1:
-            st.write('')
-        with col2:
-            figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
-            st.plotly_chart(figui, use_container_width=True)
-        with col3:
-            st.write('')
+        with ee1:
+            col1, col2, col3 = st.columns([2, 3, 2])
 
-        col1, col2, col3 = st.columns([2, 3, 2])
+            with col1:
+                st.write(' ')
 
-        with col1:
-            st.write(' ')
+            with col2:
+                st.title("AstroTool© Help Page")
+                st.markdown('''GeometricThinking is of the opinion that it is FAR better to be **focus on time** as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally **hundreds of hidden variables** that we were never even taught to consider.''')
+                
+                st.markdown('''AstroTool© was developed to solve a significant problem for forecasters who are employing natural law (astrology, arithmetic, geometry and universal principles of growth). There are so many factors to consider that it quickly becomes impossible for a serious forecaster to keep a handle on the hundreds of variables that are at work. We found ourselves missing turns that we had ourselves forecasted in the past, because we got lost in the minutiae of forecasting, along with simply losing track of where we were in real-time. AstroTool has solved this problem.''')
+                
+                st.markdown('''Following up on the success of AstroTool© v5.3 (*which was made available on this website to the public for free*), v6.0 has been completed. It offers several improvements over v5.3 and is now the tool of choice for those who have access to it.''')
+                
+                st.markdown('''Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. **AstroTool’s output will be put behind a paywall at some point in the future**. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of **80% accurate in forecasting market turns**. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. **We are confident in what you will find.**''')
+                
+                st.markdown('''The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:''')
+            
+            with col3:
+                st.write(' ')
+    
+            col1, col2, col3 = st.columns([1,3,1])
 
-        with col2:
-            st.title("Sq9")
-            st.markdown('As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). ***It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP.***')
+            with col1:
+                st.write('')
+                
+            with col2:
+                sp = Image.open(r'piv.png')
+                st.image(sp)
+            with col3:
+                st.write('')
 
-        with col3:
-            st.write(' ')
 
-        col1, col2, col3 = st.columns([1,5,1])
+            col1, col2, col3 = st.columns([2, 3, 2])
 
-        with col1:
-            st.write('')
-        with col2:
-            sp = Image.open(r'sq9.png')
-            st.image(sp)
-        with col3:
-            st.write('')
+            with col1:
+                st.write(' ')
 
-        col1, col2, col3 = st.columns([2, 3, 2])
+            with col2:
+                st.title("Chart")
+                st.markdown('As mentioned above, the key component of Astrotool is the chart of forecasted EP dates in the months ahead. We use it with the understanding that it is accurate **+/- 1 day**. In other words, if a date like 4/10/2021 is forecasted, then we know to be alert from 4/9-4/11/2021. Here is an example of the chart:')
 
-        with col1:
-            st.write(' ')
+            with col3:
+                st.write(' ')
+            
+            col1, col2, col3 = st.columns([0.5,5,0.5])
 
-        with col2:
-            st.title("Main Page")
-            st.markdown("If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at. At first sight it might looks difficult to understand, but that's not! **Let's debunk it!**")
-            st.markdown("The first two rows correspond to the actual transit of the planets. Their current degrees are displayed in the first row.  In the second row the name of the current house of the planet is given as well as its number of degrees in this house. This data is updated automatically every day by our algorithm.")
-            st.markdown("The third and fourth rows correspond to the cumulative degrees since the date indicated. The third row contains the cumulative number of degrees, and the fourth row contains the number of revolutions followed by the number of degrees remaining before the next revolution.")
-            st.markdown("Apart from the first 2 rows, the rest of the rows are based on the cumulative degrees since the major key date or pivot date... You can find the date '31/10/2008' which is the BTC White Paper or '01/03/2009', the genesis-block day also major TOPS such as '17/12/2017' (20k) or '11/10/2021' (69k) are also in the table...")
-            st.markdown("**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!")
-            def highlight_everyother(s):
-                return ['background-color: yellow; color:black' if x%2==1 else ''
-                    for x in range(len(s))]
-            st.dataframe(hm.head(6).style.apply(highlight_everyother))           
+            with col1:
+                st.write('')
+            with col2:
+                figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                    height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
+                st.plotly_chart(figui, use_container_width=True)
+            with col3:
+                st.write('')
 
-        with col3:
-            st.write(' ')
+            col1, col2, col3 = st.columns([2, 3, 2])
+
+            with col1:
+                st.write(' ')
+
+            with col2:
+                st.title("Sq9")
+                st.markdown("As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). **It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP and turned out to be the 65k BTC Top we all aware of.**")
+                st.markdown("Below here's a plot of the **4/14/2021** Sq9 visualisation.. We can clearly see 6 planets that are in this 'yellow' area. This yellow zone is separated into 8 lines, all 45 degrees apart. The more planets in this zone, the more important the date in question will be perceived as a pivot!")
+            with col3:
+                st.write(' ')
+
+            col1, col2, col3 = st.columns([1,5,1])
+
+            with col1:
+                st.write('')
+            with col2:
+                sp = Image.open(r'sqhelp.png')
+                st.image(sp)
+            with col3:
+                st.write('')
+
+            col1, col2, col3 = st.columns([2, 3, 2])
+
+            with col1:
+                st.write(' ')
+
+            with col2:
+                st.title("Main Page")
+                st.markdown("If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at. At first sight it might looks difficult to understand, but that's not! **Let's debunk it!**")
+                st.markdown("The first two rows correspond to the actual transit of the planets. Their current degrees are displayed in the first row.  In the second row the name of the current house of the planet is given as well as its number of degrees in this house. This data is updated automatically every day by our algorithm.")
+                st.markdown("The third and fourth rows correspond to the cumulative degrees since the date indicated. The third row contains the cumulative number of degrees, and the fourth row contains the number of revolutions followed by the number of degrees remaining before the next revolution.")
+                st.markdown("Apart from the first 2 rows, the rest of the rows are based on the cumulative degrees since the major key date or pivot date... You can find the date and the related data infos of '31/10/2008' which is the BTC White Paper or '01/03/2009', the genesis-block day also major TOPS such as '17/12/2017' (20k) or '11/10/2021' (69k) are also in the table...")
+                st.markdown("**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!")
+                def highlight_everyother(s):
+                    return ['background-color: yellow; color:black' if x%2==1 else ''
+                        for x in range(len(s))]
+                st.dataframe(hm.head(6).style.apply(highlight_everyother))           
+
+            with col3:
+                st.write(' ')
 
         
 
