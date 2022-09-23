@@ -193,14 +193,81 @@ if authentication_status:
         with col3:
             st.write(' ')
  
-        col2, col3 = st.columns([1,1])
-
+        col1, col2, col3 = st.columns([1,3,1])
+        with col1:
+            st.write('')
         with col2:
-            sp = Image.open(r'piv1.png')
+            sp = Image.open(r'piv.png')
             st.image(sp)
         with col3:
-            sp1 = Image.open(r'piv2.png')
-            st.image(sp1)
+            st.write('')
+
+
+        col1, col2, col3 = st.columns([2, 3, 2])
+
+        with col1:
+            st.write(' ')
+
+        with col2:
+            st.title("Chart")
+            st.markdown('As mentioned above, the key component of Astrotool is the chart of forecasted EP dates in the months ahead. We use it with the understanding that it is accurate **+/- 1 day**. In other words, if a date like 4/10/2021 is forecasted, then we know to be alert from 4/9-4/11/2021. Here is an example of the chart:')
+
+        with col3:
+            st.write(' ')
+        
+        col1, col2, col3 = st.columns([0.5,5,0.5])
+
+        with col1:
+            st.write('')
+        with col2:
+            figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
+            st.plotly_chart(figui, use_container_width=True)
+        with col3:
+            st.write('')
+
+        col1, col2, col3 = st.columns([2, 3, 2])
+
+        with col1:
+            st.write(' ')
+
+        with col2:
+            st.title("Sq9")
+            st.markdown('As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). ***It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP.***')
+
+        with col3:
+            st.write(' ')
+
+        col1, col2, col3 = st.columns([1,5,1])
+
+        with col1:
+            st.write('')
+        with col2:
+            sp = Image.open(r'sq9.png')
+            st.image(sp)
+        with col3:
+            st.write('')
+
+        col1, col2, col3 = st.columns([2, 3, 2])
+
+        with col1:
+            st.write(' ')
+
+        with col2:
+            st.title("Main Page")
+            st.markdown("If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at. At first sight it might looks difficult to understand, but that's not! **Let's debunk it!**")
+            st.markdown("The first two rows correspond to the actual transit of the planets. Their current degrees are displayed in the first row.  In the second row the name of the current house of the planet is given as well as its number of degrees in this house. This data is updated automatically every day by our algorithm.")
+            st.markdown("The third and fourth rows correspond to the cumulative degrees since the date indicated. The third row contains the cumulative number of degrees, and the fourth row contains the number of revolutions followed by the number of degrees remaining before the next revolution.")
+            st.markdown("Apart from the first 2 rows, the rest of the rows are based on the cumulative degrees since the major key date or pivot date... You can find the date '31/10/2008' which is the BTC White Paper or '01/03/2009', the genesis-block day also major TOPS such as '17/12/2017' (20k) or '11/10/2021' (69k) are also in the table...")
+            st.markdown("**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!")
+            def highlight_everyother(s):
+                return ['background-color: yellow; color:black' if x%2==1 else ''
+                    for x in range(len(s))]
+            st.dataframe(hm.head(6).style.apply(highlight_everyother))           
+
+        with col3:
+            st.write(' ')
+
         
 
         #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
@@ -279,7 +346,7 @@ if authentication_status:
         with h4:
 
             col0,col00 = st.columns([2,1])
-            sq1 = Image.open(r'sq9.jpg')
+            sq1 = Image.open(r'sq9.png')
             sq2 = Image.open(r'SQ2.png')
 
             with col0:
