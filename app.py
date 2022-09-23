@@ -274,6 +274,14 @@ if authentication_status:
             with col3:
                 st.write(' ')
 
+        with ee2:
+            with col1:
+                st.write('')
+            with col2:
+                st.markdown('Work in Progress...')
+            with col3:
+                st.write('')
+
         
 
         #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
