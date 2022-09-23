@@ -280,6 +280,7 @@ if authentication_status:
                 st.write('')
             with col2:
                 st.title('**Work in Progress...**')
+                st.markdown('Come back here very soon')
             with col3:
                 st.write('')
 
