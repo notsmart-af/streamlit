@@ -112,7 +112,7 @@ if authentication_status:
 
     # ONGLETS
 
-    info, help, main, chart, Method = st.tabs(["Info", "Intro/Help", "Main", "Chart", "Method"])
+    info, help, main, chart, Method = st.tabs(["Info", "Help", "Main", "Chart", "Method"])
 
     with info:
 
