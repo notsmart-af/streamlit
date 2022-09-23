@@ -179,7 +179,7 @@ if authentication_status:
             st.write(' ')
 
         with col2:
-            st.markdown('''GeometricThinking is of the opinion that it is FAR better to be focus on time as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally hundreds of hidden variables that we were never even taught to consider.
+            st.markdown('GeometricThinking is of the opinion that it is FAR better to be focus on time as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally hundreds of hidden variables that we were never even taught to consider.
 
             AstroTool was developed to solve a significant problem for forecasters who are employing natural law (astrology, geometry and universal principles of growth). There are so many factors to consider that it quickly becomes impossible for a serious forecaster to keep a handle on the hundreds of variables that are at work. We found ourselves missing turns that we had ourselves forecasted in the past, because we got lost in the minutiae of forecasting, along with simply losing track of where we were in real-time. AstroTool has solved this problem.
 
@@ -187,7 +187,7 @@ if authentication_status:
 
             Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. AstroTool’s output will be put behind a paywall at some point in the future. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of 80% accurate in forecasting market turns. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. We are confident in what you will find.
 
-            The key component of AstroTool is the chart of forecasted Energy Points (eps). These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:  ''')
+            The key component of AstroTool is the chart of forecasted Energy Points (eps). These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:')
 
         with col3:
             st.write(' ')
