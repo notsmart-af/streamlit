@@ -240,7 +240,7 @@ if authentication_status:
             with col2:
                 st.title("Sq9")
                 st.markdown("As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). **It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP and turned out to be the 65k BTC Top we all aware of.**")
-                st.markdown("Below here's a plot of the **4/14/2021** Sq9 visualisation.. We can clearly see 6 planets ([Jup_G], [Ear_H], [Mer_G], [Ura_H], [Mer_H], [Mar_H]) that are in this 'yellow' area. This yellow zone is separated into 8 lines, all 45 degrees apart. The more planets in this zone, the more important the date in question will be perceived as a pivot!")
+                st.markdown("Below here's a plot of the **4/14/2021** Sq9 visualisation.. We can clearly see **6 planets** ([Jup_G], [Ear_H], [Mer_G], [Ura_H], [Mer_H], [Mar_H]) that are in this 'yellow' area. This yellow zone is separated into 8 lines, all 45 degrees apart. The more planets in this zone, the more important the date in question will be perceived as a pivot!")
             with col3:
                 st.write(' ')
 
