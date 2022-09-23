@@ -278,7 +278,7 @@ if authentication_status:
             with col1:
                 st.write('')
             with col2:
-                st.markdown('Work in Progress...')
+                st.markdown('**Work in Progress...**')
             with col3:
                 st.write('')
 
