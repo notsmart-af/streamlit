@@ -192,10 +192,22 @@ if authentication_status:
             st.markdown('''The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:''')
         with col3:
             st.write(' ')
+ 
+            col2, col3 = st.columns([1,1])
+
+            with col2:
+                st.dataframe(m4.style.background_gradient(cmap='Blues'))
+            with col3:
+                fig4 = px.bar(m4, x='Date', y='Hit',
+                        title="TrNa | Hits Chart")
+                st.plotly_chart(fig4, use_container_width=True)
+        
 
         figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             height=550)
         st.plotly_chart(figui, use_container_width=True)
+
+
 
     with main:
 
