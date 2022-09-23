@@ -193,14 +193,14 @@ if authentication_status:
         with col3:
             st.write(' ')
  
-            col2, col3 = st.columns([1,1])
+        col2, col3 = st.columns([1,1])
 
-            with col2:
-                st.dataframe(m4.style.background_gradient(cmap='Blues'))
-            with col3:
-                fig4 = px.bar(m4, x='Date', y='Hit',
-                        title="TrNa | Hits Chart")
-                st.plotly_chart(fig4, use_container_width=True)
+        with col2:
+            st.dataframe(m4.style.background_gradient(cmap='Blues'))
+        with col3:
+            fig4 = px.bar(m4, x='Date', y='Hit',
+                    title="TrNa | Hits Chart")
+            st.plotly_chart(fig4, use_container_width=True)
         
 
         figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
