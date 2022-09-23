@@ -190,11 +190,13 @@ if authentication_status:
             st.markdown('''Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. **AstroTool’s output will be put behind a paywall at some point in the future**. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of **80% accurate in forecasting market turns**. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. **We are confident in what you will find.**''')
             
             st.markdown('''The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:''')
-            figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
-            st.plotly_chart(figui, use_container_width=True)
         with col3:
             st.write(' ')
+
+        figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+            height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
+        st.plotly_chart(figui, use_container_width=True)
+
     with main:
 
         h1,h2,h3,h4=st.tabs(["Helio", "Geo", "Tools", "Sq9"])
