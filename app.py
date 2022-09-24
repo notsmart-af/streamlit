@@ -315,9 +315,6 @@ if authentication_status:
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
                     st.markdown("7 = 7.5° & 22 = 22.5°")
 
-            help1 = Image.open(r'mainhelp.png')
-            st.image(help1)
-
         with h2:
 
             col0,col00 = st.columns([6.618,3])
@@ -336,9 +333,6 @@ if authentication_status:
                     mn4 = mn4.astype({col: int})
                 st.dataframe(mn4.style.background_gradient(cmap='Blues'))
                 st.markdown("7 = 7.5° & 22 = 22.5°")
-
-            help2 = Image.open(r'mainhelp.png')
-            st.image(help2)
         
         with h3:
 
