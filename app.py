@@ -16,7 +16,7 @@ from PIL import Image
 import plotly.graph_objects as go
 import os
 
-st.set_page_config(page_title="ASTROTOOL", layout="wide")
+st.set_page_config(page_title="ASTROTOOL©", layout="wide")
 
 # RECUP LA DATA
 # Retrieve the path to the current folders
@@ -71,7 +71,7 @@ if authentication_status == None:
 
 if authentication_status:
 
-    st.markdown(f"Welcome aboard {names}, enjoy the Alpha version of Astrotool!")
+    st.markdown(f"Welcome aboard **{names}**, enjoy the Alpha version of **AstroTool©**")
         
     # LOGO
 
