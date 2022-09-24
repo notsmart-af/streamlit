@@ -41,8 +41,7 @@ st.set_page_config(page_title="ASTROTOOL©", layout="wide")
 logo = Image.open(r'logo.png')
 epp = Image.open(r'ep.png')
 
-@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
-def recommendations(title):
+
 
 col1, col2, col3 = st.columns([8, 7, 2])
 
@@ -587,3 +586,6 @@ if authentication_status:
         authenticator.logout("Logout", "main")
     with col3:
         st.write(' ')
+
+@st.cache(allow_output_mutation=True, max_entries=10, ttl=3600)
+def recommendations(title):
