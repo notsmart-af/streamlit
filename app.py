@@ -570,10 +570,10 @@ if authentication_status:
                             title="Sq9 | Hits Chart")
                     st.plotly_chart(fig12, use_container_width=True)
 
-        col1, col2, col3 = st.columns([8, 7, 2])
-        with col1:
-            st.write(' ')
-        with col2:
-            authenticator.logout("Logout", "main")
-        with col3:
-            st.write(' ')
+    col1, col2, col3 = st.columns([8, 7, 2])
+    with col1:
+        st.write(' ')
+    with col2:
+        authenticator.logout("Logout", "main")
+    with col3:
+        st.write(' ')
