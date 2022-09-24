@@ -6,11 +6,11 @@ import numpy as np
 from datetime import date
 from datetime import datetime
 from datetime import timedelta
+from deta import Deta
 import matplotlib.pyplot as plt
 import streamlit_authenticator as stauth
 import streamlit.components.v1 as components
 import streamlit as st
-import matplotlib.pylab as pylab
 import database as db
 from PIL import Image
 import plotly.graph_objects as go
@@ -33,52 +33,6 @@ t = today
 
 # LOGO
 st.set_page_config(page_title="ASTROTOOL©", layout="wide")
-logo = Image.open(r'logo.png')
-epp = Image.open(r'ep.png')
-
-
-
-col1, col2, col3 = st.columns([8, 7, 2])
-
-with col1:
-    st.write(' ')
-
-with col2:
-    st.image(logo)
-
-with col3:
-    st.write(' ')
-
-# --- USER AUTHENTIFICATION ---
-
-users = db.fetch_all_users()
-
-usernames = [user["key"] for user in users]
-names = [user["name"] for user in users]
-hashed_passwords = [user["password"] for user in users]
-
-authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
-    "astrotool_dashboard", "abcdef", cookie_expiry_days=30)
-
-names, authentication_status, username = authenticator.login("Login", "main")
-
-if authentication_status == False:
-    st.error("Username / Password is incorrect")
-
-if authentication_status == None:
-    st.warning("Please enter your username and password")
-
-# --- DASHBOARD ---
-
-if authentication_status:
-
-    st.markdown(f"Welcome aboard {names}, enjoy the Alpha version of AstroTool© !")
-
-    m = fluchart.copy()
-    mm = helpchart
-    helio = helio.copy()
-    #helio = helio.iloc[::, helio.columns !='Date'].apply(np.floor)
-    helio_cum = helio_cum.copy()
     heliox = heliox.copy()
     geox = geox.copy()
     geo = geo.copy()
