@@ -78,6 +78,7 @@ if authentication_status:
     geo = geo.copy()
     hm = helio_main.copy()
     gm = geo_main.copy()
+    m = dataframe_c.copy()
 
     m1 = NatSq.copy()
     m2 = Spi.copy()
