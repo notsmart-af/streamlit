@@ -2,23 +2,18 @@
 
 import pandas as pd 
 import plotly.express as px
-import streamlit as st
 import numpy as np
 from datetime import date
 from datetime import datetime
 from datetime import timedelta
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle as Rect
 import streamlit_authenticator as stauth
 import streamlit.components.v1 as components
-import matplotlib.pyplot as plt
 import streamlit as st
 import matplotlib.pylab as pylab
 import database as db
 from PIL import Image
 import plotly.graph_objects as go
-import pandas as pd
-from datetime import datetime
 import os
 
 # RECUP LA DATA
