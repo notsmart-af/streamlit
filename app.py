@@ -16,6 +16,8 @@ from PIL import Image
 import plotly.graph_objects as go
 import os
 
+st.set_page_config(page_title="ASTROTOOL", layout="wide")
+
 # RECUP LA DATA
 # Retrieve the path to the current folders
 current_path = os.getcwd()
@@ -31,9 +33,8 @@ for file in os.listdir(csv_path):
 today = datetime.strftime(datetime.now(), "%d/%m/%Y")
 t = today
 
-
 # LOGO
-st.set_page_config(page_title="ASTROTOOL", layout="wide")
+
 logo = Image.open(r'logo.png')
 
 col1, col2, col3 = st.columns([8, 7, 2])
