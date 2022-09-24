@@ -31,507 +31,549 @@ for file in os.listdir(csv_path):
 today = datetime.strftime(datetime.now(), "%d/%m/%Y")
 t = today
 
+
 # LOGO
-st.set_page_config(page_title="ASTROTOOL©", layout="wide")
+st.set_page_config(page_title="ASTROTOOL", layout="wide")
+logo = Image.open(r'logo.png')
 
-heliox = heliox.copy()
-geox = geox.copy()
-geo = geo.copy()
-hm = helio_main.copy()
-gm = geo_main.copy()
+col1, col2, col3 = st.columns([8, 7, 2])
 
-m1 = NatSq.copy()
-m2 = Spi.copy()
-m3 = TrTr.copy()
-m4 = TrNa.copy()
-m5 = addPrice.copy()
-m6 = Fib.copy()
-m7 = FutureDate.copy()
-m8 = Mult.copy()
-m9 = Natal.copy()
-m10 = PriceTime.copy()
-m11 = Retro.copy()
-m12 = Sq9.copy()
+with col1:
+    st.write(' ')
 
-mn1 = aspects_h_tr.copy()
-mn2 = aspects_h_na.copy()
-mn3 = aspects_g_tr.copy()
-mn4 = aspects_g_na.copy()
-mn5 = dec_lat.copy()
-mn6 = retro_asp.copy()
-mn6.fillna(' ', inplace=True)
-mn7 = tools.copy()
-mn7.fillna(' ', inplace=True)
-# ONGLETS
+with col2:
+    st.image(logo)
 
-info, help, main, chart, Method = st.tabs(["About us", "Help", "Main", "Chart", "Method"])
+with col3:
+    st.write(' ')
 
-    with info:
+# --- USER AUTHENTIFICATION ---
 
-        col0,col00 = st.columns([5,3.5])
+users = db.fetch_all_users()
 
-        with col0:
-            st.title('AstroTool© Info Page')
-            
-            gt = Image.open(r'gtlogo.png')
+usernames = [user["key"] for user in users]
+names = [user["name"] for user in users]
+hashed_passwords = [user["password"] for user in users]
 
-            st.markdown('''
-            **This WebApp of Astrotool©** is a gift from **[Geometric Thinking](https://geometricthinking.com "Geometric Thinking")** and the developpers **Amir & Sachith** to the world.  We have learned that there is a **very unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to discern, **far in advance, of the dates when turns are likely to occur**. We call those dates **ENERGY POINTS (EPs)**.  This WebApp will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a heads up when to pay close attention to a chart for a trading opportunity**.
-            * Most of the workings of the file is not available inside this **Web-App** and/or **locked** to prevent the user from breaking it.
-            * The **CHART** page is self-explanatory.  The dates with the highest bars are the dates to watch the most.  Note that the ep dates should be viewed as +/- 1 day.  In other words, an ep may show up a day early or a day late.
-            * The **MAIN** page is chock full of astrological data related to the passage of time since key dates in BTC history.  Those dates are visible on the left side of the page.  As of the date of publication, the last date entered was 06/18/22.  
-            * If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at.  For a more thorough and complete understanding, you should attend a class, if and when Geometric Thinking holds another class.  
-            The founder of Geometric Thinking (GT) is no longer a young man and will not be involved with the markets for more than a few more years.  This WebApp is given to help GT students by giving away some of the insights we PRAYED for, when we were starting out.  
-            **We wish you the very best success in your trading career**.
-            ''')
-            st.header('Who are we?')
+authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
+    "astrotool_dashboard", "abcdef", cookie_expiry_days=30)
 
-            st.image(gt)
-            
-            st.markdown('''
-            We opened Geometric Thinking in July 2017 and have now taught literally many hundreds of traders worldwide the art of Geometric Thinking.  
-            * Geometric Thinking focuses on a unique understanding of how geometry and natural law focuses the minds of traders (en masse) such that **there are points in time and price where we can forecast trend changes are most likely to occur.**
+names, authentication_status, username = authenticator.login("Login", "main")
 
-            * Knowing in advance, for example, that a coin like BTC will likely reach an Energy Point (ep) in time 2 weeks in advance gives the trader an almost “unfair advantage” over other traders.  It becomes even more unfair if the Geometric Thinker realizes not only that a date 2 weeks away is a prime time to wait and watch for, but also realizes that there are forecast-able prices associated with that date.
-            * If you’ve been trading for awhile, you already know that this business is cut-throat. It is vicious and even very smart people typically lose everything over time.  If you are honest with yourself you know that **the classic trading techniques, divergences, moving averages, etc simply do not work consistently.**
+if authentication_status == False:
+    st.error("Username / Password is incorrect")
 
-            * So what does work consistently?  What will give you an unfair advantage over other traders?  **Geometry and natural law**.  
+if authentication_status == None:
+    st.warning("Please enter your username and password")
 
-            * Knowing these things will not guarantee that you will win.  It simply gives you an advantage.  Look at the picture above of the man holding two aces in the hole.  Does this guarantee that he will win the hand?  **No.  There are still 100 ways to lose, even with a pair of aces in the hole.**  If he were playing against professional poker players he would still need to master the game right?  He would still need to hide his tells, learn to bluff, learn game mathematics, etc, in order to be a consistent winner.  So too with Geometric Thinking and trading.
+# --- DASHBOARD ---
 
-            * But still, imagine if EVERY hand, or nearly every hand, that man was dealt two aces in the hole (without cheating).  **UNFAIR ADVANTAGE, right?**    We can arrange for you to be dealt two aces in the hole more often than not.  If you will combine that with the dedication to master this business, you can become a consistent winner.  **We believe this 100%**.
-            ''')
-            
-            st.header('Why should you care?')
-            st.markdown('''
-            Whether you care to believe this or not, dates such as the 12/17/2017 (20k) or the 15/04/2021 (65k) BTC high were seen weeks in advance as a date for a possible top.  The 3/12/2020 low was also forecasted as a possible low well more than a month in advance.  **WE LITERALLY [TWEETED TO THE WORLD](https://twitter.com/jimfred1276/status/1462641460948267013), THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!**  To the best of our knowledge we are the only ones who did that. 
+if authentication_status:
 
-            Whether you choose to believe this or not, I assure you it is true that at the very least, several hundred geometric thinking traders know which dates to watch, and which prices, LONG before other traders do.  Does that seem fair to you?  Does that matter?  Should you care?  **We think so.**
-
-            You can join us in our [Telegram Channel](https://t.me/joinchat/FKSNuqrZpjhlZTJi)
-            ''')
-
-        with col00:
-                spa = Image.open(r'space.png')
-                st.image(spa)
-                st.markdown('**The Solar System - "spirals everywhere"** | *A Little Book of Coincidence* by John Martineau')
-                astrotoologo = Image.open(r'astro.png')
-                sva = Image.open(r'sva.png')
-                st.image(sva)
-                st.markdown('*About the developers...*')
-                st.markdown('''This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Pantheon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers and students are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since they met each others in 2016', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking.com & AstroTool©* - who allowed us to translate "Astrotool©" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool© as a memory paper subject!
-
-                The developers take no credit for the basic calculations and methods of the "Astrotool©" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire "Astrotool" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha...''')
-
-    with help:
-        
-        ee1,ee2=st.tabs(["Intro", "User Guide"])
-
-        with ee1:
-            col1, col2, col3 = st.columns([2, 3, 2])
-
-            with col1:
-                st.write(' ')
-
-            with col2:
-                st.title("AstroTool© Help Page")
-                st.markdown('''GeometricThinking is of the opinion that it is FAR better to be **focus on time** as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally **hundreds of hidden variables** that we were never even taught to consider.''')
-                
-                st.markdown('''AstroTool© was developed to solve a significant problem for forecasters who are employing natural law (astrology, arithmetic, geometry and universal principles of growth). There are so many factors to consider that it quickly becomes impossible for a serious forecaster to keep a handle on the hundreds of variables that are at work. We found ourselves missing turns that we had ourselves forecasted in the past, because we got lost in the minutiae of forecasting, along with simply losing track of where we were in real-time. AstroTool has solved this problem.''')
-                
-                st.markdown('''Following up on the success of AstroTool© v5.3 (*which was made available on this website to the public for free*), v6.0 has been completed. It offers several improvements over v5.3 and is now the tool of choice for those who have access to it.''')
-                
-                st.markdown('''Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. **AstroTool’s output will be put behind a paywall at some point in the future**. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of **80% accurate in forecasting market turns**. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. **We are confident in what you will find.**''')
-                
-                st.markdown('''The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:''')
-            
-            with col3:
-                st.write(' ')
-    
-            col1, col2, col3 = st.columns([0.2,5,0.2])
-
-            with col1:
-                st.write('')
-                
-            with col2:
-                sp = Image.open(r'piv.png')
-                st.image(sp)
-            with col3:
-                st.write('')
+    st.markdown(f"Welcome aboard {names}, enjoy our Alpha Version!")
 
 
-            col1, col2, col3 = st.columns([2, 3, 2])
+    # LOGO
+    st.set_page_config(page_title="ASTROTOOL©", layout="wide")
 
-            with col1:
-                st.write(' ')
+    heliox = heliox.copy()
+    geox = geox.copy()
+    geo = geo.copy()
+    hm = helio_main.copy()
+    gm = geo_main.copy()
 
-            with col2:
-                st.title("Chart")
-                st.markdown('As mentioned above, the key component of Astrotool is the chart of forecasted EP dates in the months ahead. We use it with the understanding that it is accurate **+/- 1 day**. In other words, if a date like 4/10/2021 is forecasted, then we know to be alert from 4/9-4/11/2021. Here is an example of the chart:')
+    m1 = NatSq.copy()
+    m2 = Spi.copy()
+    m3 = TrTr.copy()
+    m4 = TrNa.copy()
+    m5 = addPrice.copy()
+    m6 = Fib.copy()
+    m7 = FutureDate.copy()
+    m8 = Mult.copy()
+    m9 = Natal.copy()
+    m10 = PriceTime.copy()
+    m11 = Retro.copy()
+    m12 = Sq9.copy()
 
-            with col3:
-                st.write(' ')
-            
-            col1, col2, col3 = st.columns([0.5,5,0.5])
+    mn1 = aspects_h_tr.copy()
+    mn2 = aspects_h_na.copy()
+    mn3 = aspects_g_tr.copy()
+    mn4 = aspects_g_na.copy()
+    mn5 = dec_lat.copy()
+    mn6 = retro_asp.copy()
+    mn6.fillna(' ', inplace=True)
+    mn7 = tools.copy()
+    mn7.fillna(' ', inplace=True)
+    # ONGLETS
 
-            with col1:
-                st.write('')
-            with col2:
-                figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                    height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
-                st.plotly_chart(figui, use_container_width=True)
-            with col3:
-                st.write('')
+    info, help, main, chart, Method = st.tabs(["About us", "Help", "Main", "Chart", "Method"])
 
-            col1, col2, col3 = st.columns([2, 3, 2])
+        with info:
 
-            with col1:
-                st.write(' ')
+            col0,col00 = st.columns([5,3.5])
 
-            with col2:
-                st.title("Sq9")
-                st.markdown("As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). **It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP and turned out to be the 65k BTC Top we all aware of.**")
-                st.markdown("Below here's a plot of the **4/14/2021** Sq9 visualisation.. We can clearly see **6 planets** ([Jup_G], [Ear_H], [Mer_G], [Ura_H], [Mer_H], [Mar_H]) that are in this 'yellow' area. This yellow zone is separated into 8 lines, all 45 degrees apart. **The more planets in this zone, the more important the date in question will be perceived as a pivot!**")
-            with col3:
-                st.write(' ')
-
-            col1, col2, col3 = st.columns([1,5,1])
-
-            with col1:
-                st.write('')
-            with col2:
-                sp = Image.open(r'sqhelp.png')
-                st.image(sp)
-            with col3:
-                st.write('')
-
-            col1, col2, col3 = st.columns([2, 3, 2])
-
-            with col1:
-                st.write(' ')
-
-            with col2:
-                st.title("Main Page")
-                st.markdown("If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at. At first sight it might looks difficult to understand, but that's not! **Let's debunk it!**")
-                st.markdown("The first two rows correspond to the actual transit of the planets. Their current degrees are displayed in the first row.  In the second row the name of the current house of the planet is given as well as its number of degrees in this house. This data is updated automatically every day by our algorithm.")
-                st.markdown("The third and fourth rows correspond to the cumulative degrees since the date indicated. The third row contains the cumulative number of degrees, and the fourth row contains the number of revolutions followed by the number of degrees remaining before the next revolution.")
-                st.markdown("Apart from the first 2 rows, the rest of the rows are based on the cumulative degrees since the major key date or pivot date... You can find the date and the related data infos of '31/10/2008' which is the BTC White Paper or '01/03/2009', the genesis-block day also major TOPS such as '17/12/2017' (20k) or '11/10/2021' (69k) are also in the table...")
-                st.markdown("**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!")
-                def highlight_everyother(s):
-                    return ['background-color: yellow; color:black' if x%2==1 else ''
-                        for x in range(len(s))]
-                st.dataframe(hm.head(6).style.apply(highlight_everyother))           
-
-            with col3:
-                st.write(' ')
-
-        with ee2:
-            col1, col2, col3 = st.columns([1, 1, 1])
-            with col1:
-                st.write('')
-            with col2:
-                st.title('**Work in Progress...**')
-                st.markdown('Come back here very soon!')
-            with col3:
-                st.write('')
-
-        #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-        #    height=550)
-        #st.plotly_chart(figui, use_container_width=True)
-
-
-
-    with main:
-
-        h1,h2,h3,h4=st.tabs(["Helio", "Geo", "Tools", "Sq9"])
-
-        with h1:
-
-            col0,col00 = st.columns([4,3])
-            
             with col0:
+                st.title('AstroTool© Info Page')
+                
+                gt = Image.open(r'gtlogo.png')
+
+                st.markdown('''
+                **This WebApp of Astrotool©** is a gift from **[Geometric Thinking](https://geometricthinking.com "Geometric Thinking")** and the developpers **Amir & Sachith** to the world.  We have learned that there is a **very unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to discern, **far in advance, of the dates when turns are likely to occur**. We call those dates **ENERGY POINTS (EPs)**.  This WebApp will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a heads up when to pay close attention to a chart for a trading opportunity**.
+                * Most of the workings of the file is not available inside this **Web-App** and/or **locked** to prevent the user from breaking it.
+                * The **CHART** page is self-explanatory.  The dates with the highest bars are the dates to watch the most.  Note that the ep dates should be viewed as +/- 1 day.  In other words, an ep may show up a day early or a day late.
+                * The **MAIN** page is chock full of astrological data related to the passage of time since key dates in BTC history.  Those dates are visible on the left side of the page.  As of the date of publication, the last date entered was 06/18/22.  
+                * If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at.  For a more thorough and complete understanding, you should attend a class, if and when Geometric Thinking holds another class.  
+                The founder of Geometric Thinking (GT) is no longer a young man and will not be involved with the markets for more than a few more years.  This WebApp is given to help GT students by giving away some of the insights we PRAYED for, when we were starting out.  
+                **We wish you the very best success in your trading career**.
+                ''')
+                st.header('Who are we?')
+
+                st.image(gt)
+                
+                st.markdown('''
+                We opened Geometric Thinking in July 2017 and have now taught literally many hundreds of traders worldwide the art of Geometric Thinking.  
+                * Geometric Thinking focuses on a unique understanding of how geometry and natural law focuses the minds of traders (en masse) such that **there are points in time and price where we can forecast trend changes are most likely to occur.**
+
+                * Knowing in advance, for example, that a coin like BTC will likely reach an Energy Point (ep) in time 2 weeks in advance gives the trader an almost “unfair advantage” over other traders.  It becomes even more unfair if the Geometric Thinker realizes not only that a date 2 weeks away is a prime time to wait and watch for, but also realizes that there are forecast-able prices associated with that date.
+                * If you’ve been trading for awhile, you already know that this business is cut-throat. It is vicious and even very smart people typically lose everything over time.  If you are honest with yourself you know that **the classic trading techniques, divergences, moving averages, etc simply do not work consistently.**
+
+                * So what does work consistently?  What will give you an unfair advantage over other traders?  **Geometry and natural law**.  
+
+                * Knowing these things will not guarantee that you will win.  It simply gives you an advantage.  Look at the picture above of the man holding two aces in the hole.  Does this guarantee that he will win the hand?  **No.  There are still 100 ways to lose, even with a pair of aces in the hole.**  If he were playing against professional poker players he would still need to master the game right?  He would still need to hide his tells, learn to bluff, learn game mathematics, etc, in order to be a consistent winner.  So too with Geometric Thinking and trading.
+
+                * But still, imagine if EVERY hand, or nearly every hand, that man was dealt two aces in the hole (without cheating).  **UNFAIR ADVANTAGE, right?**    We can arrange for you to be dealt two aces in the hole more often than not.  If you will combine that with the dedication to master this business, you can become a consistent winner.  **We believe this 100%**.
+                ''')
+                
+                st.header('Why should you care?')
+                st.markdown('''
+                Whether you care to believe this or not, dates such as the 12/17/2017 (20k) or the 15/04/2021 (65k) BTC high were seen weeks in advance as a date for a possible top.  The 3/12/2020 low was also forecasted as a possible low well more than a month in advance.  **WE LITERALLY [TWEETED TO THE WORLD](https://twitter.com/jimfred1276/status/1462641460948267013), THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!**  To the best of our knowledge we are the only ones who did that. 
+
+                Whether you choose to believe this or not, I assure you it is true that at the very least, several hundred geometric thinking traders know which dates to watch, and which prices, LONG before other traders do.  Does that seem fair to you?  Does that matter?  Should you care?  **We think so.**
+
+                You can join us in our [Telegram Channel](https://t.me/joinchat/FKSNuqrZpjhlZTJi)
+                ''')
+
+            with col00:
+                    spa = Image.open(r'space.png')
+                    st.image(spa)
+                    st.markdown('**The Solar System - "spirals everywhere"** | *A Little Book of Coincidence* by John Martineau')
+                    astrotoologo = Image.open(r'astro.png')
+                    sva = Image.open(r'sva.png')
+                    st.image(sva)
+                    st.markdown('*About the developers...*')
+                    st.markdown('''This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Pantheon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers and students are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since they met each others in 2016', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking.com & AstroTool©* - who allowed us to translate "Astrotool©" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool© as a memory paper subject!
+
+                    The developers take no credit for the basic calculations and methods of the "Astrotool©" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire "Astrotool" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha...''')
+
+        with help:
+            
+            ee1,ee2=st.tabs(["Intro", "User Guide"])
+
+            with ee1:
+                col1, col2, col3 = st.columns([2, 3, 2])
+
+                with col1:
+                    st.write(' ')
+
+                with col2:
+                    st.title("AstroTool© Help Page")
+                    st.markdown('''GeometricThinking is of the opinion that it is FAR better to be **focus on time** as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally **hundreds of hidden variables** that we were never even taught to consider.''')
+                    
+                    st.markdown('''AstroTool© was developed to solve a significant problem for forecasters who are employing natural law (astrology, arithmetic, geometry and universal principles of growth). There are so many factors to consider that it quickly becomes impossible for a serious forecaster to keep a handle on the hundreds of variables that are at work. We found ourselves missing turns that we had ourselves forecasted in the past, because we got lost in the minutiae of forecasting, along with simply losing track of where we were in real-time. AstroTool has solved this problem.''')
+                    
+                    st.markdown('''Following up on the success of AstroTool© v5.3 (*which was made available on this website to the public for free*), v6.0 has been completed. It offers several improvements over v5.3 and is now the tool of choice for those who have access to it.''')
+                    
+                    st.markdown('''Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. **AstroTool’s output will be put behind a paywall at some point in the future**. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of **80% accurate in forecasting market turns**. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. **We are confident in what you will find.**''')
+                    
+                    st.markdown('''The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:''')
+                
+                with col3:
+                    st.write(' ')
+        
+                col1, col2, col3 = st.columns([0.2,5,0.2])
+
+                with col1:
+                    st.write('')
+                    
+                with col2:
+                    sp = Image.open(r'piv.png')
+                    st.image(sp)
+                with col3:
+                    st.write('')
+
+
+                col1, col2, col3 = st.columns([2, 3, 2])
+
+                with col1:
+                    st.write(' ')
+
+                with col2:
+                    st.title("Chart")
+                    st.markdown('As mentioned above, the key component of Astrotool is the chart of forecasted EP dates in the months ahead. We use it with the understanding that it is accurate **+/- 1 day**. In other words, if a date like 4/10/2021 is forecasted, then we know to be alert from 4/9-4/11/2021. Here is an example of the chart:')
+
+                with col3:
+                    st.write(' ')
+                
+                col1, col2, col3 = st.columns([0.5,5,0.5])
+
+                with col1:
+                    st.write('')
+                with col2:
+                    figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                        height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
+                    st.plotly_chart(figui, use_container_width=True)
+                with col3:
+                    st.write('')
+
+                col1, col2, col3 = st.columns([2, 3, 2])
+
+                with col1:
+                    st.write(' ')
+
+                with col2:
+                    st.title("Sq9")
+                    st.markdown("As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). **It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP and turned out to be the 65k BTC Top we all aware of.**")
+                    st.markdown("Below here's a plot of the **4/14/2021** Sq9 visualisation.. We can clearly see **6 planets** ([Jup_G], [Ear_H], [Mer_G], [Ura_H], [Mer_H], [Mar_H]) that are in this 'yellow' area. This yellow zone is separated into 8 lines, all 45 degrees apart. **The more planets in this zone, the more important the date in question will be perceived as a pivot!**")
+                with col3:
+                    st.write(' ')
+
+                col1, col2, col3 = st.columns([1,5,1])
+
+                with col1:
+                    st.write('')
+                with col2:
+                    sp = Image.open(r'sqhelp.png')
+                    st.image(sp)
+                with col3:
+                    st.write('')
+
+                col1, col2, col3 = st.columns([2, 3, 2])
+
+                with col1:
+                    st.write(' ')
+
+                with col2:
+                    st.title("Main Page")
+                    st.markdown("If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at. At first sight it might looks difficult to understand, but that's not! **Let's debunk it!**")
+                    st.markdown("The first two rows correspond to the actual transit of the planets. Their current degrees are displayed in the first row.  In the second row the name of the current house of the planet is given as well as its number of degrees in this house. This data is updated automatically every day by our algorithm.")
+                    st.markdown("The third and fourth rows correspond to the cumulative degrees since the date indicated. The third row contains the cumulative number of degrees, and the fourth row contains the number of revolutions followed by the number of degrees remaining before the next revolution.")
+                    st.markdown("Apart from the first 2 rows, the rest of the rows are based on the cumulative degrees since the major key date or pivot date... You can find the date and the related data infos of '31/10/2008' which is the BTC White Paper or '01/03/2009', the genesis-block day also major TOPS such as '17/12/2017' (20k) or '11/10/2021' (69k) are also in the table...")
+                    st.markdown("**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!")
                     def highlight_everyother(s):
                         return ['background-color: yellow; color:black' if x%2==1 else ''
                             for x in range(len(s))]
-                    st.dataframe(hm.style.apply(highlight_everyother))
+                    st.dataframe(hm.head(6).style.apply(highlight_everyother))           
 
-            with col00:
+                with col3:
+                    st.write(' ')
+
+            with ee2:
+                col1, col2, col3 = st.columns([1, 1, 1])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.title('**Work in Progress...**')
+                    st.markdown('Come back here very soon!')
+                with col3:
+                    st.write('')
+
+            #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+            #    height=550)
+            #st.plotly_chart(figui, use_container_width=True)
+
+
+
+        with main:
+
+            h1,h2,h3,h4=st.tabs(["Helio", "Geo", "Tools", "Sq9"])
+
+            with h1:
+
+                col0,col00 = st.columns([4,3])
+                
+                with col0:
+                        def highlight_everyother(s):
+                            return ['background-color: yellow; color:black' if x%2==1 else ''
+                                for x in range(len(s))]
+                        st.dataframe(hm.style.apply(highlight_everyother))
+
+                with col00:
+                        st.markdown("**Transit Aspects**")
+                        for col in mn1.columns[3:]:
+                            mn1 = mn1.astype({col: int})
+                        st.dataframe(mn1.style.background_gradient(cmap='Blues'))
+                        st.markdown("**Natal Aspects**")
+                        for col in mn2.columns[3:]:
+                            mn2 = mn2.astype({col: int})
+                        st.dataframe(mn2.style.background_gradient(cmap='Blues'))
+                        st.markdown("7 = 7.5° & 22 = 22.5°")
+
+            with h2:
+
+                col0,col00 = st.columns([6.618,3])
+                with col0:
+                        def highlight_everyother(s):
+                            return ['background-color: orange; color:black' if x%2==1 else ''
+                                for x in range(len(s))]
+                        st.dataframe(gm.style.apply(highlight_everyother))
+                with col00:
                     st.markdown("**Transit Aspects**")
-                    for col in mn1.columns[3:]:
-                        mn1 = mn1.astype({col: int})
-                    st.dataframe(mn1.style.background_gradient(cmap='Blues'))
+                    for col in mn3.columns[3:]:
+                        mn3 = mn3.astype({col: int})
+                    st.dataframe(mn3.style.background_gradient(cmap='Blues'))
                     st.markdown("**Natal Aspects**")
-                    for col in mn2.columns[3:]:
-                        mn2 = mn2.astype({col: int})
-                    st.dataframe(mn2.style.background_gradient(cmap='Blues'))
+                    for col in mn4.columns[3:]:
+                        mn4 = mn4.astype({col: int})
+                    st.dataframe(mn4.style.background_gradient(cmap='Blues'))
                     st.markdown("7 = 7.5° & 22 = 22.5°")
+            
+            with h3:
 
-        with h2:
+                col5, col9 = st.columns([6,4])
+                with col5:
+                    st.markdown("**Retro**")
+                    st.dataframe(mn6.style.background_gradient(cmap='Blues'))
+                with col9:
+                    for col in mn5.columns[1:]:
+                        mn5 = mn5.astype({col: int})
+                    st.markdown("**Declination/Latitude**")
+                    st.dataframe(mn5.style.background_gradient(cmap='Blues'))
 
-            col0,col00 = st.columns([6.618,3])
-            with col0:
-                    def highlight_everyother(s):
-                        return ['background-color: orange; color:black' if x%2==1 else ''
-                            for x in range(len(s))]
-                    st.dataframe(gm.style.apply(highlight_everyother))
-            with col00:
-                st.markdown("**Transit Aspects**")
-                for col in mn3.columns[3:]:
-                    mn3 = mn3.astype({col: int})
-                st.dataframe(mn3.style.background_gradient(cmap='Blues'))
-                st.markdown("**Natal Aspects**")
-                for col in mn4.columns[3:]:
-                    mn4 = mn4.astype({col: int})
-                st.dataframe(mn4.style.background_gradient(cmap='Blues'))
-                st.markdown("7 = 7.5° & 22 = 22.5°")
-        
-        with h3:
+                st.markdown("**Moon/Node/Dec/Lat**")
+                col7, col8 = st.columns([12,0.2])
+                with col7:
+                    st.dataframe(mn7.style.background_gradient(cmap='Blues'))
 
-            col5, col9 = st.columns([6,4])
-            with col5:
-                st.markdown("**Retro**")
-                st.dataframe(mn6.style.background_gradient(cmap='Blues'))
-            with col9:
-                for col in mn5.columns[1:]:
-                    mn5 = mn5.astype({col: int})
-                st.markdown("**Declination/Latitude**")
-                st.dataframe(mn5.style.background_gradient(cmap='Blues'))
+            with h4:
 
-            st.markdown("**Moon/Node/Dec/Lat**")
-            col7, col8 = st.columns([12,0.2])
-            with col7:
-                st.dataframe(mn7.style.background_gradient(cmap='Blues'))
+                col0,col00 = st.columns([2,1])
+                sq1 = Image.open(r'sq9.png')
+                sq2 = Image.open(r'SQ2.png')
 
-        with h4:
+                with col0:
+                    st.image(sq1)
 
-            col0,col00 = st.columns([2,1])
-            sq1 = Image.open(r'sq9.png')
-            sq2 = Image.open(r'SQ2.png')
+                with col00:
+                    st.image(sq2)
+                    st.markdown("Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence...")
+                    original_title = '**<p style="font-family:sans-serif; color:Red; font-size: 20px;">**Heliocentric (H)**</p>**'
+                    st.markdown(original_title, unsafe_allow_html=True)
+                    for col in helio.columns[1:]:
+                        helio = helio.astype({col: int})
+                    st.dataframe(helio)
+                    original_titles = '**<p style="font-family:sans-serif; color:Aqua; font-size: 20px;">**Geocentric (G)**</p>**'
+                    st.markdown(original_titles, unsafe_allow_html=True)
+                    for col in geo.columns[1:]:
+                        geo = geo.astype({col: int})
+                    st.dataframe(geo) 
 
-            with col0:
-                st.image(sq1)
+        with chart:
+            st.title('**Energy Points Chart (next 3 months)**')
+            figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
+            st.plotly_chart(figui, use_container_width=True)
+            st.markdown('**Energy Points Hits on BTC @ last 2 years**')
+            df = btcusd_d.copy()
 
-            with col00:
-                st.image(sq2)
-                st.markdown("Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence...")
-                original_title = '**<p style="font-family:sans-serif; color:Red; font-size: 20px;">**Heliocentric (H)**</p>**'
-                st.markdown(original_title, unsafe_allow_html=True)
-                for col in helio.columns[1:]:
-                    helio = helio.astype({col: int})
-                st.dataframe(helio)
-                original_titles = '**<p style="font-family:sans-serif; color:Aqua; font-size: 20px;">**Geocentric (G)**</p>**'
-                st.markdown(original_titles, unsafe_allow_html=True)
-                for col in geo.columns[1:]:
-                    geo = geo.astype({col: int})
-                st.dataframe(geo) 
+            fig = go.Figure(data=[go.Candlestick(x=df['Date'],
+                            open=df['Open'],
+                            high=df['High'],
+                            low=df['Low'],
+                            close=df['Close'])])
+            fig.add_vline(x=1, x0="2020-12-05", x1="2020-12-05", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-01-08", x1="2021-01-08", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-01-22", x1="2021-01-22", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-02-26", x1="2021-02-26", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-03-14", x1="2021-03-14", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-03-24", x1="2021-03-24", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-04-15", x1="2021-04-15", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-05-05", x1="2021-05-05", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-05-18", x1="2021-05-18", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-06-10", x1="2021-06-10", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-06-19", x1="2021-06-19", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-07-06", x1="2021-07-06", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-07-18", x1="2021-07-18", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-08-02", x1="2021-08-02", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-08-20", x1="2021-08-20", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-09-03", x1="2021-09-03", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-09-24", x1="2021-09-24", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-10-20", x1="2021-10-20", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-10-30", x1="2021-10-30", line_width=1, line_color="blue")       
+            fig.add_vline(x=1, x0="2021-11-10", x1="2021-11-10", line_width=1, line_color="blue")     
+            fig.add_vline(x=1, x0="2021-12-05", x1="2021-12-05", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2021-12-30", x1="2021-12-30", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-01-13", x1="2022-01-13", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-01-25", x1="2022-01-25", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-02-08", x1="2022-02-08", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-02-17", x1="2022-02-17", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-02-24", x1="2022-02-24", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-03-02", x1="2022-03-02", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-03-20", x1="2022-03-20", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-04-06", x1="2022-04-06", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-04-19", x1="2022-04-19", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-05-16", x1="2022-05-16", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-06-06", x1="2022-06-06", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-06-20", x1="2022-06-20", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-07-11", x1="2022-07-11", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-07-29", x1="2022-07-29", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-08-12", x1="2022-08-12", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-09-07", x1="2022-09-07", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-09-14", x1="2022-09-14", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-09-28", x1="2022-09-28", line_width=1, line_color="blue")
+            fig.add_vline(x=1, x0="2022-10-02", x1="2022-10-02", line_width=1, line_color="blue")
 
-    with chart:
-        st.title('**Energy Points Chart (next 3 months)**')
-        figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-             height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
-        st.plotly_chart(figui, use_container_width=True)
-        st.markdown('**Energy Points Hits on BTC @ last 2 years**')
-        df = btcusd_d.copy()
+            fig.update_layout(
+            autosize=False,
+            width=1920,
+            height=1080)
 
-        fig = go.Figure(data=[go.Candlestick(x=df['Date'],
-                        open=df['Open'],
-                        high=df['High'],
-                        low=df['Low'],
-                        close=df['Close'])])
-        fig.add_vline(x=1, x0="2020-12-05", x1="2020-12-05", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-01-08", x1="2021-01-08", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-01-22", x1="2021-01-22", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-02-26", x1="2021-02-26", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-03-14", x1="2021-03-14", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-03-24", x1="2021-03-24", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-04-15", x1="2021-04-15", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-05-05", x1="2021-05-05", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-05-18", x1="2021-05-18", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-06-10", x1="2021-06-10", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-06-19", x1="2021-06-19", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-07-06", x1="2021-07-06", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-07-18", x1="2021-07-18", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-08-02", x1="2021-08-02", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-08-20", x1="2021-08-20", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-09-03", x1="2021-09-03", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-09-24", x1="2021-09-24", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-10-20", x1="2021-10-20", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-10-30", x1="2021-10-30", line_width=1, line_color="blue")       
-        fig.add_vline(x=1, x0="2021-11-10", x1="2021-11-10", line_width=1, line_color="blue")     
-        fig.add_vline(x=1, x0="2021-12-05", x1="2021-12-05", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2021-12-30", x1="2021-12-30", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-01-13", x1="2022-01-13", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-01-25", x1="2022-01-25", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-02-08", x1="2022-02-08", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-02-17", x1="2022-02-17", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-02-24", x1="2022-02-24", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-03-02", x1="2022-03-02", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-03-20", x1="2022-03-20", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-04-06", x1="2022-04-06", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-04-19", x1="2022-04-19", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-05-16", x1="2022-05-16", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-06-06", x1="2022-06-06", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-06-20", x1="2022-06-20", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-07-11", x1="2022-07-11", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-07-29", x1="2022-07-29", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-08-12", x1="2022-08-12", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-09-07", x1="2022-09-07", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-09-14", x1="2022-09-14", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-09-28", x1="2022-09-28", line_width=1, line_color="blue")
-        fig.add_vline(x=1, x0="2022-10-02", x1="2022-10-02", line_width=1, line_color="blue")
+            fig.update_layout(plot_bgcolor="white")
 
-        fig.update_layout(
-        autosize=False,
-        width=1920,
-        height=1080)
-
-        fig.update_layout(plot_bgcolor="white")
-
-        st.plotly_chart(fig, use_container_width=True)
-        ###### 
-        col1, col2 = st.columns([1,3.33])
-
-        with col1:
-            dataframe_c = dataframe_c.copy()
-            st.markdown("Total Major EP since last 2 years")
-            st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
-        with col2:
-            fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                        title="EP hits since last 2 years")
-            st.plotly_chart(fig1, use_container_width=True)
-
-        ######
-
-
-        # Dataframe EP
-
-    with Method:
-        
-        o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12=st.tabs(["NatSq", "Spiral", "TrTr", "TrNa", "addPrice", "Fib", "FutDates", "Mult", "Natal", "PriceTime", "Retro", "Sq9"])
-        
-        with o1:
+            st.plotly_chart(fig, use_container_width=True)
+            ###### 
             col1, col2 = st.columns([1,3.33])
 
             with col1:
-                st.dataframe(m1.style.background_gradient(cmap='Blues'))
+                dataframe_c = dataframe_c.copy()
+                st.markdown("Total Major EP since last 2 years")
+                st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
             with col2:
-                fig1 = px.bar(m1, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="NatSq | Hits Chart")
+                fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                            title="EP hits since last 2 years")
                 st.plotly_chart(fig1, use_container_width=True)
 
-        with o2:
-            col1, col2 = st.columns([1,3.33])
+            ######
 
-            with col1:
-                st.dataframe(m2.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig2 = px.bar(m2, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Spiral | Hits Chart")
-                st.plotly_chart(fig2, use_container_width=True)
 
-        with o3:
-            col1, col2 = st.columns([1,2.9])
+            # Dataframe EP
 
-            with col1:
-                st.dataframe(m3.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig3 = px.bar(m3, x='Date', y='Hit',
-                        title="TrTr | Hits Chart")
-                st.plotly_chart(fig3, use_container_width=True)
+        with Method:
+            
+            o1,o2,o3,o4,o5,o6,o7,o8,o9,o10,o11,o12=st.tabs(["NatSq", "Spiral", "TrTr", "TrNa", "addPrice", "Fib", "FutDates", "Mult", "Natal", "PriceTime", "Retro", "Sq9"])
+            
+            with o1:
+                col1, col2 = st.columns([1,3.33])
 
-        with o4:
-            col1, col2 = st.columns([1,2.9])
+                with col1:
+                    st.dataframe(m1.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig1 = px.bar(m1, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="NatSq | Hits Chart")
+                    st.plotly_chart(fig1, use_container_width=True)
 
-            with col1:
-                st.dataframe(m4.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig4 = px.bar(m4, x='Date', y='Hit',
-                        title="TrNa | Hits Chart")
-                st.plotly_chart(fig4, use_container_width=True)
+            with o2:
+                col1, col2 = st.columns([1,3.33])
 
-        with o5:
-            col1, col2 = st.columns([1,3.33])
+                with col1:
+                    st.dataframe(m2.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig2 = px.bar(m2, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="Spiral | Hits Chart")
+                    st.plotly_chart(fig2, use_container_width=True)
 
-            with col1:
-                st.dataframe(m5.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig5 = px.bar(m5, x='Date', y='Hit', title="addPrice | Hits Chart")
-                st.plotly_chart(fig5, use_container_width=True)
+            with o3:
+                col1, col2 = st.columns([1,2.9])
 
-        with o6:
-            col1, col2 = st.columns([1,3.33])
+                with col1:
+                    st.dataframe(m3.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig3 = px.bar(m3, x='Date', y='Hit',
+                            title="TrTr | Hits Chart")
+                    st.plotly_chart(fig3, use_container_width=True)
 
-            with col1:
-                st.dataframe(m6.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig6 = px.bar(m6, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Fib | Hits Chart")
-                st.plotly_chart(fig6, use_container_width=True)
+            with o4:
+                col1, col2 = st.columns([1,2.9])
 
-        with o7:
-            col1, col2 = st.columns([2,3.80])
+                with col1:
+                    st.dataframe(m4.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig4 = px.bar(m4, x='Date', y='Hit',
+                            title="TrNa | Hits Chart")
+                    st.plotly_chart(fig4, use_container_width=True)
 
-            with col1:
-                st.dataframe(m7.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig7 = px.bar(m7, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="FutDates | Hits Chart")
-                st.plotly_chart(fig7, use_container_width=True)
+            with o5:
+                col1, col2 = st.columns([1,3.33])
 
-        with o8:
-            col1, col2 = st.columns([1,3.33])
+                with col1:
+                    st.dataframe(m5.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig5 = px.bar(m5, x='Date', y='Hit', title="addPrice | Hits Chart")
+                    st.plotly_chart(fig5, use_container_width=True)
 
-            with col1:
-                st.dataframe(m8.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig8 = px.bar(m8, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Mult | Hits Chart")
-                st.plotly_chart(fig8, use_container_width=True)
+            with o6:
+                col1, col2 = st.columns([1,3.33])
 
-        with o9:
-            col1, col2 = st.columns([1,3.33])
+                with col1:
+                    st.dataframe(m6.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig6 = px.bar(m6, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="Fib | Hits Chart")
+                    st.plotly_chart(fig6, use_container_width=True)
 
-            with col1:
-                st.dataframe(m9.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig9 = px.bar(m9, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Natal | Hits Chart")
-                st.plotly_chart(fig9, use_container_width=True)
+            with o7:
+                col1, col2 = st.columns([2,3.80])
 
-        with o10:
-            col1, col2 = st.columns([1,3.33])
+                with col1:
+                    st.dataframe(m7.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig7 = px.bar(m7, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="FutDates | Hits Chart")
+                    st.plotly_chart(fig7, use_container_width=True)
 
-            with col1:
-                st.dataframe(m10.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig10 = px.bar(m10, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="PriceTime | Hits Chart")
-                st.plotly_chart(fig10, use_container_width=True)
+            with o8:
+                col1, col2 = st.columns([1,3.33])
 
-        with o11:
-            col1, col2 = st.columns([1,2.8])
+                with col1:
+                    st.dataframe(m8.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig8 = px.bar(m8, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="Mult | Hits Chart")
+                    st.plotly_chart(fig8, use_container_width=True)
 
-            with col1:
-                st.dataframe(m11.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig11 = px.bar(m11, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Retro | Hits Chart")
-                st.plotly_chart(fig11, use_container_width=True)
+            with o9:
+                col1, col2 = st.columns([1,3.33])
 
-        with o12:
-            col1, col2 = st.columns([1,3.33])
+                with col1:
+                    st.dataframe(m9.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig9 = px.bar(m9, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="Natal | Hits Chart")
+                    st.plotly_chart(fig9, use_container_width=True)
 
-            with col1:
-                st.dataframe(m12.style.background_gradient(cmap='Blues'))
-            with col2:
-                fig12 = px.bar(m12, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
-                        title="Sq9 | Hits Chart")
-                st.plotly_chart(fig12, use_container_width=True)
+            with o10:
+                col1, col2 = st.columns([1,3.33])
 
-    col1, col2, col3 = st.columns([8, 7, 2])
-    with col1:
-        st.write(' ')
-    with col2:
-        authenticator.logout("Logout", "main")
-    with col3:
-        st.write(' ')
+                with col1:
+                    st.dataframe(m10.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig10 = px.bar(m10, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="PriceTime | Hits Chart")
+                    st.plotly_chart(fig10, use_container_width=True)
+
+            with o11:
+                col1, col2 = st.columns([1,2.8])
+
+                with col1:
+                    st.dataframe(m11.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig11 = px.bar(m11, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="Retro | Hits Chart")
+                    st.plotly_chart(fig11, use_container_width=True)
+
+            with o12:
+                col1, col2 = st.columns([1,3.33])
+
+                with col1:
+                    st.dataframe(m12.style.background_gradient(cmap='Blues'))
+                with col2:
+                    fig12 = px.bar(m12, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
+                            title="Sq9 | Hits Chart")
+                    st.plotly_chart(fig12, use_container_width=True)
+
+        col1, col2, col3 = st.columns([8, 7, 2])
+        with col1:
+            st.write(' ')
+        with col2:
+            authenticator.logout("Logout", "main")
+        with col3:
+            st.write(' ')
