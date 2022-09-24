@@ -105,62 +105,62 @@ if authentication_status:
 
     info, help, main, chart, Method = st.tabs(["About us", "Help", "Main", "Chart", "Method"])
 
-        with info:
+    with info:
 
-            col0,col00 = st.columns([5,3.5])
+        col0,col00 = st.columns([5,3.5])
 
-            with col0:
-                st.title('AstroTool© Info Page')
+        with col0:
+            st.title('AstroTool© Info Page')
                 
-                gt = Image.open(r'gtlogo.png')
+            gt = Image.open(r'gtlogo.png')
 
-                st.markdown('''
-                **This WebApp of Astrotool©** is a gift from **[Geometric Thinking](https://geometricthinking.com "Geometric Thinking")** and the developpers **Amir & Sachith** to the world.  We have learned that there is a **very unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to discern, **far in advance, of the dates when turns are likely to occur**. We call those dates **ENERGY POINTS (EPs)**.  This WebApp will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a heads up when to pay close attention to a chart for a trading opportunity**.
-                * Most of the workings of the file is not available inside this **Web-App** and/or **locked** to prevent the user from breaking it.
-                * The **CHART** page is self-explanatory.  The dates with the highest bars are the dates to watch the most.  Note that the ep dates should be viewed as +/- 1 day.  In other words, an ep may show up a day early or a day late.
-                * The **MAIN** page is chock full of astrological data related to the passage of time since key dates in BTC history.  Those dates are visible on the left side of the page.  As of the date of publication, the last date entered was 06/18/22.  
-                * If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at.  For a more thorough and complete understanding, you should attend a class, if and when Geometric Thinking holds another class.  
-                The founder of Geometric Thinking (GT) is no longer a young man and will not be involved with the markets for more than a few more years.  This WebApp is given to help GT students by giving away some of the insights we PRAYED for, when we were starting out.  
-                **We wish you the very best success in your trading career**.
-                ''')
-                st.header('Who are we?')
+            st.markdown('''
+            **This WebApp of Astrotool©** is a gift from **[Geometric Thinking](https://geometricthinking.com "Geometric Thinking")** and the developpers **Amir & Sachith** to the world.  We have learned that there is a **very unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to discern, **far in advance, of the dates when turns are likely to occur**. We call those dates **ENERGY POINTS (EPs)**.  This WebApp will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a heads up when to pay close attention to a chart for a trading opportunity**.
+            * Most of the workings of the file is not available inside this **Web-App** and/or **locked** to prevent the user from breaking it.
+            * The **CHART** page is self-explanatory.  The dates with the highest bars are the dates to watch the most.  Note that the ep dates should be viewed as +/- 1 day.  In other words, an ep may show up a day early or a day late.
+            * The **MAIN** page is chock full of astrological data related to the passage of time since key dates in BTC history.  Those dates are visible on the left side of the page.  As of the date of publication, the last date entered was 06/18/22.  
+            * If you study the data on the Main page, you will gain at least a glimmer of insight into the kind of things we look at.  For a more thorough and complete understanding, you should attend a class, if and when Geometric Thinking holds another class.  
+            The founder of Geometric Thinking (GT) is no longer a young man and will not be involved with the markets for more than a few more years.  This WebApp is given to help GT students by giving away some of the insights we PRAYED for, when we were starting out.  
+            **We wish you the very best success in your trading career**.
+            ''')
+            st.header('Who are we?')
 
-                st.image(gt)
+            st.image(gt)
                 
-                st.markdown('''
-                We opened Geometric Thinking in July 2017 and have now taught literally many hundreds of traders worldwide the art of Geometric Thinking.  
-                * Geometric Thinking focuses on a unique understanding of how geometry and natural law focuses the minds of traders (en masse) such that **there are points in time and price where we can forecast trend changes are most likely to occur.**
+            st.markdown('''
+            We opened Geometric Thinking in July 2017 and have now taught literally many hundreds of traders worldwide the art of Geometric Thinking.  
+            * Geometric Thinking focuses on a unique understanding of how geometry and natural law focuses the minds of traders (en masse) such that **there are points in time and price where we can forecast trend changes are most likely to occur.**
 
-                * Knowing in advance, for example, that a coin like BTC will likely reach an Energy Point (ep) in time 2 weeks in advance gives the trader an almost “unfair advantage” over other traders.  It becomes even more unfair if the Geometric Thinker realizes not only that a date 2 weeks away is a prime time to wait and watch for, but also realizes that there are forecast-able prices associated with that date.
-                * If you’ve been trading for awhile, you already know that this business is cut-throat. It is vicious and even very smart people typically lose everything over time.  If you are honest with yourself you know that **the classic trading techniques, divergences, moving averages, etc simply do not work consistently.**
+            * Knowing in advance, for example, that a coin like BTC will likely reach an Energy Point (ep) in time 2 weeks in advance gives the trader an almost “unfair advantage” over other traders.  It becomes even more unfair if the Geometric Thinker realizes not only that a date 2 weeks away is a prime time to wait and watch for, but also realizes that there are forecast-able prices associated with that date.
+            * If you’ve been trading for awhile, you already know that this business is cut-throat. It is vicious and even very smart people typically lose everything over time.  If you are honest with yourself you know that **the classic trading techniques, divergences, moving averages, etc simply do not work consistently.**
 
-                * So what does work consistently?  What will give you an unfair advantage over other traders?  **Geometry and natural law**.  
+            * So what does work consistently?  What will give you an unfair advantage over other traders?  **Geometry and natural law**.  
 
-                * Knowing these things will not guarantee that you will win.  It simply gives you an advantage.  Look at the picture above of the man holding two aces in the hole.  Does this guarantee that he will win the hand?  **No.  There are still 100 ways to lose, even with a pair of aces in the hole.**  If he were playing against professional poker players he would still need to master the game right?  He would still need to hide his tells, learn to bluff, learn game mathematics, etc, in order to be a consistent winner.  So too with Geometric Thinking and trading.
+            * Knowing these things will not guarantee that you will win.  It simply gives you an advantage.  Look at the picture above of the man holding two aces in the hole.  Does this guarantee that he will win the hand?  **No.  There are still 100 ways to lose, even with a pair of aces in the hole.**  If he were playing against professional poker players he would still need to master the game right?  He would still need to hide his tells, learn to bluff, learn game mathematics, etc, in order to be a consistent winner.  So too with Geometric Thinking and trading.
 
-                * But still, imagine if EVERY hand, or nearly every hand, that man was dealt two aces in the hole (without cheating).  **UNFAIR ADVANTAGE, right?**    We can arrange for you to be dealt two aces in the hole more often than not.  If you will combine that with the dedication to master this business, you can become a consistent winner.  **We believe this 100%**.
-                ''')
+            * But still, imagine if EVERY hand, or nearly every hand, that man was dealt two aces in the hole (without cheating).  **UNFAIR ADVANTAGE, right?**    We can arrange for you to be dealt two aces in the hole more often than not.  If you will combine that with the dedication to master this business, you can become a consistent winner.  **We believe this 100%**.
+            ''')
                 
-                st.header('Why should you care?')
-                st.markdown('''
-                Whether you care to believe this or not, dates such as the 12/17/2017 (20k) or the 15/04/2021 (65k) BTC high were seen weeks in advance as a date for a possible top.  The 3/12/2020 low was also forecasted as a possible low well more than a month in advance.  **WE LITERALLY [TWEETED TO THE WORLD](https://twitter.com/jimfred1276/status/1462641460948267013), THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!**  To the best of our knowledge we are the only ones who did that. 
+            st.header('Why should you care?')
+            st.markdown('''
+            Whether you care to believe this or not, dates such as the 12/17/2017 (20k) or the 15/04/2021 (65k) BTC high were seen weeks in advance as a date for a possible top.  The 3/12/2020 low was also forecasted as a possible low well more than a month in advance.  **WE LITERALLY [TWEETED TO THE WORLD](https://twitter.com/jimfred1276/status/1462641460948267013), THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!**  To the best of our knowledge we are the only ones who did that. 
 
-                Whether you choose to believe this or not, I assure you it is true that at the very least, several hundred geometric thinking traders know which dates to watch, and which prices, LONG before other traders do.  Does that seem fair to you?  Does that matter?  Should you care?  **We think so.**
+            Whether you choose to believe this or not, I assure you it is true that at the very least, several hundred geometric thinking traders know which dates to watch, and which prices, LONG before other traders do.  Does that seem fair to you?  Does that matter?  Should you care?  **We think so.**
 
-                You can join us in our [Telegram Channel](https://t.me/joinchat/FKSNuqrZpjhlZTJi)
-                ''')
+            You can join us in our [Telegram Channel](https://t.me/joinchat/FKSNuqrZpjhlZTJi)
+            ''')
 
-            with col00:
-                    spa = Image.open(r'space.png')
-                    st.image(spa)
-                    st.markdown('**The Solar System - "spirals everywhere"** | *A Little Book of Coincidence* by John Martineau')
-                    astrotoologo = Image.open(r'astro.png')
-                    sva = Image.open(r'sva.png')
-                    st.image(sva)
-                    st.markdown('*About the developers...*')
-                    st.markdown('''This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Pantheon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers and students are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since they met each others in 2016', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking.com & AstroTool©* - who allowed us to translate "Astrotool©" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool© as a memory paper subject!
+        with col00:
+            spa = Image.open(r'space.png')
+            st.image(spa)
+            st.markdown('**The Solar System - "spirals everywhere"** | *A Little Book of Coincidence* by John Martineau')
+            astrotoologo = Image.open(r'astro.png')
+            sva = Image.open(r'sva.png')
+            st.image(sva)
+            st.markdown('*About the developers...*')
+            st.markdown('''This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Pantheon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers and students are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since they met each others in 2016', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking.com & AstroTool©* - who allowed us to translate "Astrotool©" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool© as a memory paper subject!
 
-                    The developers take no credit for the basic calculations and methods of the "Astrotool©" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire "Astrotool" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha...''')
+            The developers take no credit for the basic calculations and methods of the "Astrotool©" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire "Astrotool" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha...''')
 
         with help:
             
