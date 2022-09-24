@@ -72,7 +72,6 @@ if authentication_status == None:
 if authentication_status:
         
     # LOGO
-    st.set_page_config(page_title="ASTROTOOL©", layout="wide")
 
     heliox = heliox.copy()
     geox = geox.copy()
