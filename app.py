@@ -70,6 +70,8 @@ if authentication_status == None:
 # --- DASHBOARD ---
 
 if authentication_status:
+
+    st.markdown(f"Welcome aboard {names}, enjoy the Alpha version of Astrotool!")
         
     # LOGO
 
