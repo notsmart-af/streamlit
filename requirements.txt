@@ -1,5 +1,5 @@
 pip==22.2.2
-pkg
+pkg-resources==0.0.0
 altair==4.1.0
 appnope==0.1.2
 argon2-cffi==20.1.0
