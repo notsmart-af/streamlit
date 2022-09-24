@@ -1,4 +1,6 @@
 pip==22.2.2
+gevent --pre
+auto-py-to-exe
 setuptools
 altair==4.1.0
 appnope==0.1.2
