@@ -482,9 +482,6 @@ if authentication_status:
                             title="EP hits since last 2 years")
                 st.plotly_chart(fig1, use_container_width=True)
 
-            ######
-
-
             # Dataframe EP
 
         with Method:
