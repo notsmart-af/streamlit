@@ -299,8 +299,8 @@ if authentication_status:
                     st.write('')
                 with col2:
                     st.title('**Chart**')
-                    figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                        height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
+                    figui = px.bar(m.head(31), x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                        height=700, width=1200)
                     st.plotly_chart(figui, use_container_width=True)
                 with col3:
                     st.write('')
