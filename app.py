@@ -272,8 +272,7 @@ if authentication_status:
                 with col1:
                     st.write('')
                 with col2:
-                    st.title('**Work in Progress...**')
-                    st.markdown('Come back here very soon!')
+                    st.title('**AstroTool© User Guide**')
                 with col3:
                     st.write('')
 
