@@ -268,7 +268,7 @@ if authentication_status:
                     st.write(' ')
 
             with ee2:
-                col1, col2, col3 = st.columns([1, 1, 1])
+                col1, col2, col3 = st.columns([2,3,2])
                 with col1:
                     st.write('')
                 with col2:
@@ -292,7 +292,7 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2, col3 = st.columns([1, 1, 1])
+                col1, col2, col3 = st.columns([2,3,2])
                 with col1:
                     st.write('')
                 with col2:
@@ -318,7 +318,7 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2, col3 = st.columns([1, 1, 1])
+                col1, col2, col3 = st.columns([2,3,2])
                 with col1:
                     st.write('')
                 with col2:
@@ -363,7 +363,7 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2, col3 = st.columns([1, 1, 1])
+                col1, col2, col3 = st.columns([2,3,2])
                 with col1:
                     st.write('')
                 with col2:
@@ -396,7 +396,7 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2, col3 = st.columns([1, 1, 1])
+                col1, col2, col3 = st.columns([2,3,2])
                 with col1:
                     st.write('')
                 with col2:
