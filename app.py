@@ -293,12 +293,19 @@ if authentication_status:
                 with col3:
                     st.write('')
 
+                col1, col2, col3 = st.columns([1, 1, 1])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.title('**Chart**')
+                with col3:
+                    st.write('')
+
                 col1, col2, col3 = st.columns([0.5,5,0.5])
 
                 with col1:
                     st.write('')
                 with col2:
-                    st.title('**Chart**')
                     figui = px.bar(m.head(31), x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
                         height=500, width=800)
                     st.plotly_chart(figui, use_container_width=True)
