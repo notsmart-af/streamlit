@@ -337,25 +337,20 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2, col3 = st.columns([0.1,8,0.1])  
+                col1, col2 = st.columns([3,3])       
 
                 with col1:
-                    st.write('')    
-
-                with col2:
                     original_titles = '**<p style="font-family:sans-serif; color:Red; font-size: 20px;">**Heliocentric (H)**</p>**'
                     st.markdown(original_titles, unsafe_allow_html=True)
                     for col in helio.columns[1:]:
                         helio = helio.astype({col: int})
                     st.dataframe(helio)
+                with col2:
                     original_titles = '**<p style="font-family:sans-serif; color:Aqua; font-size: 20px;">**Geocentric (G)**</p>**'
                     st.markdown(original_titles, unsafe_allow_html=True)
                     for col in geo.columns[1:]:
                         geo = geo.astype({col: int})
-                    st.dataframe(geo)        
-
-                with col3:
-                    st.write('')            
+                    st.dataframe(geo)                    
 
                 col1, col2, col3 = st.columns([2, 3, 2])
                 with col1:
