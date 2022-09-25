@@ -369,18 +369,21 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2 = st.columns([2,2])    
+                col1, col2, col3 = st.columns([0.1,10,0.1])    
 
                 with col1:
+                    st.write('')
+                with col2:
                     st.markdown("**Transit Aspects**")
                     for col in mn1.columns[3:]:
                         mn1 = mn1.astype({col: int})
                     st.dataframe(mn1.style.background_gradient(cmap='Blues'))
-                with col2:
                     st.markdown("**Natal Aspects**")
                     for col in mn2.columns[3:]:
                         mn2 = mn2.astype({col: int})
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
+                with col3:
+                    st.write('')
 
             #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             #    height=550)
