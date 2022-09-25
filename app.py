@@ -332,7 +332,7 @@ if authentication_status:
                 with col1:
                     st.write('')
                 with col2:
-                    sp = Image.open(r'sq9.png', caption='Square of 9', use_column_width='always')
+                    sp = Image.open(r'sq9.png', use_column_width='always', caption='Sunrise by the mountains')
                     st.image(sp)
                 with col3:
                     st.write('')
