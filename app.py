@@ -337,20 +337,23 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2 = st.columns([3,3])       
+                col1, col2, col3 = st.columns([2,3,2])       
 
                 with col1:
+                    st.write('')
+                with col2:
                     original_titles = '**<p style="font-family:sans-serif; color:Red; font-size: 20px;">**Heliocentric (H)**</p>**'
                     st.markdown(original_titles, unsafe_allow_html=True)
                     for col in helio.columns[1:]:
                         helio = helio.astype({col: int})
                     st.dataframe(helio)
-                with col2:
                     original_titles = '**<p style="font-family:sans-serif; color:Aqua; font-size: 20px;">**Geocentric (G)**</p>**'
                     st.markdown(original_titles, unsafe_allow_html=True)
                     for col in geo.columns[1:]:
                         geo = geo.astype({col: int})
-                    st.dataframe(geo)                    
+                    st.dataframe(geo)  
+                with col3:
+                    st.write('')                  
 
                 col1, col2, col3 = st.columns([2, 3, 2])
                 with col1:
@@ -393,8 +396,6 @@ if authentication_status:
                     st.markdown('The blue are is for those rare times when today’s planets are making an important aspect with BTC’s natal chart. For example, if today’s Saturn longitude was 60 degrees with where Jupiter was on the White Paper date, it would show up here.')
                 with col3:
                     st.write('')
-
-
 
             #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             #    height=550)
