@@ -323,7 +323,7 @@ if authentication_status:
                 with col1:
                     st.write('')
                 with col2:
-                    st.title('**Longitudes on Square of 9 table**')
+                    st.title('**Longitudes on Square of 9**')
                 with col3:
                     st.write('')
 
@@ -340,10 +340,14 @@ if authentication_status:
                 col1, col2 = st.columns([2,2])       
 
                 with col1:
+                    original_titles = '**<p style="font-family:sans-serif; color:Red; font-size: 20px;">**Heliocentric (H)**</p>**'
+                    st.markdown(original_titles, unsafe_allow_html=True)
                     for col in helio.columns[1:]:
                         helio = helio.astype({col: int})
                     st.dataframe(helio)
                 with col2:
+                    original_titles = '**<p style="font-family:sans-serif; color:Aqua; font-size: 20px;">**Geocentric (G)**</p>**'
+                    st.markdown(original_titles, unsafe_allow_html=True)
                     for col in geo.columns[1:]:
                         geo = geo.astype({col: int})
                     st.dataframe(geo)                    
