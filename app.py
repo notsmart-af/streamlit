@@ -396,6 +396,32 @@ if authentication_status:
                 with col3:
                     st.write('')
 
+                col1, col2, col3 = st.columns([1, 1, 1])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.title('**Retrograde activity**')
+                with col3:
+                    st.write('')
+
+                col1, col2, col3 = st.columns([2,3,2])    
+
+                with col1:
+                    st.write('')
+                with col2:
+                    st.dataframe(mn6.style.background_gradient(cmap='Blues'))
+                with col3:
+                    st.write('')
+
+                col1, col2, col3 = st.columns([2, 3, 2])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.markdown('This visual shows us the planet’s retrograde status over the next 10 days. Here we can see that 6 of the 8 planets are retrograde today.')
+                    st.markdown('Importantly, we can see that Mercury will be no longer retrograde (will go direct) on 10/2/2022. You may see an “X” in one of the squares (occasionally not shown here). That would indicate that the planet had returned to its prior longitude from which it’s last retrograde has begun.')
+                with col3:
+                    st.write('')
+
             #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             #    height=550)
             #st.plotly_chart(figui, use_container_width=True)
