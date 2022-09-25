@@ -156,7 +156,7 @@ if authentication_status:
 
         with col00:
             spa = Image.open(r'space.png')
-            st.image(spa, caption='The Solar System - "Spirals Everywhere" | A Little Book of Coincidence* by John Martineau')
+            st.image(spa, caption='The Solar System - "Spirals Everywhere" | A Little Book of Coincidence by John Martineau')
             astrotoologo = Image.open(r'astro.png')
             sva = Image.open(r'sva.png')
             st.image(sva, caption='Amir & Sachith logo')
