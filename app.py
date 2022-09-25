@@ -369,7 +369,7 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2, col3 = st.columns([0.1,10,0.1])    
+                col1, col2, col3 = st.columns([2,3,2])    
 
                 with col1:
                     st.write('')
@@ -384,6 +384,17 @@ if authentication_status:
                     st.dataframe(mn2.style.background_gradient(cmap='Blues'))
                 with col3:
                     st.write('')
+
+                col1, col2, col3 = st.columns([2, 3, 2])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.markdown('Here we see today’s planetary aspects. The key degrees to look for are highlighted in yellow. For example, in the example above, Earth & Mercury are in conjunction, and Pluto and Mercury are 60 degrees apart.')
+                    st.markdown('The blue are is for those rare times when today’s planets are making an important aspect with BTC’s natal chart. For example, if today’s Saturn longitude was 60 degrees with where Jupiter was on the White Paper date, it would show up here.')
+                with col3:
+                    st.write('')
+
+
 
             #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             #    height=550)
