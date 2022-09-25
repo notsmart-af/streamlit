@@ -219,7 +219,7 @@ if authentication_status:
                 with col1:
                     st.write('')
                 with col2:
-                    figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                    figui = px.bar(m.head(31), x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
                         height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
                     st.plotly_chart(figui, use_container_width=True)
                 with col3:
