@@ -300,7 +300,7 @@ if authentication_status:
                 with col2:
                     st.title('**Chart**')
                     figui = px.bar(m.head(31), x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                        height=700, width=1200)
+                        height=500, width=800)
                     st.plotly_chart(figui, use_container_width=True)
                 with col3:
                     st.write('')
@@ -309,7 +309,6 @@ if authentication_status:
                 with col1:
                     st.write('')
                 with col2:
-
                     st.markdown('This is perhaps the most important visual in AstroTool. It shows at a glance the dates ahead in which there is a forecast of a likely change in trend. It is calculated by the aggregation of a large number of classical and esoteric timing signals employed by traders worldwide.')
                 with col3:
                     st.write('')
