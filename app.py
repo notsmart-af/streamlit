@@ -156,11 +156,10 @@ if authentication_status:
 
         with col00:
             spa = Image.open(r'space.png')
-            st.image(spa)
-            st.markdown('**The Solar System - "spirals everywhere"** | *A Little Book of Coincidence* by John Martineau')
+            st.image(spa, caption='The Solar System - "spirals everywhere"** | *A Little Book of Coincidence* by John Martineau')
             astrotoologo = Image.open(r'astro.png')
             sva = Image.open(r'sva.png')
-            st.image(sva)
+            st.image(sva, caption='Amir & Sachith logo')
             st.markdown('*About the developers...*')
             st.markdown('''This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Pantheon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers and students are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since they met each others in 2016', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking.com & AstroTool©* - who allowed us to translate "Astrotool©" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool© as a memory paper subject!
 
