@@ -445,7 +445,7 @@ if authentication_status:
                     st.write('')
                 with col2:
                     st.markdown('This last section is rather like the very first section. It notes how many degrees each planet has moved since a key pivot date. Important degrees are highlighted in yellow for quick reference. Note that is TOTAL degrees moved, which can get to be pretty big number for fast-moving planets like Mercury. You will note that sometimes an odd-looking number like ‘1890’ will be highlighted. In such a case, the number is 90, 180 or 270 degrees from a full planetary cycle. It is not necessary to do the calculation. Astrotool has already done the calculation and highlighted the cell for you.')
-                    st.markdown('*We wish you the best in your trading career and believe that this tool will be of tremendous help, once you learn how to use it on a daily basis. Happy trading!*')
+                    st.markdown('***We wish you the best in your trading career and believe that this tool will be of tremendous help, once you learn how to use it on a daily basis. Happy trading!***')
                 with col3:
                     st.write('')
 
