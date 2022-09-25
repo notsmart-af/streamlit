@@ -475,7 +475,7 @@ if authentication_status:
 
             with col1:
                 st.markdown("Total Major EP since last 2 years")
-                st.dataframe(chart.style.background_gradient(cmap='Blues'))
+                st.dataframe(chart)
             with col2:
                 fig1 = px.bar(chart, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
                             title="EP hits since last 2 years")
