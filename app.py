@@ -277,6 +277,22 @@ if authentication_status:
                 with col3:
                     st.write('')
 
+                col1, col2, col3 = st.columns([1, 1, 1])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.title('**Main page**')
+                    def highlight_everyother(s):
+                        return ['background-color: yellow; color:black' if x%2==1 else ''
+                            for x in range(len(s))]
+                    st.dataframe(hm.style.apply(highlight_everyother))   
+                    st.markdown('This section shows the current helio longitude of each planet on the 2nd line, which gives “Today date” on the far left. It is followed by “mod 30”. This line shows the current number of degrees into the current house. In the example above, the earth has moved into Aries…')
+                    st.markdown('Each of the following lines beginning with “White Paper date”, shows how far each planet has moved since a key date in BTC history. Since the White Paper was published on 10/31/2008, the earth has moved 5002 degrees. ')
+                    st.markdown('The line following (mod360) shows us that the earth has moved 13 full cycles (13 earth years), and is 322 degrees into the 14th cycle, since WP date.')
+                    st.markdown('Note that the Nep column has a highlighted ‘30’ on the Genesis block date. 30 degrees is a key degree so it is highlighted to stand out (of course Neptune moves very slowly, and may remain at 30 degrees for a month, so it is only useful when in tandem with other more immediate signals).')
+                with col3:
+                    st.write('')
+
             #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             #    height=550)
             #st.plotly_chart(figui, use_container_width=True)
