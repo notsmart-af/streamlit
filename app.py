@@ -319,6 +319,46 @@ if authentication_status:
                 with col3:
                     st.write('')
 
+                col1, col2, col3 = st.columns([1, 1, 1])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.title('**Longitudes on Square of 9 table**')
+                with col3:
+                    st.write('')
+
+                col1, col2, col3 = st.columns([1,5,1])    
+
+                with col1:
+                    st.write('')
+                with col2:
+                    sp = Image.open(r'sq9.png')
+                    st.image(sp)
+                with col3:
+                    st.write('')
+
+                with col1:
+                    st.write('')
+                with col2:
+                    for col in helio.columns[1:]:
+                        helio = helio.astype({col: int})
+                    st.dataframe(helio)
+                    for col in geo.columns[1:]:
+                        geo = geo.astype({col: int})
+                    st.dataframe(geo)                    
+                with col3:
+                    st.write('')
+                
+
+                col1, col2, col3 = st.columns([2, 3, 2])
+                with col1:
+                    st.write('')
+                with col2:
+                    st.markdown('This visual shows the Helio longitude of each of the planets in red, and the Geo longitude in blue. The longitudes are overlaid on Gann’s Square of 9 chart.')
+                    st.markdown('It has been our experience that on days when most planets, either in Helio or Geo, are on one of the 45 degrees lines, “the cross” (shown in yellow), a change in trend is likely. This tool alerted us to the 4/14/2021 high being a major pivot, in advance. ')
+                with col3:
+                    st.write('')
+
             #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             #    height=550)
             #st.plotly_chart(figui, use_container_width=True)
