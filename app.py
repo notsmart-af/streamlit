@@ -80,7 +80,8 @@ if authentication_status:
     geo = geo.copy()
     hm = helio_main.copy()
     gm = geo_main.copy()
-    m = dataframe_c.copy()
+    m = fluchart.copy()
+    chart = dataframe_c.copy()
 
     m1 = NatSq.copy()
     m2 = Spi.copy()
@@ -292,14 +293,23 @@ if authentication_status:
                 with col3:
                     st.write('')
 
-                col1, col2, col3 = st.columns([2, 3, 2])
+               col1, col2, col3 = st.columns([0.5,5,0.5])
+
                 with col1:
                     st.write('')
                 with col2:
                     st.title('**Chart**')
-                    figui = px.bar(m.head(31), x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-                    height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
+                    figui = px.bar(m, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                        height=700, width=1200).update_layout(xaxis={"rangeslider":{"visible":True}})
                     st.plotly_chart(figui, use_container_width=True)
+                with col3:
+                    st.write('')
+
+                col1, col2, col3 = st.columns([2, 3, 2])
+                with col1:
+                    st.write('')
+                with col2:
+
                     st.markdown('This is perhaps the most important visual in AstroTool. It shows at a glance the dates ahead in which there is a forecast of a likely change in trend. It is calculated by the aggregation of a large number of classical and esoteric timing signals employed by traders worldwide.')
                 with col3:
                     st.write('')
@@ -459,11 +469,10 @@ if authentication_status:
             col1, col2 = st.columns([1,3.33])
 
             with col1:
-                dataframe_c = dataframe_c.copy()
                 st.markdown("Total Major EP since last 2 years")
-                st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
+                st.dataframe(chart.style.background_gradient(cmap='Blues'))
             with col2:
-                fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                fig1 = px.bar(chart, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
                             title="EP hits since last 2 years")
                 st.plotly_chart(fig1, use_container_width=True)
 
