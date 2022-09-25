@@ -474,10 +474,11 @@ if authentication_status:
             col1, col2 = st.columns([1,3.33])
 
             with col1:
+                dataframe_c = dataframe_c.copy()
                 st.markdown("Total Major EP since last 2 years")
-                st.dataframe(chart)
+                st.dataframe(dataframe_c.style.background_gradient(cmap='Blues'))
             with col2:
-                fig1 = px.bar(chart, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+                fig1 = px.bar(dataframe_c, x='Date', y='Magnitude', color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
                             title="EP hits since last 2 years")
                 st.plotly_chart(fig1, use_container_width=True)
 
