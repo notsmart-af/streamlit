@@ -305,7 +305,7 @@ if authentication_status:
                 with col1:
                     st.write('')
                 with col2:
-                    figui = px.bar(m.head(36).iloc[5:,], x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis)
+                    figui = px.bar(m.head(66).iloc[5:,], x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis)
                     st.plotly_chart(figui, use_container_width=True)
                 with col3:
                     st.write('')
