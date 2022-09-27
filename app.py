@@ -745,7 +745,7 @@ if authentication_status:
 
             with e1:
 
-                col1, col2 = st.columns([3,2])
+                col1, col2 = st.columns([3,3])
                 with col1:
                     st.title('**Twitter Sentimental Analysis on BTC**')
                     st.markdown('Cryptocurrencies are rising in importance as an investment option and alternative currency. Thus, investors are keen on finding timely market movement insights. One of such sources is Twitter due to its live feed of information on cryptocurrencies and emotional information from investors expressing their sentiments.')
