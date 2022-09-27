@@ -753,10 +753,10 @@ if authentication_status:
                     st.markdown('This study has been made on 13 different MAJOR EP dates, we took for each of them, -1/+1 days from the given date (eg: our major EP is at 15/09/2022, we scrapped from Twitter 83k tweets from these 3 consecutive dates: 14/09 | 15/09 | 16/09). The total scrapped sample represent more than 850k tweets for those 13 major EP.')
                 with col2:
                     highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
-                    st.dataframe(gdeg.style.bar(subset="compound", color=['red', 'green'], align='zero'))
+                    st.dataframe(gdeg.style.apply(lambda x: ['background:green' if x in highlight else 'background:darkred' for x in gdeg.Sentiment]))
                 with col3:
                     sss = Image.open(r'wc1.png')
-                    st.image(sss, width=500, caption='WordCloud of our scrapped Tweets (#Bitcoin)')
+                    st.image(sss, width=500, caption='WordCloud of our scrapped Tweets (#bitcoin)')
 
                 fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiments grouped by Dates", width=1618, height=500, symbol="Sentiment")
                 fig.update_layout(xaxis=dict(showgrid=False),
