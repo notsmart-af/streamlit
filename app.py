@@ -739,23 +739,19 @@ if authentication_status:
                     st.plotly_chart(fig12, use_container_width=True)
 
         with Sentimental:
+            col0,col00 = st.columns([4,3])
+            with col0:
+                highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
+                st.dataframe(gdeg.style.apply(lambda x: ['background:green' if x in highlight else 'background:darkred' for x in gdeg.Sentiment]))
 
-            h111 = st.tabs(["Twitter Sentimental Analysis"])
+            with col00:
+                fig = px.pie(gdeg, values='compound', names='Sentiment', width=600, height=500, title="Percentage distribution of each sentiment")
+                st.plotly_chart(fig)
 
-            with h111:
-                col0,col00 = st.columns([4,3])
-                with col0:
-                    highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
-                    st.dataframe(gdeg.style.apply(lambda x: ['background:green' if x in highlight else 'background:darkred' for x in gdeg.Sentiment]))
-
-                with col00:
-                    fig = px.pie(gdeg, values='compound', names='Sentiment', width=600, height=500, title="Percentage distribution of each sentiment")
-                    st.plotly_chart(fig)
-
-                    fig1 = px.pie(gdeg, values='compound', names='Date', width=600, height=500, title="Percentage distribution of each sentiment by dates")
-                    st.plotly_chart(fig1)
-                    
-                    st.markdown("7 = 7.5° & 22 = 22.5°")
+                fig1 = px.pie(gdeg, values='compound', names='Date', width=600, height=500, title="Percentage distribution of each sentiment by dates")
+                st.plotly_chart(fig1)
+                
+                st.markdown("7 = 7.5° & 22 = 22.5°")
 
 
     col1, col2, col3 = st.columns([8, 7, 2])
