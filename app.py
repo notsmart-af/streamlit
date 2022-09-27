@@ -750,7 +750,7 @@ if authentication_status:
                     st.dataframe(gdeg.style.bar(subset="compound", color=['red', 'green'], align='zero'))
                 
                 with col00:
-                    fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiment grouped by Dates", width=1200, height=450, symbol="Sentiment")
+                    fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiments grouped by Dates", width=1200, height=450, symbol="Sentiment")
                     fig.update_layout(xaxis=dict(showgrid=False),
                     yaxis=dict(showgrid=False))
                     st.plotly_chart(fig)
