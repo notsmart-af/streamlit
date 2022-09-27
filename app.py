@@ -83,6 +83,7 @@ if authentication_status:
     m = fluchart.copy()
     chart = dataframe_c.copy()
     gdeg = final_sentiment.copy()
+    gdeg = gdeg.iloc[: , 1:]
 
     m1 = NatSq.copy()
     m2 = Spi.copy()
