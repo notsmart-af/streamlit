@@ -756,7 +756,7 @@ if authentication_status:
                     st.dataframe(gdeg.style.bar(subset="compound", color=['red', 'green'], align='zero'))
                 with col3:
                     sss = Image.open(r'wc1.png')
-                    st.image(sss, width=850, caption='WordCloud of our scrapped Tweets (#Bitcoin)')
+                    st.image(sss, width=500, caption='WordCloud of our scrapped Tweets (#Bitcoin)')
 
                 fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiments grouped by Dates", width=1618, height=500, symbol="Sentiment")
                 fig.update_layout(xaxis=dict(showgrid=False),
