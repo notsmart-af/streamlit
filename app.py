@@ -745,7 +745,7 @@ if authentication_status:
 
             with e1:
 
-                col1, col2, col3 = st.columns([3,3,3])
+                col1, col2, col3 = st.columns([5,3,5])
                 with col1:
                     st.title('**Twitter Sentimental Analysis on BTC**')
                     st.markdown('Cryptocurrencies are rising in importance as an investment option and alternative currency. Thus, investors are keen on finding timely market movement insights. One of such sources is Twitter due to its live feed of information on cryptocurrencies and emotional information from investors expressing their sentiments.')
@@ -755,7 +755,7 @@ if authentication_status:
                     highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
                     st.dataframe(gdeg.style.bar(subset="compound", color=['red', 'green'], align='zero'))
                 with col3:
-                    sss = Image.open(r'wordcloudgood.png')
+                    sss = Image.open(r'wc1.png')
                     st.image(sss)
 
                 fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiments grouped by Dates", width=1618, height=500, symbol="Sentiment")
