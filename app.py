@@ -740,9 +740,9 @@ if authentication_status:
 
         with Sentimental:
 
-            h1 = st.tabs(["Twitter Sentimental Analysis"])
+            h111 = st.tabs(["Twitter Sentimental Analysis"])
 
-            with h1:
+            with h111:
                 col0,col00 = st.columns([4,3])
                 with col0:
                     highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
