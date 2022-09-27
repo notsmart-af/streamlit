@@ -763,7 +763,6 @@ if authentication_status:
 
                     st.dataframe(gdeg.style.apply(highlight))
 
-
                 with col3:
                     sss = Image.open(r'wc1.png')
                     st.image(sss, width=500, caption='WordCloud of our scrapped Tweets (#bitcoin)')
