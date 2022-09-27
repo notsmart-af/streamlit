@@ -754,7 +754,7 @@ if authentication_status:
                 with col2:
                     
                     def highlight_everyother(s):
-                        return ['background-color: grey; color:black' if x%6 in range(4, 7) else ''
+                        return ['background-color: grey; color:black' if x%6 in range(3, 7) else ''
                             for x in range(len(s))]
                     st.dataframe(gdeg.style.apply(highlight_everyother))
                 with col3:
