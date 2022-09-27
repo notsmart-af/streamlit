@@ -752,8 +752,9 @@ if authentication_status:
                     st.markdown('This page will examine the extent to which Twitter sentiments can be used to correlate human mass-psychology and our major EP days date… This study was conducted using a snscrape for Twitter scrapping, a “pipeline_nlp” in order to clean our samples, and a lexicon-based approach through the VADER algorithm for sentiment analysis.')
                     st.markdown('This study has been made on 13 different MAJOR EP dates, we took for each of them, -1/+1 days from the given date (eg: our major EP is at 15/09/2022, we scrapped from Twitter 83k tweets from these 3 consecutive dates: 14/09 | 15/09 | 16/09). The total scrapped sample represent more than 850k tweets for those 13 major EP.')
                 with col2:
-                    highlights = ['Positive', 'Strongly Positive', "Weakly Positive"]
+                    
                     def highlight(x):
+                        highlights = ['Positive', 'Strongly Positive', "Weakly Positive"]
                         return ['background:green' if x in highlights else 'background:darkred' for x in gdeg.Sentiment]
                     st.dataframe(gdeg.style.apply(highlight))
                 with col3:
