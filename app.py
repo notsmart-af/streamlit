@@ -756,7 +756,7 @@ if authentication_status:
                     def highlight(x):
                         highlights = ['Positive', 'Strongly Positive', "Weakly Positive"]
                         return ['background:green' if x in highlights else 'background:darkred' for x in gdeg.Sentiment]
-                    st.dataframe(gdeg.style.apply(highlight))
+                    st.dataframe(gdeg.head(37).style.apply(highlight))
                 with col3:
                     sss = Image.open(r'wc1.png')
                     st.image(sss, width=500, caption='WordCloud of our scrapped Tweets (#bitcoin)')
