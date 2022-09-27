@@ -82,6 +82,7 @@ if authentication_status:
     gm = geo_main.copy()
     m = fluchart.copy()
     chart = dataframe_c.copy()
+    gdeg = final_sentiment.copy()
 
     m1 = NatSq.copy()
     m2 = Spi.copy()
@@ -107,7 +108,7 @@ if authentication_status:
     mn7.fillna(' ', inplace=True)
     # ONGLETS
 
-    info, help, main, chart, Method = st.tabs(["About us", "Help", "Main", "Chart", "Method"])
+    info, help, main, chart, Method, Sentimental = st.tabs(["About us", "Help", "Main", "Chart", "Method", "Sentimental Analysis"])
 
     with info:
 
@@ -736,6 +737,28 @@ if authentication_status:
                     fig12 = px.bar(m12, x='Date', y='Hit', color='Hit', color_continuous_scale=px.colors.sequential.Blues,
                             title="Sq9 | Hits Chart")
                     st.plotly_chart(fig12, use_container_width=True)
+
+        with Sentimental:
+
+            h1=st.tabs(["Twitter Sentimental Analysis"])
+
+            with h1:
+
+                col0,col00 = st.columns([4,3])
+                
+                with col0:
+                    highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
+                    st.dataframe(gdeg.style.apply(lambda x: ['background:green' if x in highlight else 'background:darkred' for x in gdeg.Sentiment]))
+
+                with col00:
+                    fig = px.pie(gdeg, values='compound', names='Sentiment', width=600, height=500, title="Percentage distribution of each sentiment")
+                    st.plotly_chart(fig)
+
+                    fig1 = px.pie(gdeg, values='compound', names='Date', width=600, height=500, title="Percentage distribution of each sentiment by dates")
+                    st.plotly_chart(fig1)
+                    
+                    st.markdown("7 = 7.5° & 22 = 22.5°")
+
 
     col1, col2, col3 = st.columns([8, 7, 2])
     with col1:
