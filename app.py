@@ -745,7 +745,7 @@ if authentication_status:
 
             with e1:
 
-                col1, col2, col3 = st.columns([2,3,2])
+                col1, col2, col3 = st.columns([1,3,1])
                 with col1:
                     st.write('')
                 with col2:
