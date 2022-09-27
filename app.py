@@ -755,6 +755,7 @@ if authentication_status:
                     highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
                     st.dataframe(gdeg.style.bar(subset="compound", color=['red', 'green'], align='zero'))
                 with col3:
+                    st.markdown('**Scrapped Tweets Word Cloud (#BITCOIN)**')
                     sss = Image.open(r'wc1.png')
                     st.image(sss)
 
