@@ -741,12 +741,8 @@ if authentication_status:
 
         with Sentimental:
             col0,col00 = st.columns([3,3])
-
-            def highlight_everyothesr(s):
-                lambda x: ['background:green' if x in highlight else 'background:darkred' for x in s.Sentiment]
-
             highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
-            st.dataframe(gdeg.style.apply(highlight_everyothesr))
+            st.dataframe(gdeg.style.apply(lambda x: ['background:green' if x in highlight else 'background:darkred' for x in gdeg.Sentiment]))
             with col0:
                 fig = px.pie(gdeg, values='compound', names='Sentiment', width=600, height=500, title="Percentage distribution of each sentiment")
                 st.plotly_chart(fig)
