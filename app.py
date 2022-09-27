@@ -757,9 +757,8 @@ if authentication_status:
                     #    return ['background-color: grey; color:black' if x%6 in range(3, 7) else ''
                     #        for x in range(len(s))]
                     #st.dataframe(gdeg.style.apply(highlight_everyother))
-
+                    gggg = ['Positive', 'Strongly Positive', "Weakly Positive"]
                     def highlight(x):
-                        gggg = ['Positive', 'Strongly Positive', "Weakly Positive"]
                         return ['background:green' if x in gggg else 'background:darkred' for x in gdeg.Sentiment]
 
                     st.dataframe(gdeg.style.apply(highlight))
