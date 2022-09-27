@@ -740,12 +740,10 @@ if authentication_status:
 
         with Sentimental:
 
-            h1=st.tabs(["Twitter Sentimental Analysis"])
+            h1 = st.tabs(["Twitter Sentimental Analysis"])
 
             with h1:
-
                 col0,col00 = st.columns([4,3])
-                
                 with col0:
                     highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
                     st.dataframe(gdeg.style.apply(lambda x: ['background:green' if x in highlight else 'background:darkred' for x in gdeg.Sentiment]))
