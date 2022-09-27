@@ -747,24 +747,18 @@ if authentication_status:
 
                 col1, col2 = st.columns([3,2])
                 with col1:
-                    st.write('')
-                with col2:
                     st.title('**Twitter Sentimental Analysis on BTC**')
                     st.markdown('Cryptocurrencies are rising in importance as an investment option and alternative currency. Thus, investors are keen on finding timely market movement insights. One of such sources is Twitter due to its live feed of information on cryptocurrencies and emotional information from investors expressing their sentiments.')
                     st.markdown('This page will examine the extent to which Twitter sentiments can be used to correlate human mass-psychology and our major EP days date… This study was conducted using a snscrape for Twitter scrapping, a “pipeline_nlp” in order to clean our samples, and a lexicon-based approach through the VADER algorithm for sentiment analysis.')
                     st.markdown('This study has been made on 13 different MAJOR EP dates, we took for each of them, -1/+1 days from the given date (eg: our major EP is at 15/09/2022, we scrapped from Twitter 83k tweets from these 3 consecutive dates: 14/09 | 15/09 | 16/09). The total scrapped sample represent more than 850k tweets for those 13 major EP.')
-
-
-                col0,col00 = st.columns([3,9])
-                with col0:
+                with col2:
                     highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
                     st.dataframe(gdeg.style.bar(subset="compound", color=['red', 'green'], align='zero'))
-                
-                with col00:
-                    fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiments grouped by Dates", width=1200, height=450, symbol="Sentiment")
-                    fig.update_layout(xaxis=dict(showgrid=False),
-                    yaxis=dict(showgrid=False))
-                    st.plotly_chart(fig)
+
+                fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiments grouped by Dates", width=1618, height=500, symbol="Sentiment")
+                fig.update_layout(xaxis=dict(showgrid=False),
+                yaxis=dict(showgrid=False))
+                st.plotly_chart(fig)
     
                 col0,col00 = st.columns([3,3])
                 with col0:
