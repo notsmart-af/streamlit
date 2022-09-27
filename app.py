@@ -740,19 +740,69 @@ if authentication_status:
                     st.plotly_chart(fig12, use_container_width=True)
 
         with Sentimental:
-            col0,col00 = st.columns([3,3])
-            highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
-            st.dataframe(gdeg.style.apply(lambda x: ['background:green' if x in highlight else 'background:darkred' for x in gdeg.Sentiment]))
-            with col0:
-                fig = px.pie(gdeg, values='compound', names='Sentiment', width=600, height=500, title="Percentage distribution of each sentiment")
+
+            e1,e2=st.tabs(["Dashboard", "Chart"])
+
+            with e1:
+                col0,col00 = st.columns([3,9])
+                with col0:
+                    highlight = ['Positive', 'Strongly Positive', "Weakly Positive"]
+                    st.dataframe(gdeg.style.bar(subset="compound", color=['red', 'green'], align='zero'))
+                
+                with col00:
+                    fig = px.line(gdeg, x="Date", y="Sentiment", color='Sentiment', title="Sentiment grouped by Dates", width=1200, height=450, symbol="Sentiment")
+                    fig.update_layout(xaxis=dict(showgrid=False),
+                    yaxis=dict(showgrid=False))
+                    st.plotly_chart(fig)
+    
+                col0,col00 = st.columns([3,3])
+                with col0:
+                    fig = px.pie(gdeg, values='compound', names='Sentiment', width=600, height=500, title="Percentage distribution of each sentiment")
+                    st.plotly_chart(fig)
+
+                with col00:
+                    fig1 = px.pie(gdeg, values='compound', names='Date', width=600, height=500, title="Percentage distribution of each sentiment by dates")
+                    st.plotly_chart(fig1)
+
+            with e2:
+                fig = px.bar(gdeg, x='Date', y='Sentiment', color="compound", title="Sentiment compound over time", color_continuous_scale=px.colors.sequential.Cividis, width=1618, height=618)
                 st.plotly_chart(fig)
 
-            with col00:
-                fig1 = px.pie(gdeg, values='compound', names='Date', width=600, height=500, title="Percentage distribution of each sentiment by dates")
-                st.plotly_chart(fig1)
-                
-                st.markdown("7 = 7.5° & 22 = 22.5°")
+                df = btcusd_d.copy()
 
+                fig = go.Figure(data=[go.Candlestick(x=df['Date'],
+                                open=df['Open'],
+                                high=df['High'],
+                                low=df['Low'],
+                                close=df['Close'])])
+                fig.add_vline(x=1, x0="2020-12-17", x1="2020-12-19", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2021-01-20", x1="2021-01-22", line_width=4, line_color="firebrick")
+                fig.add_vline(x=1, x0="2021-04-14", x1="2021-04-16", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2021-05-18", x1="2021-05-19", line_width=4, line_color="green")
+                fig.add_vline(x=1, x0="2021-07-01", x1="2021-07-03", line_width=4, line_color="green")      
+                fig.add_vline(x=1, x0="2021-07-17", x1="2021-07-19", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2021-07-31", x1="2021-08-02", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2021-08-31", x1="2021-09-02", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2021-09-23", x1="2021-09-25", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2021-10-09", x1="2021-10-11", line_width=4, line_color="lime")              
+                fig.add_vline(x=1, x0="2021-11-09", x1="2021-11-11", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2021-12-09", x1="2021-12-11", line_width=4, line_color="lime")
+                fig.add_vline(x=1, x0="2022-01-24", x1="2022-01-26", line_width=4, line_color="red")
+                fig.add_vline(x=1, x0="2022-04-04", x1="2022-04-06", line_width=4, line_color="green")
+                fig.add_vline(x=1, x0="2022-06-04", x1="2022-06-06", line_width=4, line_color="green")
+                fig.add_vline(x=1, x0="2022-06-19", x1="2022-06-21", line_width=4, line_color="firebrick")
+                fig.add_vline(x=1, x0="2022-07-03", x1="2022-07-05", line_width=4, line_color="green")
+                fig.add_vline(x=1, x0="2022-07-12", x1="2022-07-15", line_width=4, line_color="firebrick")
+                fig.add_vline(x=1, x0="2022-09-13", x1="2022-09-15", line_width=4, line_color="firebrick")
+
+                fig.update_layout(
+                autosize=False,
+                width=1920,
+                height=1080)
+
+                fig.update_layout(plot_bgcolor="white")
+
+                st.plotly_chart(fig, use_container_width=True)
 
     col1, col2, col3 = st.columns([8, 7, 2])
     with col1:
