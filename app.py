@@ -753,10 +753,18 @@ if authentication_status:
                     st.markdown('This study has been made on 13 different MAJOR EP dates, we took for each of them, -1/+1 days from the given date (eg: our major EP is at 15/09/2022, we scrapped from Twitter 83k tweets from these 3 consecutive dates: 14/09 | 15/09 | 16/09). The total scrapped sample represent more than 850k tweets for those 13 major EP.')
                 with col2:
                     
-                    def highlight_everyother(s):
-                        return ['background-color: grey; color:black' if x%6 in range(3, 7) else ''
-                            for x in range(len(s))]
-                    st.dataframe(gdeg.style.apply(highlight_everyother))
+                    #def highlight_everyother(s):
+                    #    return ['background-color: grey; color:black' if x%6 in range(3, 7) else ''
+                    #        for x in range(len(s))]
+                    #st.dataframe(gdeg.style.apply(highlight_everyother))
+
+                    def highlight(x):
+                        gggg = ['Positive', 'Strongly Positive', "Weakly Positive"]
+                            return ['background:green' if x in gggg else 'background:darkred' for x in gdeg.Sentiment]
+                            
+                    st.dataframe(gdeg.style.apply(highlight))
+
+
                 with col3:
                     sss = Image.open(r'wc1.png')
                     st.image(sss, width=500, caption='WordCloud of our scrapped Tweets (#bitcoin)')
