@@ -74,12 +74,13 @@ if authentication_status == None:
 
 if authentication_status:
 
-    col1, col2, col3 = st.columns([8, 8, 4])
-    with col1:
+    col111, col222, col333 = st.columns([8, 8, 4])
+    
+    with col111:
         st.write(' ')
-    with col2:
+    with col222:
         st.write(' ')
-    with col3:
+    with col333:
         language = st.selectbox('', ['EN', 'FR'])
         try:
             localizator = gettext.translation('base', localedir='locales', languages=[language])
