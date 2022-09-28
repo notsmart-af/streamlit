@@ -109,7 +109,7 @@ if authentication_status:
     mn7.fillna(' ', inplace=True)
     # ONGLETS
 
-    info, help, main, chart, Method, Sentimental = st.tabs(["About us", "Help", "Main", "Chart", "Method", "Sentimental Analysis"])
+    info, help, main, chart, Method, Sentimental = st.tabs(["About us", "Help", "Main", "Chart", "Method", "Sentiment Analysis"])
 
     with info:
 
