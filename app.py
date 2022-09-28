@@ -182,6 +182,7 @@ if authentication_status:
 
             with col1:
                 st.write(' ')
+                
 
             with col2:
                 st.title(_("**AstroTool© Help Page**"))
