@@ -81,7 +81,7 @@ if authentication_status:
     with col222:
         st.write(' ')
     with col333:
-        language = st.selectbox('', ['EN', 'FR'])
+        language = st.selectbox('', ['en', 'fr'])
         try:
             localizator = gettext.translation('base', localedir='locales', languages=[language])
             localizator.install()
