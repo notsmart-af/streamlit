@@ -68,7 +68,7 @@ msgstr ""
 "\n"
 "            * Avoir ces connaissances puissantes ne garantit pas que vous gagnerez, elles vous donnent un avantage de pointe. Regardez l'image ci-dessus de l'homme qui a deux as dans le trou. Cela garantit-il qu'il va gagner la main ? **Non. Il y a toujours 100 façons de perdre, même avec une paire d'as dans le trou**. S'il jouait contre d'autres joueurs de poker professionnels, il devrait quand même maîtriser le jeu, n'est-ce pas ? Il devrait toujours cacher ses tells, apprendre à bluffer, apprendre les mathématiques du jeu, etc. pour être un gagnant régulier. La même chose s'applique à la pensée géométrique et au trading.\n"
 "\n"
-"            * Maintenant, imaginez ce que la pensée géométrique peut faire pour vous. Je peux vous donner deux As sur presque toutes les mains sans tricher ! **AstroTool et la Pensée Géométrique peuvent faire en sorte que vous receviez deux as dans le trou le plus souvent possible. Si vous combinez cela avec le dévouement pour maîtriser cette activité, vous pouvez devenir un gagnant constant. **Nous y croyons à 100%.**\N"
+"            * Maintenant, imaginez ce que la pensée géométrique peut faire pour vous. Je peux vous donner deux As sur presque toutes les mains sans tricher ! **AstroTool et la Pensée Géométrique peuvent faire en sorte que vous receviez deux as dans le trou le plus souvent possible. Si vous combinez cela avec le dévouement pour maîtriser cette activité, vous pouvez devenir un gagnant constant. **Nous y croyons à 100%.**"
 "            "
 
 #: app.py:153
@@ -90,10 +90,10 @@ msgstr ""
 "\n"
 "            Que vous vous souciez de le croire ou non, des dates telles que le 17/12/2017 (top 20k) ou le 15/04/2021 (65k) BTC ont été vues des semaines à l'avance comme une date pour un possible top. Le bas du 3/12/2020 a également été prévu comme un bas possible bien plus d'un mois à l'avance. **Nous avons littéralement [TWEETÉ AU MONDE](https://twitter.com/jimfred1276/status/1462641460948267013), QUE LE TOP DE NOV 2021 ÉTAIT EN PLACE, UNE SEMAINE PLUS OU MOINS APRÈS LES FAITS, ALORS QUE LE PRIX ÉTAIT TOUJOURS DE 65000!** À notre connaissance, nous sommes les seuls à l'avoir fait.\n"
 "\n"
-"            Que vous choisissiez de le croire ou non, nous vous assurons qu'il est vrai qu'au minimum, **plusieurs centaines de traders à la pensée géométrique savent quelles dates surveiller, et quels prix, bien avant les autres traders.** \n"
-"            "
+"            Que vous choisissiez de le croire ou non, nous vous assurons qu'il est vrai qu'au minimum, **plusieurs centaines de traders à la pensée géométrique savent quelles dates surveiller, et quels prix, bien avant les autres traders.**"
+
 "            **N'Est-ce que cela vous semble important ? Est-ce que cela a de l'importance ? Devriez-vous vous en soucier ? Nous le pensons.**"
-"\n"
+
 "            Vous pouvez nous rejoindre sur notre [Canal Télégramme](https://t.me/joinchat/FKSNuqrZpjhlZTJi)\n"
 "            "
 
