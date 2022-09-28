@@ -74,6 +74,20 @@ if authentication_status == None:
 
 if authentication_status:
 
+    col1, col2, col3 = st.columns([3, 3, 1])
+    with col1:
+        st.write(' ')
+    with col2:
+        language = st.sidebar.selectbox('', ['EN', 'FR'])
+        try:
+            localizator = gettext.translation('base', localedir='locales', languages=[language])
+            localizator.install()
+            _ = localizator.gettext 
+        except:
+            pass
+    with col3:
+        st.write(' ')
+
     st.markdown(_(f"Welcome aboard **{names}**, enjoy the Alpha version of **AstroTool©**"))
         
     # LOGO

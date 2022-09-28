@@ -225,77 +225,76 @@ msgstr "D'après notre expérience, les jours où la plupart des planètes, soit en 
 
 #: app.py:379
 msgid "**Aspects**"
-msgstr ""
+msgstr "**Aspects**"
 
 #: app.py:388 app.py:480 app.py:499
 msgid "**Transit Aspects**"
-msgstr ""
+msgstr "**Aspects Transit**"
 
 #: app.py:392 app.py:484 app.py:503
 msgid "**Natal Aspects**"
-msgstr ""
+msgstr "**Aspects Natal**"
 
 #: app.py:403
 msgid "Here we see today’s planetary aspects. The key degrees to look for are highlighted in yellow. For example, in the example above, Earth & Mercury are in conjunction, and Pluto and Mercury are 60 degrees apart."
-msgstr ""
+msgstr "Nous voyons ici les aspects planétaires d'aujourd'hui. Les degrés clés à rechercher sont soulignés en jaune. Par exemple, dans l'exemple ci-dessus, la Terre et Mercure sont en conjonction, et Pluton et Mercure sont séparés de 60 degrés."
 
 #: app.py:404
 msgid "The blue are is for those rare times when today’s planets are making an important aspect with BTC’s natal chart. For example, if today’s Saturn longitude was 60 degrees with where Jupiter was on the White Paper date, it would show up here."
-msgstr ""
+msgstr "La zone bleue est réservée aux rares fois où les planètes du jour forment un aspect important avec le thème natal de la CTB. Par exemple, si la longitude de Saturne d'aujourd'hui était de 60 degrés par rapport à l'emplacement de Jupiter à la date du livre blanc, cela apparaîtrait ici."
 
 #: app.py:412
 msgid "**Retrograde activity**"
-msgstr ""
+msgstr "**Activité rétrograde**"
 
 #: app.py:429
 msgid "This visual shows us the planet’s retrograde status over the next 10 days. Here we can see that 6 of the 8 planets are retrograde today."
-msgstr ""
+msgstr "Ce visuel nous montre le statut rétrograde des planètes au cours des 10 prochains jours. Ici, nous pouvons voir que 6 des 8 planètes sont rétrogrades aujourd'hui."
 
 #: app.py:430
 msgid "Importantly, we can see that Mercury will be no longer retrograde (will go direct) on 10/2/2022. You may see an “X” in one of the squares (occasionally not shown here). That would indicate that the planet had returned to its prior longitude from which it’s last retrograde has begun."
-msgstr ""
+msgstr "Il est important de noter que Mercure ne sera plus rétrograde (sera direct) le 10/2/2022. Vous pouvez voir un "X" dans l'un des carrés (occasionnellement non montré ici). Cela indiquerait que la planète est retournée à sa longitude antérieure à partir de laquelle sa dernière rétrogradation a commencé."
 
 #: app.py:438
 msgid "**Progression from all Pivots**"
-msgstr ""
+msgstr "**Progression de tous les Pivots**"
 
 #: app.py:456
 msgid "This last section is rather like the very first section. It notes how many degrees each planet has moved since a key pivot date. Important degrees are highlighted in yellow for quick reference. Note that is TOTAL degrees moved, which can get to be pretty big number for fast-moving planets like Mercury. You will note that sometimes an odd-looking number like ‘1890’ will be highlighted. In such a case, the number is 90, 180 or 270 degrees from a full planetary cycle. It is not necessary to do the calculation. Astrotool has already done the calculation and highlighted the cell for you."
-msgstr ""
+msgstr " Cette dernière section est un peu comme la toute première section. Elle note combien de degrés chaque planète s'est déplacée depuis une date pivot clé. Les degrés importants sont surlignés en jaune pour une référence rapide. Notez qu'il s'agit de degrés TOTAL déplacés, ce qui peut devenir un nombre assez important pour les planètes qui se déplacent rapidement comme Mercure. Vous remarquerez que parfois un nombre étrange comme '1890' sera mis en évidence. Dans ce cas, le nombre correspond à 90, 180 ou 270 degrés d'un cycle planétaire complet. Il n'est pas nécessaire de faire le calcul. Astrotool a déjà fait le calcul et mis en évidence la cellule pour vous."
 
 #: app.py:457
 msgid "***We wish you the best in your trading career and believe that this tool will be of tremendous help, once you learn how to use it on a daily basis. Happy trading!***"
-msgstr ""
+msgstr "***Nous vous souhaitons le meilleur dans votre carrière de trader et nous sommes convaincus que cet outil vous sera d'une aide précieuse, une fois que vous aurez appris à l'utiliser au quotidien. Bon trading!***"
 
 #: app.py:537
 msgid "Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence..."
-msgstr ""
+msgstr "Voici une vue aérienne de la pyramide **Khufru en Egypte**, certains prétendent que les anciens bâtisseurs nous ont légué ces pyramides comme un *calculateur astronomique*, que **W.D Gann** appelle le ***carré de 9***. Il a été découvert que chaque rangée **45°** de cette pyramide (**8 côtés**) a une **petite inclinaison**, était-ce intentionnel pour révéler l'importance du **45° degré** ? Ou comme on l'appelle, une coïncidence architecturale..."
 
 #: app.py:550
 msgid "**Energy Points Chart (next 3 months)**"
-msgstr ""
+msgstr "**Tableau des points d'énergie (3 prochains mois)**"
 
 #: app.py:554
 msgid "**Energy Points Hits on BTC @ last 2 years**"
-msgstr ""
+msgstr "**Points d'énergie atteints sur BTC @ 2 dernières années**"
 
 #: app.py:617
 msgid "Total Major EP since last 2 years"
-msgstr ""
+msgstr "Total des EP majeurs depuis les 2 dernières années"
 
 #: app.py:757
-msgid "**Twitter Sentimental Analysis on BTC**"
-msgstr ""
+msgid "**Twitter Sentiment Analysis on $BTC**"
+msgstr "**Analyse du sentiment de Twitter sur le $BTC**"
 
 #: app.py:758
 msgid "Cryptocurrencies are rising in importance as an investment option and alternative currency. Thus, investors are keen on finding timely market movement insights. One of such sources is Twitter due to its live feed of information on cryptocurrencies and emotional information from investors expressing their sentiments."
-msgstr ""
+msgstr "Les crypto-monnaies gagnent en importance en tant qu'option d'investissement et monnaie alternative. Ainsi, les investisseurs sont désireux de trouver des informations opportunes sur les mouvements du marché. L'une de ces sources est Twitter, en raison de son flux d'informations en direct sur les crypto-monnaies et des informations émotionnelles des investisseurs exprimant leurs sentiments."
 
 #: app.py:759
 msgid "This page will examine the extent to which Twitter sentiments can be used to correlate human mass-psychology and our major EP days date… This study was conducted using a snscrape for Twitter scrapping, a “pipeline_nlp” in order to clean our samples, and a lexicon-based approach through the VADER algorithm for sentiment analysis."
-msgstr ""
+msgstr "Cette page examinera dans quelle mesure les sentiments sur Twitter peuvent être utilisés pour établir une corrélation entre la psychologie de masse humaine et nos principaux jours d'EP... Cette étude a été menée à l'aide d'un snscrape pour le scrapping de Twitter, d'un "pipeline_nlp" afin de nettoyer nos échantillons, et d'une approche basée sur le lexique via l'algorithme VADER pour l'analyse des sentiments."
 
 #: app.py:760
 msgid "This study has been made on 13 different MAJOR EP dates, we took for each of them, -1/+1 days from the given date (eg: our major EP is at 15/09/2022, we scrapped from Twitter 83k tweets from these 3 consecutive dates: 14/09 | 15/09 | 16/09). The total scrapped sample represent more than 850k tweets for those 13 major EP."
-msgstr ""
-
+msgstr "Cette étude a été faite sur 13 dates différentes d'EP majeur, nous avons pris pour chacune d'entre elles, -1/+1 jours à partir de la date donnée (ex : notre EP majeur est au 15/09/2022, nous avons récupéré de Twitter 83k tweets de ces 3 dates consécutives : 14/09 | 15/09 | 16/09). Le total de l'échantillon supprimé représente plus de 850k tweets pour ces 13 EP majeurs."
