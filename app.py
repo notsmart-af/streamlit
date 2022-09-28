@@ -78,7 +78,7 @@ if authentication_status:
     with col1:
         st.write(' ')
     with col2:
-        language = st.sidebar.selectbox('', ['EN', 'FR'])
+        language = st.selectbox('', ['EN', 'FR'])
         try:
             localizator = gettext.translation('base', localedir='locales', languages=[language])
             localizator.install()
