@@ -182,7 +182,7 @@ if authentication_status:
 
             with col1:
                 st.write(' ')
-                
+
 
             with col2:
                 st.title(_("**AstroTool© Help Page**"))
@@ -295,7 +295,7 @@ if authentication_status:
                         for x in range(len(s))]
                 st.dataframe(hm.style.apply(highlight_everyother))   
                 st.markdown(_('This section shows the current helio longitude of each planet on the 2nd line, which gives “Today date” on the far left. It is followed by “mod 30”. This line shows the current number of degrees into the current house. In the example above, the earth has moved into Aries…'))
-                st.markdown(_('Each of the following lines beginning with “White Paper date”, shows how far each planet has moved since a key date in BTC history. Since the White Paper was published on 10/31/2008, the earth has moved 5002 degrees. '))
+                st.markdown(_('Each of the following lines beginning with “White Paper date”, shows how far each planet has moved since a key date in BTC history. Since the White Paper was published on 10/31/2008, the earth has moved 5000 degrees. '))
                 st.markdown(_('The line following (mod360) shows us that the earth has moved 13 full cycles (13 earth years), and is 322 degrees into the 14th cycle, since WP date.'))
                 st.markdown(_('Note that the Nep column has a highlighted ‘30’ on the Genesis block date. 30 degrees is a key degree so it is highlighted to stand out (of course Neptune moves very slowly, and may remain at 30 degrees for a month, so it is only useful when in tandem with other more immediate signals).'))
             with col3:

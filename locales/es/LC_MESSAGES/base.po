@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-09-28 19:23+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: app.py:126
+msgid ""
+"\n"
+"            **This WebApp of Astrotool©** is a gift from **[Geometric Thinking](https://geometricthinking.com \"Geometric Thinking\")** and the developers **Amir & Sachith** to the world.  We have learned that there is a **unique way** to *read price charts* for geometric support and resistance.  **AND** we have found that there are ways to project, **far in advance, the dates when pivot turns are likely to occur in the market**. We call those dates **ENERGY POINTS (EPs)**.  This WebApp will highlight future EPS for you.  *It will not tell you which way a market will break*, but **it will give you a upindication when to pay close attention to a chart for price volatility**.\n"
+"            * The **MAIN** page is absolutely full of key astrological data related to key dates in BTC history, all neatly summarized in an easy-to-read table. The dates are easily found on the left side of the table and the aspects on the right. The data on the Main page, will give you insight into the types of date we research for this WebApp. For a more thorough and complete understanding, we encourage all users to attend a class, if and when Geometric Thinking holds another class. As of the date of publication, the last date entered was 06/18/22.\n"
+"            * The **CHART** page is self-explanatory. The dates with the highest bars are the dates to watch the most. Note that the EP dates should be viewed as +/- 1 day. In other words, an EP may show up a day before or a day after the highlighted date.\n"
+"            The founder of Geometric Thinking (GT) has been involved in the market for a very long time and will not be available to teach for more than a few more years. This WebApp is given to help GT students by giving away some of the insights we PRAYED for, when we were starting out. We wish you the very best success in your trading career! \n"
+"            **We wish you the very best success in your trading career**.\n"
+"            "
+msgstr ""
+
+#: app.py:133
+msgid "Who are we?"
+msgstr ""
+
+#: app.py:137
+msgid ""
+"\n"
+"            We opened Geometric Thinking in July 2017 and have now taught literally hundreds of traders worldwide the art of Geometric Thinking.  \n"
+"\n"
+"            * Geometric Thinking focuses on a unique understanding of how geometry and natural law focuses the minds of traders (en masse) such that **there are points in time and price where we can forecast trend changes are most likely to occur.**\n"
+"\n"
+"            * Knowing in advance, for example, that a coin like BTC will likely reach an Energy Point (EP) in time 2 weeks in advance gives the trader almost an “unfair advantage” over other traders. It becomes advantageous for the Geometric Thinker to realize that a projected date 2 weeks in advance is a prime time to observe and plan for, but also analyze the “forecast-able” prices associated with that date.\n"
+"            \n"
+"            * If you’ve been trading for a while, you already know that this business is cut-throat. It is vicious and even very smart people typically lose everything over time. If you are honest with yourself, you know that **the classic trading techniques, divergences, moving averages, etc. simply do not work consistently.**\n"
+"\n"
+"            * Therefore, what does work consistently? What will give you an unfair advantage over other traders? **Geometry and natural law.**\n"
+"\n"
+"            * Having this powerful knowledge will not guarantee that you will win, it gives you an cutting-edge advantage. Look at the picture above of the man holding two aces in the hole. Does this guarantee that he will win the hand? **No. There are still 100 ways to lose, even with a pair of aces in the hole**. If he were playing against other professional poker players he would still need to master the game right? He would still need to hide his tells, learn to bluff, learn game mathematics, etc., to be a consistent winner. The same applies to Geometric Thinking and trading.\n"
+"\n"
+"            * Now, imagine what Geometric Thinking can do for you. I can give you two Aces on nearly every hand without cheating! **That is a CUTTING-EDGE ADVANTAGE, right?** AstroTool and Geometric Thinking can arrange for you to be dealt two aces in the hole more often than not. If you will combine that with the dedication to master this business, you can become a consistent winner. **We believe this 100%.**\n"
+"            "
+msgstr ""
+
+#: app.py:153
+msgid "Why is this important?"
+msgstr ""
+
+#: app.py:154
+msgid ""
+"\n"
+"            Whether you care to believe this or not, dates such as the 12/17/2017 (20k top) or the 15/04/2021 (65k) BTC top were seen weeks in advance as a date for a possible top. The 3/12/2020 low was also forecasted as a possible low well more than a month in advance. **WE LITERALLY [TWEETED TO THE WORLD](https://twitter.com/jimfred1276/status/1462641460948267013), THAT THE NOV 2021 TOP WAS IN, A WEEK OR SO AFTER THE FACT, WHEN PRICE WAS STILL ~ 65000!** To the best of our knowledge, we are the only ones who did that.\n"
+"\n"
+"            Whether you choose to believe this or not, We assure you it is true that at the very least, **several hundred geometric thinking traders know which dates to watch, and which prices, LONG before other traders do.** \n"
+"            \n"
+"            **Does that seem important to you? Does that matter? Should you care? We think so.**\n"
+"\n"
+"            You can join us in our [Telegram Channel](https://t.me/joinchat/FKSNuqrZpjhlZTJi)\n"
+"            "
+msgstr ""
+
+#: app.py:170
+msgid "*About the developers...*"
+msgstr ""
+
+#: app.py:171
+msgid ""
+"This fully implemented Web-App, ready to use in Python, was created as part of a **Memory Paper** for **[DU Data Analytics @ University Pantheon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. The two developers and students are **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Both being passionate about blockchain and programming since they met each others in 2016', they linked their passion with their interest to create this web-app. This was made possible only by our mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *creator of GeometricThinking.com & AstroTool©* - who allowed us to translate \"Astrotool©\" into Python from his excel sheet which he has been working on since 1991'... We also want to thanks **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *director of the DU Data Analytics at Pantheon Sorbonne* - for allowing us AstroTool© as a memory paper subject!\n"
+"\n"
+"            The developers take no credit for the basic calculations and methods of the \"Astrotool©\" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire \"Astrotool\" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha..."
+msgstr ""
+
+#: app.py:188
+msgid "**AstroTool© Help Page**"
+msgstr ""
+
+#: app.py:189
+msgid "GeometricThinking is of the opinion that it is FAR better to be **focus on time** as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally **hundreds of hidden variables** that we were never even taught to consider."
+msgstr ""
+
+#: app.py:191
+msgid "AstroTool© was developed to solve a significant problem for forecasters who are employing natural law (astrology, arithmetic, geometry and universal principles of growth). There are so many factors to consider that it quickly becomes impossible for a serious forecaster to keep a handle on the hundreds of variables that are at work. We found ourselves missing market turns that we had ourselves forecasted in the past, because we got lost in the minutiae of forecasting, along with simply losing track of where we were in real-time. AstroTool has solved this problem."
+msgstr ""
+
+#: app.py:193
+msgid "Following up on the success of AstroTool© v5.3 (*which was made available on this website to the public for free*), v6.0 has been completed. It offers several improvements over v5.3 and is now the tool of choice for those who have access to it."
+msgstr ""
+
+#: app.py:195
+msgid "Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. **AstroTool’s output will be put behind a paywall at some point in the future**. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of **80% accurate in forecasting market turns**. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. **We are confident in what you will find.**"
+msgstr ""
+
+#: app.py:197
+msgid "The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:"
+msgstr ""
+
+#: app.py:220
+msgid "Chart"
+msgstr ""
+
+#: app.py:221
+msgid "As mentioned above, the key component of Astrotool is the chart of forecasted EP dates in the months ahead. We use it with the understanding that it is accurate **+/- 1 day**. In other words, if a date like 4/10/2021 is forecasted, then we know to be alert from 4/9-4/11/2021. Here is an example of the chart:"
+msgstr ""
+
+#: app.py:243
+msgid "Sq9"
+msgstr ""
+
+#: app.py:244
+msgid "As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). **It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP and turned out to be the 65k BTC Top we all aware of.**"
+msgstr ""
+
+#: app.py:245
+msgid "Below here's a plot of the **4/14/2021** Sq9 visualization.. We can clearly see **6 planets** ([Jup_G], [Ear_H], [Mer_G], [Ura_H], [Mer_H], [Mar_H]) that are in this 'yellow' area. This yellow zone is separated into 8 lines, all 45 degrees apart. **The more planets in this zone, the more important the date in question will be perceived as a pivot!**"
+msgstr ""
+
+#: app.py:265
+msgid "Main Page"
+msgstr ""
+
+#: app.py:266
+msgid "If you study the data on the Main page, you will gain insight into the things we search. At first sight it might looks difficult to understand, but it's not! **Let's unpack it!**"
+msgstr ""
+
+#: app.py:267
+msgid "The first two rows correspond to the actual transit of the planets. Their current degrees are displayed in the first row.  In the second row the name of the current house of the planet is given as well as its number of degrees in this house. This data is updated automatically every day by our algorithm."
+msgstr ""
+
+#: app.py:268
+msgid "The third and fourth rows correspond to the cumulative degrees since the date indicated. The third row contains the cumulative number of degrees, and the fourth row contains the number of revolutions followed by the number of degrees remaining before the next revolution."
+msgstr ""
+
+#: app.py:269
+msgid "Apart from the first 2 rows, the rest of the rows are based on the cumulative degrees since the major key date or pivot date... You can find the date and the related data information of '31/10/2008' which is the BTC White Paper or '01/03/2009', the genesis-block day also major TOPS such as '17/12/2017' (20k) or '11/10/2021' (69k) are also in the table..."
+msgstr ""
+
+#: app.py:270
+msgid "**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!"
+msgstr ""
+
+#: app.py:284
+msgid "**AstroTool© User Guide**"
+msgstr ""
+
+#: app.py:292
+msgid "**Main**"
+msgstr ""
+
+#: app.py:297
+msgid "This section shows the current helio longitude of each planet on the 2nd line, which gives “Today date” on the far left. It is followed by “mod 30”. This line shows the current number of degrees into the current house. In the example above, the earth has moved into Aries…"
+msgstr ""
+
+#: app.py:298
+msgid "Each of the following lines beginning with “White Paper date”, shows how far each planet has moved since a key date in BTC history. Since the White Paper was published on 10/31/2008, the earth has moved 5002 degrees. "
+msgstr ""
+
+#: app.py:299
+msgid "The line following (mod360) shows us that the earth has moved 13 full cycles (13 earth years), and is 322 degrees into the 14th cycle, since WP date."
+msgstr ""
+
+#: app.py:300
+msgid "Note that the Nep column has a highlighted ‘30’ on the Genesis block date. 30 degrees is a key degree so it is highlighted to stand out (of course Neptune moves very slowly, and may remain at 30 degrees for a month, so it is only useful when in tandem with other more immediate signals)."
+msgstr ""
+
+#: app.py:308
+msgid "**Chart**"
+msgstr ""
+
+#: app.py:326
+msgid "This is perhaps the most important visual in AstroTool. It shows at a glance the dates ahead in which there is a forecast of a likely change in trend. It is calculated by the aggregation of a large number of classical and esoteric timing signals employed by traders worldwide."
+msgstr ""
+
+#: app.py:334
+msgid "**Longitudes on Square of 9**"
+msgstr ""
+
+#: app.py:370
+msgid "This visual shows the Helio longitude of each of the planets in red, and the Geo longitude in blue. The longitudes are overlaid on Gann’s Square of 9 chart."
+msgstr ""
+
+#: app.py:371
+msgid "It has been our experience that on days when most planets, either in Helio or Geo, are on one of the 45 degrees lines, “the cross” (shown in yellow), a change in trend is likely. This tool alerted us to the 4/14/2021 high being a major pivot, in advance. "
+msgstr ""
+
+#: app.py:379
+msgid "**Aspects**"
+msgstr ""
+
+#: app.py:388 app.py:480 app.py:499
+msgid "**Transit Aspects**"
+msgstr ""
+
+#: app.py:392 app.py:484 app.py:503
+msgid "**Natal Aspects**"
+msgstr ""
+
+#: app.py:403
+msgid "Here we see today’s planetary aspects. The key degrees to look for are highlighted in yellow. For example, in the example above, Earth & Mercury are in conjunction, and Pluto and Mercury are 60 degrees apart."
+msgstr ""
+
+#: app.py:404
+msgid "The blue are is for those rare times when today’s planets are making an important aspect with BTC’s natal chart. For example, if today’s Saturn longitude was 60 degrees with where Jupiter was on the White Paper date, it would show up here."
+msgstr ""
+
+#: app.py:412
+msgid "**Retrograde activity**"
+msgstr ""
+
+#: app.py:429
+msgid "This visual shows us the planet’s retrograde status over the next 10 days. Here we can see that 6 of the 8 planets are retrograde today."
+msgstr ""
+
+#: app.py:430
+msgid "Importantly, we can see that Mercury will be no longer retrograde (will go direct) on 10/2/2022. You may see an “X” in one of the squares (occasionally not shown here). That would indicate that the planet had returned to its prior longitude from which it’s last retrograde has begun."
+msgstr ""
+
+#: app.py:438
+msgid "**Progression from all Pivots**"
+msgstr ""
+
+#: app.py:456
+msgid "This last section is rather like the very first section. It notes how many degrees each planet has moved since a key pivot date. Important degrees are highlighted in yellow for quick reference. Note that is TOTAL degrees moved, which can get to be pretty big number for fast-moving planets like Mercury. You will note that sometimes an odd-looking number like ‘1890’ will be highlighted. In such a case, the number is 90, 180 or 270 degrees from a full planetary cycle. It is not necessary to do the calculation. Astrotool has already done the calculation and highlighted the cell for you."
+msgstr ""
+
+#: app.py:457
+msgid "***We wish you the best in your trading career and believe that this tool will be of tremendous help, once you learn how to use it on a daily basis. Happy trading!***"
+msgstr ""
+
+#: app.py:537
+msgid "Here is an aerial view of the **Khufru pyramid in Egypt**, some claim that the ancient builders bequeathed these pyramids to us as an *astro-calculator*, which **W.D Gann** calls the ***Square of 9***. It has been discovered that each **45°** row of this pyramid (**8 sides**) has a **small inclination**, was this intentional to reveal the importance of the **45° degree**? Or as they call it, an architectural coincidence..."
+msgstr ""
+
+#: app.py:550
+msgid "**Energy Points Chart (next 3 months)**"
+msgstr ""
+
+#: app.py:554
+msgid "**Energy Points Hits on BTC @ last 2 years**"
+msgstr ""
+
+#: app.py:617
+msgid "Total Major EP since last 2 years"
+msgstr ""
+
+#: app.py:757
+msgid "**Twitter Sentimental Analysis on BTC**"
+msgstr ""
+
+#: app.py:758
+msgid "Cryptocurrencies are rising in importance as an investment option and alternative currency. Thus, investors are keen on finding timely market movement insights. One of such sources is Twitter due to its live feed of information on cryptocurrencies and emotional information from investors expressing their sentiments."
+msgstr ""
+
+#: app.py:759
+msgid "This page will examine the extent to which Twitter sentiments can be used to correlate human mass-psychology and our major EP days date… This study was conducted using a snscrape for Twitter scrapping, a “pipeline_nlp” in order to clean our samples, and a lexicon-based approach through the VADER algorithm for sentiment analysis."
+msgstr ""
+
+#: app.py:760
+msgid "This study has been made on 13 different MAJOR EP dates, we took for each of them, -1/+1 days from the given date (eg: our major EP is at 15/09/2022, we scrapped from Twitter 83k tweets from these 3 consecutive dates: 14/09 | 15/09 | 16/09). The total scrapped sample represent more than 850k tweets for those 13 major EP."
+msgstr ""
+
