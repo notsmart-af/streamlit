@@ -91,9 +91,9 @@ msgstr ""
 "            Que vous vous souciez de le croire ou non, des dates telles que le 17/12/2017 (top 20k) ou le 15/04/2021 (65k) BTC ont été vues des semaines à l'avance comme une date pour un possible top. Le bas du 3/12/2020 a également été prévu comme un bas possible bien plus d'un mois à l'avance. **Nous avons littéralement [TWEETÉ AU MONDE](https://twitter.com/jimfred1276/status/1462641460948267013), QUE LE TOP DE NOV 2021 ÉTAIT EN PLACE, UNE SEMAINE PLUS OU MOINS APRÈS LES FAITS, ALORS QUE LE PRIX ÉTAIT TOUJOURS DE 65000!** À notre connaissance, nous sommes les seuls à l'avoir fait.\n"
 "\n"
 "            Que vous choisissiez de le croire ou non, nous vous assurons qu'il est vrai qu'au minimum, **plusieurs centaines de traders à la pensée géométrique savent quelles dates surveiller, et quels prix, bien avant les autres traders.**"
-
-"            **N'Est-ce que cela vous semble important ? Est-ce que cela a de l'importance ? Devriez-vous vous en soucier ? Nous le pensons.**"
-
+"\n"
+"            **Est-ce que cela vous semble important ? Est-ce que cela a de l'importance ? Devriez-vous vous en soucier ? Nous le pensons.**"
+"\n"
 "            Vous pouvez nous rejoindre sur notre [Canal Télégramme](https://t.me/joinchat/FKSNuqrZpjhlZTJi)\n"
 "            "
 
