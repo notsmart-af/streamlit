@@ -26,7 +26,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"            **Cette WebApp d'Astrotool©** est un cadeau de **[Geometric Thinking](https://geometricthinking.com \"Geometric Thinking\")** et des développeurs **Amir & Sachith** au monde.  Nous avons appris qu'il existe une **manière unique** de *lire les graphiques de prix* pour le support et la résistance géométriques.  **Nous avons découvert qu'il existe des moyens de projeter, **longtemps à l'avance, les dates auxquelles des pivots sont susceptibles de se produire sur le marché**. Nous appelons ces dates des **POINTS D'ENERGIE (PE)**.  Cette WebApp mettra en évidence les futurs PE pour vous.  *Elle ne vous dira pas dans quel sens un marché va se casser*, mais **elle vous donnera une indication du moment où vous devez prêter une attention particulière à un graphique pour la volatilité des prix**.\n"
+"            **Cette WebApp d'Astrotool©** est un cadeau de **[Geometric Thinking](https://geometricthinking.com \"Geometric Thinking\")** et des développeurs **Amir & Sachith** au monde.  Nous avons appris qu'il existe une **manière unique** de *lire les graphiques de prix* pour le support et la résistance géométriques.  **Nous avons découvert qu'il existe des moyens de projeter, longtemps à l'avance, les dates auxquelles des pivots sont susceptibles de se produire sur le marché**. Nous appelons ces dates des **POINTS D'ENERGIE (EP)**.  Cette WebApp mettra en évidence les futurs PE pour vous.  *Elle ne vous dira pas dans quel sens un marché va se casser*, mais **elle vous donnera une indication du moment où vous devez prêter une attention particulière à un graphique pour la volatilité des prix**.\n"
 "            * La page **MAIN** est remplie de données astrologiques clés liées aux dates clés de l'histoire du BTC, toutes soigneusement résumées dans un tableau facile à lire. Les dates sont faciles à trouver sur le côté gauche du tableau et les aspects sur le côté droit. Les données de la page principale vous donneront un aperçu des types de dates que nous recherchons pour cette WebApp. Pour une compréhension plus approfondie et complète, nous encourageons tous les utilisateurs à assister à un cours, si et quand Geometric Thinking organise un autre cours. À la date de publication, la dernière date saisie était le 18/06/22.\n"
 "            * La page **CHART** se passe d'explication. Les dates avec les barres les plus hautes sont les dates à surveiller le plus. Notez que les dates des PE doivent être considérées comme +/- 1 jour. En d'autres termes, un EP peut apparaître un jour avant ou un jour après la date en surbrillance.
 "            Le fondateur de Geometric Thinking (GT) est impliqué sur le marché depuis très longtemps et ne sera pas disponible pour enseigner pendant plus de quelques années encore. Cette application Web a pour but d'aider les étudiants de GT en leur donnant certaines des connaissances pour lesquelles nous avons prié, lorsque nous avons commencé. Nous vous souhaitons le meilleur succès dans votre carrière de trader ! \n"
@@ -90,9 +90,9 @@ msgstr ""
 "\n"
 "            Que vous vous souciez de le croire ou non, des dates telles que le 17/12/2017 (top 20k) ou le 15/04/2021 (65k) BTC ont été vues des semaines à l'avance comme une date pour un possible top. Le bas du 3/12/2020 a également été prévu comme un bas possible bien plus d'un mois à l'avance. **Nous avons littéralement [TWEETÉ AU MONDE](https://twitter.com/jimfred1276/status/1462641460948267013), QUE LE TOP DE NOV 2021 ÉTAIT EN PLACE, UNE SEMAINE PLUS OU MOINS APRÈS LES FAITS, ALORS QUE LE PRIX ÉTAIT TOUJOURS DE 65000!** À notre connaissance, nous sommes les seuls à l'avoir fait.\n"
 "\n"
-"            Que vous choisissiez de le croire ou non, nous vous assurons qu'il est vrai qu'au minimum, **plusieurs centaines de traders à la pensée géométrique savent quelles dates surveiller, et quels prix, bien avant les autres traders.** \n" "\N"
+"            Que vous choisissiez de le croire ou non, nous vous assurons qu'il est vrai qu'au minimum, **plusieurs centaines de traders à la pensée géométrique savent quelles dates surveiller, et quels prix, bien avant les autres traders.** \n"
 "            "
-"            **Est-ce que cela vous semble important ? Est-ce que cela a de l'importance ? Devriez-vous vous en soucier ? Nous le pensons. **"
+"            **N'Est-ce que cela vous semble important ? Est-ce que cela a de l'importance ? Devriez-vous vous en soucier ? Nous le pensons.**"
 "\n"
 "            Vous pouvez nous rejoindre sur notre [Canal Télégramme](https://t.me/joinchat/FKSNuqrZpjhlZTJi)\n"
 "            "
@@ -177,7 +177,7 @@ msgstr "A part les 2 premières lignes, le reste des lignes sont basées sur les d
 
 #: app.py:270
 msgid "**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!"
-msgstr "**Le but de cette table 'principale' était d'avoir un enregistrement et un calcul de toutes les dates importantes et des informations clés en relation avec les planètes de notre système solaire. ** Elle est très utile pour les utilisateurs avancés en astro-trading ! C'est un must-have !"
+msgstr "**Le but de cette table 'principale' était d'avoir un enregistrement et un calcul de toutes les dates importantes et des informations clés en relation avec les planètes de notre système solaire.** Elle est très utile pour les utilisateurs avancés en astro-trading ! C'est un must-have !"
 
 #: app.py:284
 msgid "**AstroTool© User Guide**"
