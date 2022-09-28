@@ -25,10 +25,17 @@ msgid ""
 "            **We wish you the very best success in your trading career**.\n"
 "            "
 msgstr ""
+"\n"
+"            **Cette WebApp d'Astrotool©** est un cadeau de **[Geometric Thinking](https://geometricthinking.com \"Geometric Thinking\")** et des développeurs **Amir & Sachith** au monde.  Nous avons appris qu'il existe une **manière unique** de *lire les graphiques de prix* pour le support et la résistance géométriques.  **Nous avons découvert qu'il existe des moyens de projeter, **longtemps à l'avance, les dates auxquelles des pivots sont susceptibles de se produire sur le marché**. Nous appelons ces dates des **POINTS D'ENERGIE (PE)**.  Cette WebApp mettra en évidence les futurs PE pour vous.  *Elle ne vous dira pas dans quel sens un marché va se casser*, mais **elle vous donnera une indication du moment où vous devez prêter une attention particulière à un graphique pour la volatilité des prix**.\n"
+"            * La page **MAIN** est remplie de données astrologiques clés liées aux dates clés de l'histoire du BTC, toutes soigneusement résumées dans un tableau facile à lire. Les dates sont faciles à trouver sur le côté gauche du tableau et les aspects sur le côté droit. Les données de la page principale vous donneront un aperçu des types de dates que nous recherchons pour cette WebApp. Pour une compréhension plus approfondie et complète, nous encourageons tous les utilisateurs à assister à un cours, si et quand Geometric Thinking organise un autre cours. À la date de publication, la dernière date saisie était le 18/06/22.\n"
+"            * La page **CHART** se passe d'explication. Les dates avec les barres les plus hautes sont les dates à surveiller le plus. Notez que les dates des PE doivent être considérées comme +/- 1 jour. En d'autres termes, un EP peut apparaître un jour avant ou un jour après la date en surbrillance.
+"            Le fondateur de Geometric Thinking (GT) est impliqué sur le marché depuis très longtemps et ne sera pas disponible pour enseigner pendant plus de quelques années encore. Cette application Web a pour but d'aider les étudiants de GT en leur donnant certaines des connaissances pour lesquelles nous avons prié, lorsque nous avons commencé. Nous vous souhaitons le meilleur succès dans votre carrière de trader ! \n"
+"            **Nous vous souhaitons le meilleur succès dans votre carrière de trader**.\n"
+"            "
 
 #: app.py:133
 msgid "Who are we?"
-msgstr ""
+msgstr "Qui sommes-nous ?"
 
 #: app.py:137
 msgid ""
@@ -48,10 +55,25 @@ msgid ""
 "            * Now, imagine what Geometric Thinking can do for you. I can give you two Aces on nearly every hand without cheating! **That is a CUTTING-EDGE ADVANTAGE, right?** AstroTool and Geometric Thinking can arrange for you to be dealt two aces in the hole more often than not. If you will combine that with the dedication to master this business, you can become a consistent winner. **We believe this 100%.**\n"
 "            "
 msgstr ""
+"\n"
+"            Nous avons ouvert Geometric Thinking en juillet 2017 et avons maintenant enseigné littéralement à des centaines de traders dans le monde entier l'art de la pensée géométrique.  \n"
+"\n"
+"            * Geometric Thinking se concentre sur une compréhension unique de la façon dont la géométrie et la loi naturelle concentrent l'esprit des traders (en masse) de sorte que **il y a des points dans le temps et le prix où nous pouvons prévoir que les changements de tendance sont les plus susceptibles de se produire.**\n"
+"\n"
+"            * Savoir à l'avance, par exemple, qu'une pièce de monnaie comme BTC atteindra probablement un point d'énergie (EP) dans le temps 2 semaines à l'avance donne au trader presque un "avantage injuste" sur les autres traders. Il devient avantageux pour le penseur géométrique de réaliser qu'une date prévue 2 semaines à l'avance est un moment privilégié pour observer et planifier, mais aussi analyser les prix "prévisibles" associés à cette date.\n"
+"            \n"
+"            * Si vous faites du trading depuis un certain temps, vous savez déjà que ce secteur est un coupe-gorge. Il est vicieux et même les personnes très intelligentes perdent généralement tout au fil du temps. Si vous êtes honnête avec vous-même, vous savez que **les techniques de trading classiques, les divergences, les moyennes mobiles, etc. ne fonctionnent tout simplement pas de manière constante.** \n"
+"\n"
+"            * Par conséquent, qu'est-ce qui fonctionne de manière constante ? Qu'est-ce qui vous donnera un avantage injuste sur les autres traders ? **Géométrie et loi naturelle.**\n"
+"\n"
+"            * Avoir ces connaissances puissantes ne garantit pas que vous gagnerez, elles vous donnent un avantage de pointe. Regardez l'image ci-dessus de l'homme qui a deux as dans le trou. Cela garantit-il qu'il va gagner la main ? **Non. Il y a toujours 100 façons de perdre, même avec une paire d'as dans le trou**. S'il jouait contre d'autres joueurs de poker professionnels, il devrait quand même maîtriser le jeu, n'est-ce pas ? Il devrait toujours cacher ses tells, apprendre à bluffer, apprendre les mathématiques du jeu, etc. pour être un gagnant régulier. La même chose s'applique à la pensée géométrique et au trading.\n"
+"\n"
+"            * Maintenant, imaginez ce que la pensée géométrique peut faire pour vous. Je peux vous donner deux As sur presque toutes les mains sans tricher ! **AstroTool et la Pensée Géométrique peuvent faire en sorte que vous receviez deux as dans le trou le plus souvent possible. Si vous combinez cela avec le dévouement pour maîtriser cette activité, vous pouvez devenir un gagnant constant. **Nous y croyons à 100%.**\N"
+"            "
 
 #: app.py:153
 msgid "Why is this important?"
-msgstr ""
+msgstr "Pourquoi est-ce important ?"
 
 #: app.py:154
 msgid ""
@@ -65,10 +87,19 @@ msgid ""
 "            You can join us in our [Telegram Channel](https://t.me/joinchat/FKSNuqrZpjhlZTJi)\n"
 "            "
 msgstr ""
+"\n"
+"            Que vous vous souciez de le croire ou non, des dates telles que le 17/12/2017 (top 20k) ou le 15/04/2021 (65k) BTC ont été vues des semaines à l'avance comme une date pour un possible top. Le bas du 3/12/2020 a également été prévu comme un bas possible bien plus d'un mois à l'avance. **Nous avons littéralement [TWEETÉ AU MONDE] (https://twitter.com/jimfred1276/status/1462641460948267013), QUE LE TOP DE NOV 2021 ÉTAIT EN PLACE, UNE SEMAINE PLUS OU MOINS APRÈS LES FAITS, ALORS QUE LE PRIX ÉTAIT TOUJOURS DE 65000!** À notre connaissance, nous sommes les seuls à l'avoir fait.\n"
+"\n"
+"            Que vous choisissiez de le croire ou non, nous vous assurons qu'il est vrai qu'au minimum, **plusieurs centaines de traders à la pensée géométrique savent quelles dates surveiller, et quels prix, bien avant les autres traders.** \n" "\N"
+"            \n"
+"            **Est-ce que cela vous semble important ? Est-ce que cela a de l'importance ? Devriez-vous vous en soucier ? Nous le pensons. **\N"
+"\n"
+"            Vous pouvez nous rejoindre sur notre [Canal Télégramme] (https://t.me/joinchat/FKSNuqrZpjhlZTJi)\n"
+"            "
 
 #: app.py:170
 msgid "*About the developers...*"
-msgstr ""
+msgstr "*À propos des développeurs...*"
 
 #: app.py:171
 msgid ""
@@ -76,118 +107,121 @@ msgid ""
 "\n"
 "            The developers take no credit for the basic calculations and methods of the \"Astrotool©\" algorithm --- It is a complete property of our mentor Jim Fredrickson --- Our job was to translate the entire \"Astrotool\" algorithm into Python in order to make it competitive and up to date. The creation of the Web-App is a major asset for the ease of use of such an algorithm, it was a necessary step for the progress of such a project! A lot of work has been done (about 3 months of intense coding during the summer of 2022...), but the biggest part is still to come! The AstroTool Team has many upcoming ingenious ideas and we will bring astrotool to a level never seen before! Enjoy the Alpha..."
 msgstr ""
+"Cette Web-App entièrement implémentée, prête à l'emploi en Python, a été créée dans le cadre d'un **Memory Paper** pour le **[DU Data Analytics @ University Pantheon Sorbonne Paris](https://formations.pantheonsorbonne.fr/fr/catalogue-des-formations/diplome-d-universite-DU/diplome-d-universite-KBVXM363/diplome-d-universite-sorbonne-data-analytics-KPMK3V7Z.html)**. Les deux développeurs et étudiants sont **[Amir Lehmam](https://fr.linkedin.com/in/amirlehmam)** & **[Sachith Galbokka](https://fr.linkedin.com/in/sachith-galbokka-b22187204)**. Tous deux étant passionnés par la blockchain et la programmation depuis leur rencontre en 2016', ils ont lié leur passion à leur intérêt pour créer cette web-app. Ceci n'a été rendu possible que par notre mentor **[Jim Fredrickson](https://geometricthinking.com/about-us/)** - *créateur de GeometricThinking.com & AstroTool©* - qui nous a permis de traduire "Astrotool©" en Python à partir de sa feuille excel sur laquelle il travaille depuis 1991'... Nous tenons également à remercier **[Marc Arthure DIAYE](http://marc-arthur.diaye.monsite-orange.fr/)** - *directeur du DU Data Analytics à Panthéon Sorbonne* - pour nous avoir permis d'utiliser AstroTool© comme sujet de mémoire!\n"
+"\n"
+"            Les développeurs ne s'attribuent aucun mérite pour les calculs et méthodes de base de l'algorithme \"Astrotool©\" --- C'est une propriété complète de notre mentor Jim Fredrickson --- Notre travail a été de traduire l'intégralité de l'algorithme \"Astrotool©\" en Python afin de le rendre compétitif et à jour. La création de la Web-App est un atout majeur pour la facilité d'utilisation d'un tel algorithme, c'était une étape nécessaire pour l'avancement d'un tel projet ! Beaucoup de travail a été fait (environ 3 mois de codage intense pendant l'été 2022...), mais le plus gros reste à faire ! L'équipe AstroTool a beaucoup d'idées ingénieuses à venir et nous allons amener astrotool à un niveau jamais vu auparavant ! Profitez de l'Alpha..."
 
 #: app.py:188
 msgid "**AstroTool© Help Page**"
-msgstr ""
+msgstr "**Aide AstroTool©**"
 
 #: app.py:189
 msgid "GeometricThinking is of the opinion that it is FAR better to be **focus on time** as a factor in trading, than to first focus on price. However, forecasting time is much trickier than forecasting price. There are literally **hundreds of hidden variables** that we were never even taught to consider."
-msgstr ""
+msgstr "L'équipe GeometricThinking est d'avis qu'il est BEAUCOUP mieux de se **focaliser sur le temps** comme facteur dans le trading, que de se concentrer d'abord sur le prix. Cependant, prévoir le temps est beaucoup plus délicat que de prévoir le prix. Il y a littéralement des **centaines de variables cachées** que l'on ne nous a jamais appris à considérer."
 
 #: app.py:191
 msgid "AstroTool© was developed to solve a significant problem for forecasters who are employing natural law (astrology, arithmetic, geometry and universal principles of growth). There are so many factors to consider that it quickly becomes impossible for a serious forecaster to keep a handle on the hundreds of variables that are at work. We found ourselves missing market turns that we had ourselves forecasted in the past, because we got lost in the minutiae of forecasting, along with simply losing track of where we were in real-time. AstroTool has solved this problem."
-msgstr ""
+msgstr "AstroTool© a été développé pour résoudre un problème important pour les prévisionnistes qui utilisent la loi naturelle (astrologie, arithmétique, géométrie et principes universels de croissance). Il y a tellement de facteurs à prendre en compte qu'il devient rapidement impossible pour un prévisionniste sérieux de garder le contrôle sur les centaines de variables en jeu. Nous nous sommes retrouvés à rater des tournants du marché que nous avions nous-mêmes prévus dans le passé, parce que nous nous sommes perdus dans les méandres de la prévision et que nous avons tout simplement perdu la trace de notre position en temps réel. AstroTool a résolu ce problème."
 
 #: app.py:193
 msgid "Following up on the success of AstroTool© v5.3 (*which was made available on this website to the public for free*), v6.0 has been completed. It offers several improvements over v5.3 and is now the tool of choice for those who have access to it."
-msgstr ""
+msgstr "Suite au succès de l'AstroTool© v5.3 (*qui a été mis gratuitement à la disposition du public sur ce site web*), la v6.0 est terminée. Elle offre plusieurs améliorations par rapport à la v5.3 et constitue désormais l'outil de choix pour ceux qui y ont accès."
 
 #: app.py:195
 msgid "Our intention is to make v6.0 available to the public for a short window of time, as we move toward putting the key charts and output on our website. **AstroTool’s output will be put behind a paywall at some point in the future**. Those who have taken the time to research the accuracy of Astrotool v5.3 as a forecasting tool have found it to be on the order of **80% accurate in forecasting market turns**. These forecasts are often made months in advance. We invite others to do their own research to see if this statement is self-serving bluster, or is in fact the Truth. **We are confident in what you will find.**"
-msgstr ""
+msgstr "Nous avons l'intention de mettre la v6.0 à la disposition du public pendant une courte période, alors que nous nous apprêtons à mettre les principaux graphiques et résultats sur notre site Web. **Les résultats d'AstroTools seront mis derrière un paywall à un moment donné dans le futur**. Ceux qui ont pris le temps d'étudier la précision d'Astrotool v5.3 en tant qu'outil de prévision ont constaté qu'il était de l'ordre de **80% de précision dans la prévision des retournements de marché**. Ces prévisions sont souvent faites des mois à l'avance. Nous invitons les autres à faire leurs propres recherches pour voir si cette déclaration est une fanfaronnade intéressée ou si elle est en fait la vérité. **Nous sommes confiants dans ce que vous trouverez."
 
 #: app.py:197
 msgid "The key component of AstroTool is the chart of forecasted **Energy Points (eps)**. These are the days that have a higher-than-average likelihood of being dates of market turns. In some cases, those dates present themselves as eps immediately, with sharp turns (long green or red candles) on or about the day in question. But in many cases there is an extended period of time that elapses before it becomes clear that a major pivot has been formed. Here are two such examples:"
-msgstr ""
+msgstr "L'élément clé d'AstroTool est le graphique des **Points d'énergie (eps)** prévus. Ce sont les jours qui ont une probabilité supérieure à la moyenne d'être des dates de retournement du marché. Dans certains cas, ces dates se présentent sous forme d'eps immédiatement, avec des virages brusques (longues bougies vertes ou rouges) le jour même ou autour du jour en question. Mais dans de nombreux cas, il s'écoule une longue période de temps avant qu'il ne devienne évident qu'un pivot majeur s'est formé. Voici deux exemples de ce type :"
 
 #: app.py:220
 msgid "Chart"
-msgstr ""
+msgstr "Graphique"
 
 #: app.py:221
 msgid "As mentioned above, the key component of Astrotool is the chart of forecasted EP dates in the months ahead. We use it with the understanding that it is accurate **+/- 1 day**. In other words, if a date like 4/10/2021 is forecasted, then we know to be alert from 4/9-4/11/2021. Here is an example of the chart:"
-msgstr ""
+msgstr "Comme nous l'avons mentionné plus haut, l'élément clé d'Astrotool est le tableau des dates prévues pour les PE dans les mois à venir. Nous l'utilisons en sachant qu'il est précis **+/- 1 jour**. En d'autres termes, si une date comme le 4/10/2021 est prévue, nous savons qu'il faut être vigilant du 4/9 au 4/11/2021. Voici un exemple de graphique :"
 
 #: app.py:243
 msgid "Sq9"
-msgstr ""
+msgstr "Sq9"
 
 #: app.py:244
 msgid "As you can see, 10/3/2022 is being highlighted as a date to watch. There are many other visual aids as well. For example, here is a chart that shows the placement of each of the planets longitude, updated daily, superimposed upon the Gann Square of Nine chart (Sq9). **It was this visual that alerted us in advance to the likelihood of the 4/14/2021 high being a significant EP and turned out to be the 65k BTC Top we all aware of.**"
-msgstr ""
+msgstr "Comme vous pouvez le voir, le 10/3/2022 est mis en évidence comme une date à surveiller. Il existe également de nombreuses autres aides visuelles. Par exemple, voici un graphique qui montre le placement de la longitude de chacune des planètes, mis à jour quotidiennement, superposé au graphique du Carré de Neuf de Gann (Sq9). **C'est ce visuel qui nous a alerté à l'avance sur la probabilité que le sommet du 14/4/2021 soit un PE significatif et s'est avéré être le sommet de 65k BTC que nous connaissons tous.**"
 
 #: app.py:245
 msgid "Below here's a plot of the **4/14/2021** Sq9 visualization.. We can clearly see **6 planets** ([Jup_G], [Ear_H], [Mer_G], [Ura_H], [Mer_H], [Mar_H]) that are in this 'yellow' area. This yellow zone is separated into 8 lines, all 45 degrees apart. **The more planets in this zone, the more important the date in question will be perceived as a pivot!**"
-msgstr ""
+msgstr "Ci-dessous, voici un tracé de la visualisation du **4/14/2021** Sq9.. Nous pouvons clairement voir **6 planètes** ([Jup_G], [Ear_H], [Mer_G], [Ura_H], [Mer_H], [Mar_H]) qui sont dans cette zone 'jaune'. Cette zone jaune est séparée en 8 lignes, toutes distantes de 45 degrés. **Plus il y a de planètes dans cette zone, plus la date en question sera perçue comme un pivot!**"
 
 #: app.py:265
-msgid "Main Page"
-msgstr ""
+msgid "Page Principal"
+msgstr "Page Principal"
 
 #: app.py:266
 msgid "If you study the data on the Main page, you will gain insight into the things we search. At first sight it might looks difficult to understand, but it's not! **Let's unpack it!**"
-msgstr ""
+msgstr " Si vous étudiez les données de la page principale, vous aurez un aperçu de ce que nous recherchons. À première vue, cela peut sembler difficile à comprendre, mais ça ne l'est pas ! **Déballons-le!**"
 
 #: app.py:267
 msgid "The first two rows correspond to the actual transit of the planets. Their current degrees are displayed in the first row.  In the second row the name of the current house of the planet is given as well as its number of degrees in this house. This data is updated automatically every day by our algorithm."
-msgstr ""
+msgstr "Les deux premières rangées correspondent au transit réel des planètes. Leurs degrés actuels sont affichés dans la première ligne.  Dans la deuxième ligne, le nom de la maison actuelle de la planète est donné ainsi que son nombre de degrés dans cette maison. Ces données sont mises à jour automatiquement chaque jour par notre algorithme."
 
 #: app.py:268
 msgid "The third and fourth rows correspond to the cumulative degrees since the date indicated. The third row contains the cumulative number of degrees, and the fourth row contains the number of revolutions followed by the number of degrees remaining before the next revolution."
-msgstr ""
+msgstr "Les troisième et quatrième rangées correspondent aux degrés cumulés depuis la date indiquée. La troisième ligne contient le nombre de degrés cumulés, et la quatrième ligne contient le nombre de révolutions suivi du nombre de degrés restant avant la prochaine révolution."
 
 #: app.py:269
 msgid "Apart from the first 2 rows, the rest of the rows are based on the cumulative degrees since the major key date or pivot date... You can find the date and the related data information of '31/10/2008' which is the BTC White Paper or '01/03/2009', the genesis-block day also major TOPS such as '17/12/2017' (20k) or '11/10/2021' (69k) are also in the table..."
-msgstr ""
+msgstr "A part les 2 premières lignes, le reste des lignes sont basées sur les degrés cumulés depuis la date clé majeure ou date pivot... Vous pouvez trouver la date et les informations relatives aux données du '31/10/2008', qui est le livre blanc de la CTB, ou du '01/03/2009', le jour du bloc de genèse. Les TOPS majeurs tels que '17/12/2017' (20k) ou '11/10/2021' (69k) sont également dans le tableau..."
 
 #: app.py:270
 msgid "**The purpose of this 'Main' table was to have a record & calculation of all our important dates and key information in relation to our solar system planets.** It is very useful for advanced users in astro-trading! It is a must-have!"
-msgstr ""
+msgstr "**Le but de cette table 'principale' était d'avoir un enregistrement et un calcul de toutes les dates importantes et des informations clés en relation avec les planètes de notre système solaire. ** Elle est très utile pour les utilisateurs avancés en astro-trading ! C'est un must-have !"
 
 #: app.py:284
 msgid "**AstroTool© User Guide**"
-msgstr ""
+msgstr "Guide de l'utilisateur d'AstroTool©"
 
 #: app.py:292
 msgid "**Main**"
-msgstr ""
+msgstr "Principal"
 
 #: app.py:297
 msgid "This section shows the current helio longitude of each planet on the 2nd line, which gives “Today date” on the far left. It is followed by “mod 30”. This line shows the current number of degrees into the current house. In the example above, the earth has moved into Aries…"
-msgstr ""
+msgstr "Cette section montre la longitude hélio actuelle de chaque planète sur la 2ème ligne, ce qui donne "Today date" à l'extrême gauche. Elle est suivie de "mod 30". Cette ligne indique le nombre actuel de degrés dans la maison actuelle. Dans l'exemple ci-dessus, la terre est entrée dans la constellation du Bélier..."
 
 #: app.py:298
-msgid "Each of the following lines beginning with “White Paper date”, shows how far each planet has moved since a key date in BTC history. Since the White Paper was published on 10/31/2008, the earth has moved 5002 degrees. "
-msgstr ""
+msgid "Each of the following lines beginning with “White Paper date”, shows how far each planet has moved since a key date in BTC history. Since the White Paper was published on 10/31/2008, the earth has moved 5000 degrees."
+msgstr "Chacune des lignes suivantes, commençant par "date du livre blanc", indique la distance parcourue par chaque planète depuis une date clé de l'histoire de la CTB. Depuis la publication du livre blanc le 31/10/2008, la terre s'est déplacée de 5000 degrés."
 
 #: app.py:299
 msgid "The line following (mod360) shows us that the earth has moved 13 full cycles (13 earth years), and is 322 degrees into the 14th cycle, since WP date."
-msgstr ""
+msgstr "La ligne suivante (mod360) nous montre que la terre s'est déplacée de 13 cycles complets (13 années terrestres), et est à 322 degrés dans le 14ème cycle, depuis la date WP."
 
 #: app.py:300
 msgid "Note that the Nep column has a highlighted ‘30’ on the Genesis block date. 30 degrees is a key degree so it is highlighted to stand out (of course Neptune moves very slowly, and may remain at 30 degrees for a month, so it is only useful when in tandem with other more immediate signals)."
-msgstr ""
+msgstr "Notez que la colonne Nep a un '30' surligné sur la date du bloc de Genèse. 30 degrés est un degré clé, il est donc mis en évidence pour se démarquer (bien sûr, Neptune se déplace très lentement, et peut rester à 30 degrés pendant un mois, il n'est donc utile qu'en tandem avec d'autres signaux plus immédiats)."
 
 #: app.py:308
 msgid "**Chart**"
-msgstr ""
+msgstr "**Graphique**"
 
 #: app.py:326
 msgid "This is perhaps the most important visual in AstroTool. It shows at a glance the dates ahead in which there is a forecast of a likely change in trend. It is calculated by the aggregation of a large number of classical and esoteric timing signals employed by traders worldwide."
-msgstr ""
+msgstr "C'est peut-être le visuel le plus important d'AstroTool. Il montre d'un coup d'œil les dates à venir pour lesquelles on prévoit un changement probable de tendance. Il est calculé par l'agrégation d'un grand nombre de signaux de timing classiques et ésotériques utilisés par les traders du monde entier."
 
 #: app.py:334
 msgid "**Longitudes on Square of 9**"
-msgstr ""
+msgstr "**Longitudes sur Carré de 9**"
 
 #: app.py:370
 msgid "This visual shows the Helio longitude of each of the planets in red, and the Geo longitude in blue. The longitudes are overlaid on Gann’s Square of 9 chart."
-msgstr ""
+msgstr "Ce visuel montre la longitude Hélio de chacune des planètes en rouge, et la longitude Géo en bleu. Les longitudes sont superposées sur le graphique du carré de 9 de Gann."
 
 #: app.py:371
 msgid "It has been our experience that on days when most planets, either in Helio or Geo, are on one of the 45 degrees lines, “the cross” (shown in yellow), a change in trend is likely. This tool alerted us to the 4/14/2021 high being a major pivot, in advance. "
-msgstr ""
+msgstr "D'après notre expérience, les jours où la plupart des planètes, soit en Hélio, soit en Géo, se trouvent sur l'une des lignes de 45 degrés, "la croix" (représentée en jaune), un changement de tendance est probable. Cet outil nous a alerté à l'avance que le sommet du 14/4/2021 était un pivot majeur."
 
 #: app.py:379
 msgid "**Aspects**"
