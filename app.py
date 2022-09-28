@@ -74,8 +74,8 @@ if authentication_status == None:
 
 if authentication_status:
 
-    col111, col222, col333 = st.columns([8, 8, 4])
-    
+    col111, col222, col333 = st.columns([8, 8, 1.5])
+
     with col111:
         st.write(' ')
     with col222:
