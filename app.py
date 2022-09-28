@@ -78,6 +78,8 @@ if authentication_status:
     with col1:
         st.write(' ')
     with col2:
+        st.write(' ')
+    with col3:
         language = st.selectbox('', ['EN', 'FR'])
         try:
             localizator = gettext.translation('base', localedir='locales', languages=[language])
@@ -85,8 +87,6 @@ if authentication_status:
             _ = localizator.gettext 
         except:
             pass
-    with col3:
-        st.write(' ')
 
     st.markdown(_(f"Welcome aboard **{names}**, enjoy the Alpha version of **AstroTool©**"))
         
