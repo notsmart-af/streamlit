@@ -490,8 +490,8 @@ if authentication_status:
                         return ['background-color: yellow; color:black' if x%2==1 else ''
                             for x in range(len(s))]
                     st.dataframe(hm.style.apply(highlight_everyother))
-                    st.markdown("Ar = Aries, Ta = Taurus, Ge = Gemini, Ca = Cancer, Le = Leo, Li = Libra")
-                    st.markdown("Vi = Virgo, Sc = Scorpio, Sg = Sagittarius, Cp = Capricorn, Aq = Aquarius, Pi = Pisces")
+                    st.markdown("**Ar** = Aries, **Ta** = Taurus, **Ge** = Gemini, **Ca** = Cancer, **Le** = Leo, **Li** = Libra")
+                    st.markdown("**Vi** = Virgo, **Sc** = Scorpio, **Sg** = Sagittarius, **Cp** = Capricorn, **Aq** = Aquarius, **Pi** = Pisces")
 
             with col00:
                     st.markdown(_("**Transit Aspects**"))
@@ -512,8 +512,8 @@ if authentication_status:
                         return ['background-color: orange; color:black' if x%2==1 else ''
                             for x in range(len(s))]
                     st.dataframe(gm.style.apply(highlight_everyother))
-                    st.markdown("Ar = Aries, Ta = Taurus, Ge = Gemini, Ca = Cancer, Le = Leo, Li = Libra")
-                    st.markdown("Vi = Virgo, Sc = Scorpio, Sg = Sagittarius, Cp = Capricorn, Aq = Aquarius, Pi = Pisces")
+                    st.markdown("**Ar** = Aries, **Ta** = Taurus, **Ge** = Gemini, **Ca** = Cancer, **Le** = Leo, **Li** = Libra")
+                    st.markdown("**Vi** = Virgo, **Sc** = Scorpio, **Sg** = Sagittarius, **Cp** = Capricorn, **Aq** = Aquarius, **Pi** = Pisces")
             with col00:
                 st.markdown(_("**Transit Aspects**"))
                 for col in mn3.columns[3:]:
