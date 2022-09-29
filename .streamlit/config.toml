@@ -165,14 +165,14 @@ base = "dark"
 
 # Primary accent color for interactive elements.
 # The value below was set in C:\Users\PEGON\.streamlit\config.toml
-primaryColor = "#e4dcbe"
+primaryColor = "#e94c4f"
 
 # Background color for the main content area.
-# backgroundColor =
+# backgroundColor = "0e1117"
 
 # Background color used for the sidebar and most interactive widgets.
 # The value below was set in C:\Users\PEGON\.streamlit\config.toml
-secondaryBackgroundColor = "#0e1117"
+secondaryBackgroundColor = "#30ee2e"
 
 # Color used for almost all text.
 # The value below was set in C:\Users\PEGON\.streamlit\config.toml
@@ -180,4 +180,4 @@ textColor = "#f1f1f1"
 
 # Font family for all text in the app, except code blocks. One of "sans serif", "serif", or "monospace".
 # The value below was set in C:\Users\PEGON\.streamlit\config.toml
-font = "sans serif"
+font = "monospace"
