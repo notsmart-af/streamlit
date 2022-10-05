@@ -643,9 +643,9 @@ if authentication_status:
         spee = Image.open(r'images//astroannex.png')
         sssss = Image.open(r'images//annex.png')
         st.markdown("**Energy Points Hits on BTC @ last 2 years ||| ON A TRADINGVIEW CHART**")
-        st.image(spee, width=1920)
+        st.image(spee, width=1820)
         st.markdown("**Close Up (*updated as of 04/10/2022*)**")
-        st.image(sssss, width=1920)
+        st.image(sssss, width=1820)
 
         # Dataframe EP
 
