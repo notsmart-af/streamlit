@@ -91,7 +91,7 @@ if authentication_status:
 
     st.markdown(_(f"Welcome aboard **{names}**, enjoy the Alpha version of **AstroTool©**"))
         
-    # LOGO
+        # LOGO
 
     heliox = heliox.copy()
     geox = geox.copy()
@@ -126,6 +126,26 @@ if authentication_status:
     mn7 = tools.copy()
     mn7.fillna(' ', inplace=True)
     # ONGLETS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     info, help, main, chart, Sentimental, Method = st.tabs(["Introduction", "Help", "Main", "Chart", "Sentiment Analysis", "Method"])
 
@@ -473,10 +493,6 @@ if authentication_status:
             with col3:
                 st.write('')
 
-        #figui = px.bar(mm, x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
-        #    height=550)
-        #st.plotly_chart(figui, use_container_width=True)
-
     with main:
 
         h1,h2,h3,h4=st.tabs(["Helio", "Geo", "Tools", "Sq9"])
@@ -646,8 +662,6 @@ if authentication_status:
         st.image(spee, width=1480)
         st.markdown("**Close Up (*updated as of 04/10/2022*)**")
         st.image(sssss, width=1480)
-
-        # Dataframe EP
 
     with Method:
         
