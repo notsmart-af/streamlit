@@ -583,7 +583,7 @@ if authentication_status:
 
     with chart:
         st.title(_('**Energy Points Chart (next 3 months)**'))
-        figui = px.bar(m.head(96).iloc[5:,], x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
+        figui = px.bar(m.head(90), x="Date", y="Magnitude", hover_data=['Date', 'Magnitude'], color='Magnitude', color_continuous_scale=px.colors.sequential.Cividis,
             height=618).update_layout(xaxis={"rangeslider":{"visible":True}})
         st.plotly_chart(figui, use_container_width=True)
         st.markdown(_('**Energy Points Hits on BTC @ last 2 years**'))
