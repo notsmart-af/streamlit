@@ -114,6 +114,7 @@ if authentication_status:
     m9 = Natal.copy()
     m10 = PriceTime.copy()
     m11 = Retro.copy()
+    
     m12 = Sq9.copy()
 
     mn1 = aspects_h_tr.copy()

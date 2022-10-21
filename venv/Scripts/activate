@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\PEGON\Desktop\mémoire\MEMOIREPROPRE\STREAMLIT\streamlit\streamlit\venv"
+VIRTUAL_ENV="G:\ASTROTOOL\astrotool\MEMOIREPROPRE\STREAMLIT\streamlit\streamlit\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
