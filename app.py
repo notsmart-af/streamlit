@@ -561,7 +561,6 @@ if authentication_status:
                 for col in geo.columns[1:]:
                     geo = geo.astype({col: int})
                 st.dataframe(geo)
-                st.dataframe(m12.style.background_gradient(cmap='Blues')) 
 
     with chart:
         st.title(_('**Energy Points Chart (next 3 months)**'))
