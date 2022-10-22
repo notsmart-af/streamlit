@@ -135,7 +135,7 @@ if authentication_status:
         col0,col00 = st.columns([5,3.5])
 
         with col0:
-            st.title('AstroTool© Info Page')
+            st.title('AstroTool©')
                 
             gt = Image.open(r'images//gtlogo.png')
 
